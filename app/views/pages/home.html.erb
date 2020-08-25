@@ -1,9 +1,27 @@
-<div  id='banner-home' style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(assets/background-meds.jpg);">
-  <h1>Rupt'Care</h1>
-  <h2>Votre solution pour la rupture des médicaments</h2>
+<div  id='banner-home' style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(assets/background-meds.jpg);">
+  <div class="container">
+    <h1>Rupt'Care</h1>
+    <h2>Votre solution pour la rupture des médicaments</h2>
+  </div>
 </div>
 
 
-<div id="searchbar-home">
-  <h3>Je cherche une alternative médicamenteuse pour :</h3>
+<div id="homesearch">
+  <div class="container">
+    <h3>Je cherche une alternative médicamenteuse pour :</h3>
+    <div id="searchbar">
+      <%= form_tag "#", method: :get do %>
+        <%= text_field_tag :query,
+          params[:query], class: "input-search-bar", id:"search", placeholder: "Entrer le nom ici" %>
+
+        <%= text_field_tag :query,
+          params[:query], class: "input-search-bar", id:"search", placeholder: "Entrer le nom ici"%>
+      <%= submit_tag "Entrer", class: "btn btn-primary"%>
+     <% end %>
+    </div>
+  </div>
+
 </div>
+
+<%= render 'shared/footer'  %>
+
