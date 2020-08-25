@@ -1,21 +1,25 @@
 <div class="container">
 	<div class="row">
-      <div class="col-xs-12 col-md-6">
-  	  <%= image_path @patient.photo %>
+      <div class="col-sm">
+		  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" height=250 width=200 >
       </div>
       <div class="col-sm">
-		<h1> Detailled information about the patient </h1>
-		  <%= @patient.name %>
-		  <%= @patient.address %>
-		  <%= @patient.age %>
+		<h6> Informations détaillées sur le patient </h6>
+		  <ul class="list-info-patient">
+		  	<li><%= @patient.first_name %></li>
+			<li><%= @patient.address %></li>
+			<li><%= @patient.age %></li>
 		  <hr>
-		  <%= @patient.chronic_disease %>
+		  <li><%= @patient.chronic_disease %></li>
 		  <br>
+		</ul>
 	  </div>
 	  <div class="col-sm">
-	  	<h1> Other useful informations about the patient </h1>
+	  	<h6> Autres informations utiles sur le patient </h6>
+	  	  <ul>
 	  	   <%= @patient.chronic_disease %>
-	  	   <%= @patient.doctor.name %>
+	  	  </ul>
+
 	  </div>
 	</div>
     
