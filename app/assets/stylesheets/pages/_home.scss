@@ -1,1 +1,23 @@
 // Specific CSS for your home-page
+
+@import "components/banner-homepage";
+
+
+#homesearch {
+  vertical-align: middle;
+  margin-top: 60px;
+}
+
+#homesearch h3 {
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 44px;
+text-align: center;
+
+color: #060303;
+}
+
+#searchbar {
+  text-align: center;
+}

@@ -1,26 +1,65 @@
 <div class="container">
-  <div class="card-product">
-    <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
-    <div class="card-product-infos">
-    	<h2> Hello <%= @user.name %> </h2>
-    </div>
+	<h1 class="title-lvl"> Tableau de bord </h1>
+	  <div class="dashboard-header">
+	  	<h2 class="user-presentation">
+	    	<img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+	    	Hello Dr. Farouk Rahmani</h2>
+			
+			<ul class="dashboard-profil-modif">
+				<li class="list-dashboard"> → Afficher mes patients </li>
+				<li class="list-dashboard"> → Historique de mes recherches </li>
+			</ul>
+	    </div>
+
+	    <div class="dashboard-corps">
+		<div class="row clearfix">
+	    	<div class="span4">
+	    		<div class="main-column clearfix">
+	    			<div class="main-column-block">
+	    			</div>
+	    			<div class="main-column-block">
+	    			</div>
+	    			<div class="main-column-block">
+	    			</div>
+	    		</div>
+	    	</div>
+
+	    	<div class="dashboard-box-patients-display">
+			<div class="search-dashboard-patients">
+			<form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
+			  <i class="fas fa-search" aria-hidden="true"></i>
+			  <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+			    aria-label="Search">
+			</form>
+			</div>
+			  <h2 class="my-patients-title"> Mes patients ( <%= @patients.count %> )</h2>
+
+							<div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" height=50 width=50 >
+  <div class="card-product-infos">
+    <h2>Product name</h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
   </div>
-
-
-  <h2> My patients ( <%= @patients.count %> )</h2>
-  <% @patients.each do |patient| %>
-    <div class="row">
-      <div class="col-xs-12 col-md-5 col-md-offset-1">
-        <img src="<%= patient.photo %>" height=200 width=250>
-      </div>
-
-      <div class="col-xs-12 col-md-6">
-        <li>  Name : <%= patient.name %></li>
-      <% end %>
-      </div>
-
-    </div>
 </div>
 
+		</div>
+
+
+
+
+			  <% @patients.each do |patient| %>
+			    <div class="row">
+			      <div class="col-xs-12 col-md-5 col-md-offset-1">
+			        <img src="<%= patient.photo %>" height=200 width=250>
+			      </div>
+
+			      <div class="col-xs-12 col-md-6">
+			        <li>  Name : <%= patient.name %></li>
+			      <% end %>
+			      </div>
+			    </div>
+			</div>
+		</div>
+</div>
 
 
