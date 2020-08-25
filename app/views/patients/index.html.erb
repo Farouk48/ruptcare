@@ -33,33 +33,19 @@
 			</form>
 			</div>
 			  <h2 class="my-patients-title"> Mes patients ( <%= @patients.count %> )</h2>
-
-							<div class="card-product">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" height=50 width=50 >
-  <div class="card-product-infos">
-    <h2>Product name</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
-  </div>
-</div>
+					<% @patients.each do |patient| %>	
+				<div class="card-product">	
+					  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" height=50 width=50 >
+					    <div class="card-product-infos">
+						    <h2> <%= link_to "patient.first_name", patients_path(@patient)  %></h2>
+				  </div>
+				</div>
+				<% end %>
 
 		</div>
 
 
 
 
-			  <% @patients.each do |patient| %>
-			    <div class="row">
-			      <div class="col-xs-12 col-md-5 col-md-offset-1">
-			        <img src="<%= patient.photo %>" height=200 width=250>
-			      </div>
-
-			      <div class="col-xs-12 col-md-6">
-			        <li>  Name : <%= patient.name %></li>
-			      <% end %>
-			      </div>
-			    </div>
-			</div>
-		</div>
-</div>
-
+	
 
