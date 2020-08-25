@@ -1,1 +1,55 @@
-show.html.erb
+<div class="container">
+	<div class="row">
+      <div class="col-xs-12 col-md-6">
+  	  <%= image_path @patient.photo %>
+      </div>
+      <div class="col-sm">
+		<h1> Detailled information about the patient </h1>
+		  <%= @patient.name %>
+		  <%= @patient.address %>
+		  <%= @patient.age %>
+		  <hr>
+		  <%= @patient.chronic_disease %>
+		  <br>
+	  </div>
+	  <div class="col-sm">
+	  	<h1> Other useful informations about the patient </h1>
+	  	   <%= @patient.chronic_disease %>
+	  	   <%= @patient.doctor.name %>
+	  </div>
+	</div>
+    
+    <table class="table">
+	  <thead>
+	    <tr>
+	      <th scope="col">#</th>
+	      <th scope="col">Date</th>
+	      <th scope="col">Délivrance</th>
+	      <th scope="col">Pharmacie</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <th scope="row">1</th>
+	      <td>09/10/2020 18h20</td>
+	      <td>Doliprane 500mg</td>
+	      <td>Pharmacie le Wagon</td>
+	    </tr>
+	    <tr>
+	      <th scope="row">2</th>
+	      <td>9/10/2020 18h20</td>
+	      <td>Temesta 50mg</td>
+	      <td>Pharmacie Le Wagon</td>
+	    </tr>
+	    <tr>
+	      <th scope="row">3</th>
+	      <td>9/10/2020 18h20</td>
+	      <td>Xanax 50mg</td>
+	      <td>Pharmacie Rahmani</td>
+	    </tr>
+	  </tbody>
+	</table>
+	 <%= link_to "Retourner sur le tableau de bord", patients_path, class: "btn btn-danger" %>
+</div>
+
+
