@@ -23,37 +23,29 @@
 	  </div>
 	</div>
     
-    <table class="table">
-	  <thead>
-	    <tr>
-	      <th scope="col">#</th>
-	      <th scope="col">Date</th>
-	      <th scope="col">Délivrance</th>
-	      <th scope="col">Pharmacie</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	    <tr>
-	      <th scope="row">1</th>
-	      <td>09/10/2020 18h20</td>
-	      <td>Doliprane 500mg</td>
-	      <td>Pharmacie le Wagon</td>
-	    </tr>
-	    <tr>
-	      <th scope="row">2</th>
-	      <td>9/10/2020 18h20</td>
-	      <td>Temesta 50mg</td>
-	      <td>Pharmacie Le Wagon</td>
-	    </tr>
-	    <tr>
-	      <th scope="row">3</th>
-	      <td>9/10/2020 18h20</td>
-	      <td>Xanax 50mg</td>
-	      <td>Pharmacie Rahmani</td>
-	    </tr>
-	  </tbody>
-	</table>
-	 <%= link_to "Retourner sur le tableau de bord", patients_path, class: "btn btn-danger" %>
+  <div class="table-users">
+   <div class="header-table-patient">Historique délivrance patient</div>
+   
+   <table cellspacing="0">
+      <tr>
+         <th>Date</th>
+         <th>Délivrance</th>
+         <th> Pharmacist </th>
+         <th>Pharmacist</th>
+         <th width="230">Comments</th>
+      </tr>
+
+      <tr>
+         <td>29/02/2020</td>
+         <td>Temesta</td>
+         <td>Le Wagon</td>
+         <td> Julien Dupuis </td>
+         <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </td>
+      </tr>
+   </table>
 </div>
+
+	 <%= link_to "Retourner sur le tableau de bord", patients_path, class: "btn btn-danger" %>
+	</div>
 
 
