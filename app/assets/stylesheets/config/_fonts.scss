@@ -11,9 +11,9 @@ $headers-font: "Oxygen", "sans-serif";
 
 @font-face {
   font-family: "Post No Bills";
-  src: font-url('fonts/postnobills.eot');
-  src: font-url('fonts/postnobills.eot?#iefix') format('embedded-opentype'),
-       font-url('fonts/postnobills.woff') format('woff'),
-       font-url('fonts/postnobills.ttf') format('truetype')
+  src: font-url('/post-no-bills/postnobillscolombo-regular.ttf') format('truetype');
+  // src: url('fonts/postnobills.eot?#iefix') format('embedded-opentype'),
+  //      url('fonts/postnobills.woff') format('woff'),
+  //      url('fonts/postnobills.ttf') format('truetype')
 }
 $my-font: "Post No Bills";
