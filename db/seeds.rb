@@ -30,6 +30,7 @@ sertraline = Drug.create!(name:"Sertraline", drugs_class: "Anti-dépresseur" , f
 escitalopram = Drug.create!(name:"Escitalopram 10mg", drugs_class:"Anti-dépresseur" , family:"ISRS", action:"Inhibiteur séléctif de la recapture de la sérotonine", galenic: "comprimé", posology:, recommandations:, availibity:)
 venlafaxine = Drug.create!(name:"Venlafaxine LP 37,5 mg", drugs_class: "Anti-dépresseur", family:"", action:"", galenic: "Comprimé", posology:"", recommandations:"", availibity:"")
 
+
 puts "#{Drug.all}"
 
 victor = Doctor.create!(full_name: "Bergeaud Victor", rpps_number:"" , speciality: "Psychiatre")
