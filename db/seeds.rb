@@ -54,6 +54,6 @@ patient_2 = Patient.create!(first_name: "Victor", last_name: "BERGEAUD" ,address
 
 puts "#{Patient.all}"
 
-patient_drugs_1 = Patient_drug.create!(drug: drug_1, patient: patient_1 , disease:"Depression")
+patient_drugs_1 = PatientDrug.create!(drug: drug_1, patient: patient_1 , disease:"Depression")
 
 
