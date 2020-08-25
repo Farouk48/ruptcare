@@ -1,1 +1,16 @@
-<h1>show product</h1>
+<h1 style="color: #07B8F1; font-family: font-family: 'Oxygen', sans-serif; padding-left: 10px;"><%= @drug.name %></h1>
+<div class="drug-container">
+  <div class="drugs-infos">
+    <img src="https://pinepharmacyug.com/wp-content/uploads/2019/09/Mirtazapine-15mg-Tablets-28.jpg" alt="drug">
+    <h2>Stock disponible: <span class="remaining-stock">0</span> </h2>
+    <h2>Disponibilité: Disponible dans 2 jours</h2>
+  </div>
+  <div class="drugs-description">
+    <h1>Mécanismes d'action:</h1>
+    <p><%=@drug.action%></p>
+    <h2>Schéma posologique:</h2>
+    <p><%=@drug.posology%></p>
+    <h2>Recommandatins thérapeutiques:</h2>
+    <p><%= @drug.recommandations %></p>
+ </div>
+</div>
