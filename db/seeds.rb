@@ -23,19 +23,25 @@ farouk = User.create!(full_name: "Rahmani Farouk", rpps_number: "10101992104", e
 puts "#{User.all}"
 
 
-mirtazapine = Drug.create!(name:"Mirtazapine 15mg", drugs_class: "Anti-dépresseur", family:"", action:"", galenic: "Comprimé", posology:"", recommandations:"", availibity:"")
+mirtazapine = Drug.create!(name:"Mirtazapine 15mg", drugs_class: "Anti-dépresseur", family:"", action:"", galenic: "comprimé", posology:"", recommandations:"", availibity:"")
 fluoxetine = Drug.create!(name:"Fluoxétine 20mg", drugs_class: "Anti-dépresseur", family:"ISRS", action: "Inhibiteur séléctif de la recapture de la sérotonine", galenic: ["comprimé","gélules"], posology:"20mg/jour", recommandations:"", availibity: 1)
-paroxetine = Drug.create!(name:"Paroxétine", drugs_class: "Anti-dépresseur", family:"ISRS", action:"Inhibiteur séléctif de la recapture de la sérotonine", galenic: "comprimé", posology:, recommandations:"", availibity:"")
-sertraline = Drug.create!(name:"Sertraline", drugs_class: "Anti-dépresseur" , family:"", action:"", galenic: "Comprimé", posology:"", recommandations:"", availibity:"")
-escitalopram = Drug.create!(name:"Escitalopram 10mg", drugs_class:"Anti-dépresseur" , family:"ISRS", action:"Inhibiteur séléctif de la recapture de la sérotonine", galenic: "comprimé", posology:, recommandations:, availibity:)
-venlafaxine = Drug.create!(name:"Venlafaxine LP 37,5 mg", drugs_class: "Anti-dépresseur", family:"", action:"", galenic: "Comprimé", posology:"", recommandations:"", availibity:"")
-
+paroxetine = Drug.create!(name:"Paroxétine", drugs_class: "Anti-dépresseur", family:"ISRS", action:"Inhibiteur séléctif de la recapture de la sérotonine", galenic: "comprimé", posology:"", recommandations:"", availibity:"")
+sertraline = Drug.create!(name:"Sertraline", drugs_class:"", family:"", action:"", galenic: "comprimé", posology:"", recommandations:"", availibity:"")
+escitalopram = Drug.create!(name:"Escitalopram 10mg", drugs_class:"", family:"ISRS", action:"Inhibiteur séléctif de la recapture de la sérotonine", galenic: "comprimé", posology:"", recommandations:"", availibity:"")
+venlafaxine = Drug.create!(name:"venlafaxine 37,5 mg", drugs_class:"", family:"", action:"", galenic: "comprimé", posology:"", recommandations:"", availibity:"")
 
 puts "#{Drug.all}"
 
-victor = Doctor.create!(full_name: "Bergeaud Victor", rpps_number:"" , speciality: "Psychiatre")
+#Patient.create!()
 
-puts "#{Doctor.all}"
+
+
+
+#puts "#{Drug.all}"
+
+#victor = Doctor.create!(full_name: "Bergeaud Victor", rpps_number:"" , speciality: "Psychiatre")
+
+#puts "#{Doctor.all}"
 
 #dubois = Patient.create!(first_name: "", last_name: "" ,address: , age: , city: , chronic_disease: , doctor: victor, pharma: pharma_1)
 
