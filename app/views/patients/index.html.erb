@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="card-product">
+    <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
+    <div class="card-product-infos">
+    	<h2> Hello <%= @user.name %> </h2>
+    </div>
+  </div>
+
+
+  <h2> My patients ( <%= @patients.count %> )</h2>
+  <% @patients.each do |patient| %>
+    <div class="row">
+      <div class="col-xs-12 col-md-5 col-md-offset-1">
+        <img src="<%= patient.photo %>" height=200 width=250>
+      </div>
+
+      <div class="col-xs-12 col-md-6">
+        <li>  Name : <%= patient.name %></li>
+        <li>  Age : <%= patient.age %></li>
+        <li>  Address : <%= patient.address %><%= patient.city %></li>
+        <li>  Useful Information : <%= patient.chronic_disease %></li>
+      <% end %>
+      </div>
+
+    </div>
+</div>
+
+
+
