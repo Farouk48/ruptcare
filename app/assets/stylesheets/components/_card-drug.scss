@@ -1,28 +1,42 @@
+.top-drug-title h1 {
+  color: #51CAF4;
+  padding: 20px;
+}
+
+#rupt {
+  color: #51CAF4;
+}
+
+#alternatives{
+  color: #51CAF4;
+}
+
 .card-drug {
   overflow: hidden;
   height: 200px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   border-radius: 10px;
 }
 
 .card-drug img {
   height: 100%;
-  width: 50%;
+  width: 40%;
   object-fit: cover;
 }
 
 .card-drug h2 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-drug-infos p {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -37,12 +51,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   height: 100%;
-  grid-gap: 16px;
+  grid-gap: 30px;
   position: relative;
-  grid-gap: 1rem;
+  grid-gap: 3rem;
   padding: 2rem;
   max-width: 1024px;
-  margin: 0 auto;
 
 }
 
@@ -50,7 +63,7 @@
   height: 200px;
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
   margin-bottom: 50px;
   border-radius: 10px;
 }
