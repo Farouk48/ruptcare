@@ -7,38 +7,24 @@
   <div class="card-drug">
     <img src="https://images.unsplash.com/photo-1558956397-d89fe6bb84e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=50" />
     <div class="card-drug-infos">
-      <h2><%= @drugs.name %></h2>
-      <p>Product description with <strong>relevant info</strong> only.</p>
+      <h2><%= link_to @main_drug.name, drug_path(@main_drug) %></h2>
+      <p><%= @main_drug.drugs_class %></p>
+      <p><%= @main_drug.family %></p>
     </div>
   </div>
 
-  <p><strong id="alternatives">Les autres alternatives thérapeutiques</strong> pouvant être recommandées :</p>Choisissez l’alternative la plus adaptée
+  <p><strong id="alternatives">Les autres alternatives thérapeutiques</strong> pouvant être recommandées au prescripteur:</p>
 
   <div class="cards-drugs-grid">
-    <div class="card-other-drug">
-      <img src="https://images.unsplash.com/photo-1558956397-7f6aea7aaab4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=50" />
-        <h2>Title here</h2>
-        <p>Short description here!</p>
-    </div>
-    <div class="card-other-drug">
-      <img src="https://images.unsplash.com/photo-1550572017-7cefce6b5753?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=50" />
-        <h2>Title here</h2>
-        <p>Short description here!</p>
-    </div>
-    <div class="card-other-drug">
-      <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=50" />
-        <h2>Title here</h2>
-        <p>Short description here!</p>
-    </div>
-    <div class="card-other-drug">
-      <img src="https://images.unsplash.com/photo-1562243061-204550d8a2c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=50" />
-        <h2>Title here</h2>
-        <p>Short description here!</p>
-    </div>
-    <div class="card-other-drug">
-      <img src="https://images.unsplash.com/photo-1558956397-bca0c4c5f228?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=50" />
-        <h2>Title here</h2>
-        <p>Short description here!</p>
-    </div>
+    <% @drugs.each do |drug| %>
+      <% unless drug == @main_drug %>
+        <div class="card-other-drug">
+          <img src="https://images.unsplash.com/photo-1558956397-7f6aea7aaab4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=50" />
+          <h2><%= link_to drug.name, drug_path(drug) %></h2>
+          <p><%= drug.drugs_class %></p>
+          <p><%= drug.family %></p>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>

@@ -1,7 +1,11 @@
 class DrugsController < ApplicationController
 
   def index
+  	if params[:query].present?
+  		@drugs = Drug.search_by_name_and_actions(params[:query])
+  	else
     @drugs = Drug.all
+    @main_drug = @drugs.first
     @drugs = policy_scope(Drug).order(created_at: :desc)
   end
 
@@ -9,7 +13,8 @@ class DrugsController < ApplicationController
     @drug = Drug.new
     authorize @drug
   end
-
+  end
+  
   def show
     @drug = Drug.find(params[:id])
     authorize @drug
