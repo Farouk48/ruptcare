@@ -28,44 +28,39 @@ pharma_4 = Pharma.create!(name:"Pharmacie du Monde", address:"38 Avenue Parmenti
 
 
 
-puts "#{Pharma.all}"
+# puts "#{Pharma.all}"
 
 
-user_1 = User.create!(full_name: "RAHMANI Farouk", rpps_number: "10101992104", email:"farouk@gmail.com", password: "123456", pharma: pharma_1)
+# user_1 = User.create!(full_name: "RAHMANI Farouk", rpps_number: "10101992104", email:"farouk@gmail.com", password: "123456", pharma: pharma_1)
 
-puts "#{User.all}"
+# puts "#{User.all}"
 
-
-#drug_1 = Drug.create!(name:"Mirtazapine 15mg", drugs_class: "Anti-dépresseur", family:"Antagoniste α2 présynaptique d'action central", action:"antagoniste α2 présynaptique d’action centrale qui augmente la neurotransmission noradrénergique et sérotoninergique centrale", galenic: "comprimés", posology:"La dose journalière efficace est habituellement comprise entre 15 et 45 mg ; la dose de départ est de 15 ou 30 mg.", recommandations:"Les patients présentant une dépression doivent être traités pendant une période suffisante d’au moins 6 mois pour assurer la disparition complète des symptômes.
-#Il est recommandé d’arrêter le traitement par la mirtazapine progressivement afin d’éviter les symptômes de sevrage ", availibity: 1)
-#drug_2 = Drug.create!(name:"Fluoxétine 20mg", drugs_class: "Anti-dépresseur", family:"ISRS", action: "Inhibiteur séléctif de la recapture de la sérotonine", galenic: ["comprimés dispersibles sécables","gélules"], posology:"La posologie recommandée est de 20 mg/jour. Elle sera revue et adaptée si nécessaire au cours des 3 à 4 premières semaines du traitement et par la suite si cela est cliniquement justifié", recommandations:"Les adaptations posologiques seront faites avec prudence et de façon individuelle, afin de maintenir les patients à la dose minimale efficace", availibity: 1)
-#drug_3 = Drug.create!(name:"Paroxétine 20mg", drugs_class: "Anti-dépresseur", family:"ISRS", action:"Inhibiteur séléctif de la recapture de la sérotonine", galenic: "comprimés", posology:"La posologie recommandée est de 20 mg par jour", recommandations:"", availibity: 1)
-#drug_4 = Drug.create!(name:"Sertraline 25mg", drugs_class:"Anti-dépresseur", family:"ISRS", action:"Inhibiteur séléctif de la recapture de la sérotonine", galenic: "gélules", posology:"La dose efficace habituelle est de 50 mg/jour. La dose quotidienne peut être augmentée par tranches de 50 mg sur une période de plusieurs semaines. La dose maximale recommandée est de 200 mg/jour.", recommandations:"", availibity: 1)
-#drug_5 = Drug.create!(name:"Escitalopram 10mg", drugs_class:"Anti-dépresseur", family:"ISRS", action:"Inhibiteur séléctif de la recapture de la sérotonine", galenic: "comprimés", posology:"", recommandations:"", availibity: 1)
-#drug_6 = Drug.create!(name:"Venlafaxine 37,5 mg", drugs_class:"Anti-dépresseur", family:"IRSN", action:"Inhibiteur de la recapture de la sérotonine et de la noradrénaline", galenic: "comprimé", posology:"", recommandations:"", availibity: 1)
 
 puts "#{Drug.all}"
 
 
 
 filepath = File.join(Rails.root, 'db/drugs.csv')
- CSV.foreach(filepath) do |row|
- if :row[4] == "commercialisée"
-   Drug.create!(name: :row[1], galenic: :row[2], administration: :row[3], commercialisation: :row[4], drugs_class: :row[5], family: :row[6], action: :row[7], posology: :row[8], recommandations: :row[9], availability: :row[10] )
- else
-
- end
+ csv_options = {
+ 	col_sep: ',',
+ 	quote_char: '"'
+ }
+ CSV.foreach(filepath, csv_options) do |row|
+ if row[4] == 'Commercialisée'
+  drug = Drug.create!(name: row[1], galenic: row[2], administration: row[3], commercialisation: row[4], drugs_class: row[5], family: row[6], action: row[7], posology: row[8], recommandations: row[9], availability: row[10] )
+  puts "#{drug.name} created"
+  end
 end
 
 
 
 
-stock_1 = Stock.create!(quantity: 0, pharma: pharma_1 , drug: drug_1)
-stock_2 = Stock.create!(quantity: 14, pharma: pharma_1 , drug: drug_2)
-stock_3 = Stock.create!(quantity: 20, pharma: pharma_1 , drug: drug_3)
-stock_4 = Stock.create!(quantity: 2, pharma: pharma_1 , drug: drug_4)
-stock_5 = Stock.create!(quantity: 6, pharma: pharma_1 , drug: drug_5)
-stock_6 = Stock.create!(quantity: 10, pharma: pharma_1 , drug: drug_6)
+stock_1 = Stock.create!(quantity: 0, pharma: pharma_1 , drug: Drug.all.sample)
+stock_2 = Stock.create!(quantity: 14, pharma: pharma_1 , drug: Drug.all.sample)
+stock_3 = Stock.create!(quantity: 20, pharma: pharma_1 , drug: Drug.all.sample)
+stock_4 = Stock.create!(quantity: 2, pharma: pharma_1 , drug: Drug.all.sample)
+stock_5 = Stock.create!(quantity: 6, pharma: pharma_1 , drug: Drug.all.sample)
+stock_6 = Stock.create!(quantity: 10, pharma: pharma_1 , drug: Drug.all.sample)
 
 
 
@@ -84,6 +79,6 @@ puts "#{Patient.all}"
 
 
 
-patient_drugs_1 = PatientDrug.create!(drug: drug_1, patient: patient_1 , disease:"Depression")
+patient_drugs_1 = PatientDrug.create!(drug: Drug.all.sample, patient: patient_1 , disease:"Depression")
 
 
