@@ -12,6 +12,7 @@
 
 // Your CSS partials
 @import "components/index";
+@import "components/_sidenav";
 @import "pages/index";
 
 @import "drugs/index";
@@ -19,4 +20,5 @@
 @import "patients/index";
 @import "patients/show";
 @import "components/_card";
+@import "pharmas/index"
 

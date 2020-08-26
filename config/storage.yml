@@ -1,5 +1,5 @@
-test:
-  service: Disk
+cloudinary:
+  service: Cloudinary
   root: <%= Rails.root.join("tmp/storage") %>
 
 local:
