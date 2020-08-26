@@ -5,6 +5,7 @@
  font-family: $headers-font;
  font-size: 48px;
  line-height: 61px;
+ font-weight: light;
 }
 
 #title-pharma h2 {
@@ -18,4 +19,16 @@
 #map-pharma {
   display:flex;
   justify-content: space-between;
+}
+
+#pharma-display {
+  text-align: left;
+  padding-left: 70px;
+  border: 1px solid #B59494;
+  background: rgba(108, 194, 232, 0.09);
+  font-family:$body-font;
+}
+
+#map {
+  border: 1px solid #B59494;
 }

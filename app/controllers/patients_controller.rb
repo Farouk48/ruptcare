@@ -1,13 +1,12 @@
 class PatientsController < ApplicationController
   before_action :set_patient, only: [:show]
 
-
   def index
 
     @patients = Patient.all
     @patients = policy_scope(Patient).order(created_at: :desc)
 
-    @patients = current_user.patients
+    # @patients = current_user.patients
 
   end
 
