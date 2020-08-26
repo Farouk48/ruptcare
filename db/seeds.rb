@@ -51,13 +51,14 @@ pharma_2 = Pharma.create!(name:"Pharmacie Oberkampf", address:"58 Rue Neuve Popi
 
 
 
-# filepath = File.join(Rails.root, 'db/drugs.csv')
+filepath = File.join(Rails.root, 'db/drugs.csv')
+ CSV.foreach(filepath) do |row|
+ if :row[4] == "commercialisée"
+   Drug.create!(name: :row[1], galenic: :row[2], administration: :row[3], commercialisation: :row[4], drugs_class: :row[5], family: :row[6], action: :row[7], posology: :row[8], recommandations: :row[9], availability: :row[10] )
+ else
 
-# CSV.foreach(filepath) do |row|
-#    Drug.create!(name: :row[1], galenic: :row[2], administration: :row[3], commercialisation: :row[4], laboratoire: :row[5], action: :row[6] )
-
-
-# end
+ end
+end
 
 
 
