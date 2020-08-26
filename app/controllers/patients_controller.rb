@@ -14,7 +14,7 @@ class PatientsController < ApplicationController
   end
 
   def show
-    @patient = Patient.new
+     #@patient = Patient.new
     authorize @patient
   end
 
