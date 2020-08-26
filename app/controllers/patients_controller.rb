@@ -6,7 +6,10 @@ class PatientsController < ApplicationController
     @patients = Patient.all
     @patients = policy_scope(Patient).order(created_at: :desc)
 
+
+
     # @patients = current_user.patients
+
 
   end
 

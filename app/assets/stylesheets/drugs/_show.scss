@@ -1,58 +1,67 @@
-.drug-container {
+.drug-container{
+  display:flex;
+   align-items: center;
+  flex-wrap: wrap;
+  margin-left: 30px;
+}
+.card-drug {
+  overflow: hidden;
+  height: fit-content;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 10px;
+  align-items: flex-start;
+}
+
+.card-drug img {
+  width: 100%;
+  object-fit: cover;
+  height: fit-content;
+}
+
+.card-drug-infos h1{
+  font-family:'Heebo', sans-serif;
+  font-size: 20px;
+}
+
+.card-drug .card-drug-stock {
+  padding: 16px;
+}
+ h1, h2{
+  font-family: 'Heebo', sans-serif;
+  font-size: 20px;
+}
+
+.card-drug-stock{
+  background-color: white;
+  font-family: 'Heebo', sans-serif;
+}
+.card-drug-stock h2 {
+margin-bottom: 15px;
+}
+.card-drug-left{
   display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+ .drug-name {
+  color:  #07B8F1;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
 }
 
-.drugs-infos {
-  flex: 0 0 30%;
-  h2 {
-    font-weight: bold;
-    font-size: 34px;
-    padding-right: 30px;
-   font-family: 'Heebo', sans-serif;
-   padding-top: 90px;
-   padding-left: 10px;
-  }
-  h2 span{
-    padding: 0px 30px;
-    background-color: red;
-    color: white;
-    border-radius: 4px;
-
-  }
-  img {
-    height: 400px;
-    margin-right: 10px;
-    margin-left: 10px;
-    border-radius: 10px;
-    border: 1px solid lightgrey;
-
-  }
+#action{
+  margin-top: 0px;
 }
 
-.drugs-description {
-  flex-grow: 1;
-  background-color: #948F8F ;
-  flex-direction: row;
-  background: rgba(148, 143, 143, 0.07);
-  border: 1px solid rgba(0, 0, 0, 0.44);
-  height: 700px;
-  padding-right: 10px;
-  padding-left: 10px;
-  h1{
-    padding-top: 10px;
-    font-family: 'Heebo', sans-serif;
-    font-size: 36px;
-    font-weight: bold;
-  }
-  h2{
-    padding-top: 200px;
-    font-family: 'Heebo', sans-serif;
-    font-size: 36px;
-    font-weight: bold;
-  }
-  h3{
-    font-family: 'Heebo', sans-serif;
-    font-size: 36px;
-    font-weight: bold;
-  }
+#posology{
+  margin-top: 40px;
+}
+
+#thera{
+  margin-top: 20px;
 }

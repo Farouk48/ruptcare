@@ -4,6 +4,7 @@
     <p>L'alternative proposée par <strong id="rupt">Rupt'</strong>Care</p>
   </div>
 
+<% if @drug.present? %>
   <div class="card-drug">
     <img src="https://images.unsplash.com/photo-1558956397-d89fe6bb84e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=50" />
     <div class="card-drug-infos">
@@ -12,6 +13,7 @@
       <p><%= @main_drug.family %></p>
     </div>
   </div>
+<% end  %>
 
   <p><strong id="alternatives">Les autres alternatives thérapeutiques</strong> pouvant être recommandées au prescripteur:</p>
 

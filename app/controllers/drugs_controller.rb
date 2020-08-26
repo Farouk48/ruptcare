@@ -14,7 +14,7 @@ end
     @drug = Drug.new
     authorize @drug
   end
-  
+
   def show
     @drug = Drug.find(params[:id])
     authorize @drug
@@ -65,6 +65,6 @@ end
   private
 
   def drug_params
-    params.require(:drug).require(:name, :drugs_class, :family, :action, :galenic, :posology, :recommandations, :availibity)
+    params.require(:drug).require(:name, :drugs_class, :family, :action, :galenic, :posology, :recommandations, :availability, :commercialisation, :administration)
   end
 end
