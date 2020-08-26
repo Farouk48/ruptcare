@@ -1,0 +1,21 @@
+@import "components/map";
+
+#title-pharma h1 {
+ color:#07B8F1;
+ font-family: $headers-font;
+ font-size: 48px;
+ line-height: 61px;
+}
+
+#title-pharma h2 {
+  font-family:$body-font;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 35px;
+  left: 65px;
+}
+
+#map-pharma {
+  display:flex;
+  justify-content: space-between;
+}

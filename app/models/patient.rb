@@ -6,5 +6,4 @@ class Patient < ApplicationRecord
 
   has_many :users, through: :pharmas
 
-
 end

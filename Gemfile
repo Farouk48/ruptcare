@@ -43,6 +43,9 @@ gem 'geocoder'
 gem 'pg_search', '~> 2.3.0'
 
 
+
+gem 'pundit'
+
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
