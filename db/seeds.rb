@@ -8,8 +8,8 @@
 
 #pundit avec admin à rajouter dans la seed si necessaire admin:true or false
 
-User.destroy_all
 Pharma.destroy_all
+User.destroy_all
 Drug.destroy_all
 Stock.destroy_all
 Doctor.destroy_all
