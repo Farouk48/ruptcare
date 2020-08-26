@@ -1,51 +1,48 @@
 
 <div class="grid-container">
 
-<aside class="sidenav">
-  <ul class="sidenav__list">
-  	<li class="sidenav__list-item">Mon profil</li>
-    <li class="sidenav__list-item">Afficher mes patients</li>
-    <li class="sidenav__list-item">Historique de mes recherches</li>
-      <li class="sidenav__list-item">Mes conversations médicales</li>
-
-  </ul>
-</aside>
+	<div class="sidenav">
+	  <ul class="sidenav__list">
+	  	<li class="sidenav__list-item">Mon profil</li>
+	    <li class="sidenav__list-item">Afficher mes patients</li>
+	    <li class="sidenav__list-item">Historique de mes recherches</li>
+	    <li class="sidenav__list-item">Mes conversations médicales</li>
+	  </ul>
+	</div>
+  
   <div class="main">
   	<div class="welcome-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "the-road-815297__340_ghyxvy", height: 700, width: 1000, crop: :fill %>')">>
   	<div class="main-header"   >
-  <div class="user-dashboard-welcome">Bonjour Farouk</div>
-  <div class="main-header__updates">Vous n'avez pas de nouveaux messages aujourd'hui</div>
+	  <div class="user-dashboard-welcome">Bonjour Farouk</div>
+	  <div class="main-header__updates">Vous n'avez pas de nouveaux messages aujourd'hui</div>
+	  </div>
   </div>
-</div>
-  <header class="header">
+  <div class="header">
   	  <div class="header__search"><p><span id="datetime"></span></p>
-
-<script>
-var dt = new Date();
-document.getElementById("datetime").innerHTML = dt.toLocaleString();
-</script></div>
-  <div class="header__avatar">
-  <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
-			  <i class="fas fa-search" aria-hidden="true"></i>
-			  <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search a patient"
-			    aria-label="Search">
-			</form>
-			</div>
-  </header>
-
- 	<h2 class="my-patients-title"> Mes patients ( <%= @patients.count %> )</h2>
-   <div class="main-overview">
-   
-   		<% @patients.each do |patient| %>	
-  <div class="overviewcard">
-    <div class="overviewcard__icon"><%= link_to patient.first_name, patient_path(patient)%></div>
-    <div class="overviewcard__info"> <%= patient.age %> ans</div>
-       <div class="overviewcard__info"> <%= patient.address %></div>
+			<script>var dt = new Date();
+			document.getElementById("datetime").innerHTML = dt.toLocaleString();</script>
+	  </div>
+	  <div class="header__avatar">
+		  <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
+					  <i class="fas fa-search" aria-hidden="true"></i>
+					  <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search a patient"
+					    aria-label="Search"></form>
+  	   </div>
   </div>
-  <% end %>
-</div>
-<div class="main-cards">
 
+   <h2 class="my-patients-title"> Mes patients ( <%= @patients.count %> )</h2>
+   <div class="main-overview">
+   		<% @patients.each do |patient| %>	
+	  <div class="overviewcard">
+	    <div class="overviewcard__icon"><%= link_to patient.first_name, patient_path(patient)%></div>
+	    <div class="overviewcard__info"> <%= patient.age %> ans</div>
+	    <div class="overviewcard__info"> <%= patient.address %></div>
+  	  </div>
+ 		 <% end %>
+   </div>
+
+
+<div class="main-cards">
     <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "rfephsgwmw59lminnvhj", height: 700, width: 1000, crop: :fill %>')"><h3 class="research-drugs-dashboard">Faire une recherche de médicaments</h3> </div>
 </div>
 
