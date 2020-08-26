@@ -1,16 +1,24 @@
-<h1 style="color: #07B8F1; font-family: font-family: 'Oxygen', sans-serif; padding-left: 10px;"><%= @drug.name %></h1>
+<%=link_to "Revenir aux résultas de recherche", drugs_path , class: 'btn btn-primary' %>
 <div class="drug-container">
-  <div class="drugs-infos">
-    <img src="https://pinepharmacyug.com/wp-content/uploads/2019/09/Mirtazapine-15mg-Tablets-28.jpg" alt="drug">
-    <h2>Stock disponible: <span class="remaining-stock">0</span> </h2>
-    <h2>Disponibilité: Disponible dans 2 jours</h2>
+  <div class="card-drug">
+    <div class="card-drug-left">
+      <img src="https://pinepharmacyug.com/wp-content/uploads/2019/09/Mirtazapine-15mg-Tablets-28.jpg">
+      <div class="card-drug-stock">
+        <h1><i class="fas fa-layer-group"> Stock:</i></h1>
+        <h2><i class="fas fa-history"> Disponible dans:</i></h2>
+
+      </div>
+    </div>
+    <div class="card-drug-infos">
+      <div class="drug-name"><%= @drug.name  %></div>
+      <h1><i class="fas fa-pills" id="action"></i> Mécanisme d'action:</h1>
+        <%= @drug.action %>
+      <h1><i class="fas fa-pills" id="posology"></i> Schéma posologique:</h1>
+        <%= @drug.posology%>
+      <h1><i class="fas fa-pills" id="thera"></i> Recommandations thérapeutiques:</h1>
+        <%= @drug.recommandations%>
+    </div>
   </div>
-  <div class="drugs-description">
-    <h1>Mécanismes d'action:</h1>
-    <p><%=@drug.action%></p>
-    <h2>Schéma posologique:</h2>
-    <p><%=@drug.posology%></p>
-    <h2>Recommandatins thérapeutiques:</h2>
-    <p><%= @drug.recommandations %></p>
- </div>
 </div>
+
+
