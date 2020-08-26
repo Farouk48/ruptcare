@@ -10,10 +10,10 @@ $headers-font: "Oxygen", "sans-serif";
 // To use a font file (.woff) uncomment following lines
 
 @font-face {
-  font-family: "Post No Bills";
-  src: font-url('/post-no-bills/postnobillscolombo-regular.ttf') format('truetype');
+  font-family: "PostNoBillsJaffna";
+  src: font-url('postnobillsjaffna/PostNoBillsJaffna-Bold.ttf') format('truetype');
   // src: url('fonts/postnobills.eot?#iefix') format('embedded-opentype'),
   //      url('fonts/postnobills.woff') format('woff'),
   //      url('fonts/postnobills.ttf') format('truetype')
 }
-$my-font: "Post No Bills";
+$my-font: "PostNoBillsJaffna";
