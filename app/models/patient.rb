@@ -4,5 +4,4 @@ class Patient < ApplicationRecord
   belongs_to :pharma
 
   has_many :users, through: :pharmas
-
 end
