@@ -10,6 +10,17 @@
 require 'csv'
 
 
+User.destroy_all
+PatientDrug.destroy_all
+Patient.destroy_all
+Stock.destroy_all
+Pharma.destroy_all
+Drug.destroy_all
+Doctor.destroy_all
+
+pharma_1 = Pharma.create!(name:"Pharmacie du 20ème", address:"144 Boulevard de Ménilmontant", city:"75020 Paris")
+pharma_2 = Pharma.create!(name:"Pharmacie Oberkampf", address:"58 Rue Neuve Popincourt", city:"75011 Paris")
+
 
 
 # User.destroy_all
