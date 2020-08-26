@@ -28,12 +28,12 @@ pharma_4 = Pharma.create!(name:"Pharmacie du Monde", address:"38 Avenue Parmenti
 
 
 
-# puts "#{Pharma.all}"
+puts "#{Pharma.all}"
 
 
-# user_1 = User.create!(full_name: "RAHMANI Farouk", rpps_number: "10101992104", email:"farouk@gmail.com", password: "123456", pharma: pharma_1)
+user_1 = User.create!(full_name: "RAHMANI Farouk", rpps_number: "10101992104", email:"farouk@gmail.com", password: "123456", pharma: pharma_1)
 
-# puts "#{User.all}"
+puts "#{User.all}"
 
 
 puts "#{Drug.all}"
