@@ -1,7 +1,14 @@
 class PatientsController < ApplicationController
+  before_action :set_patient, only: [:show]
+
+
   def index
+
     @patients = Patient.all
     @patients = policy_scope(Patient).order(created_at: :desc)
+
+    @patients = current_user.patients
+
   end
 
   def show
@@ -56,4 +63,12 @@ class PatientsController < ApplicationController
   def patient_params
     params.permit(:patient).require(:first_name, :last_name, :address, :age, :city, :chronic_disease, :doctor_id, :pharma_id)
   end
+
+private
+
+  def set_patient
+  	@patient = Patient.find(params[:id])
+  end
+
+
 end
