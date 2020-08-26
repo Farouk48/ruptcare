@@ -14,7 +14,7 @@ class DrugsController < ApplicationController
     authorize @drug
   end
   end
-  
+
   def show
     @drug = Drug.find(params[:id])
     authorize @drug
@@ -65,6 +65,6 @@ class DrugsController < ApplicationController
   private
 
   def drug_params
-    params.require(:drug).require(:name, :drugs_class, :family, :action, :galenic, :posology, :recommandations, :availibity)
+    params.require(:drug).require(:name, :drugs_class, :family, :action, :galenic, :posology, :recommandations, :availability, :commercialisation, :administration)
   end
 end
