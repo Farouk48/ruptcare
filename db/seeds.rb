@@ -10,11 +10,14 @@
 require 'csv'
 
 
+
+
 User.destroy_all
 PatientDrug.destroy_all
 Patient.destroy_all
 Stock.destroy_all
 Pharma.destroy_all
+User.destroy_all
 Drug.destroy_all
 Doctor.destroy_all
 

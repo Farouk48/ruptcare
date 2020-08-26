@@ -5,6 +5,7 @@ class DrugsController < ApplicationController
   		@drugs = Drug.search_by_name_and_actions(params[:query])
   	else
     @drugs = Drug.all
+    @main_drug = @drugs.first
     @drugs = policy_scope(Drug).order(created_at: :desc)
   end
 
