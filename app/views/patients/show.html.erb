@@ -1,34 +1,33 @@
 <div class="container">
 	<div class="row">
-      <div class="col-sm">
+    <div class="col-sm">
 		  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" height=350 width=300 >
-      </div>
+    </div>
 
-      <div class="col-sm">
-		<h6 class="info-patient"> Informations sur le patient </h6>
+    <div class="col-sm">
+		  <h1 class="info-patient"> Informations sur le patient </h1>
 		  <ul class="list-info-patient">
-		  	<li><%= @patient.first_name %>  <%= @patient.last_name %></li>
-			<li><%= @patient.age %> ans</li>	
-		  <hr>
-		  <li><%= @patient.address %></li>
-		  <br>
-		</ul>
-	  </div>
+  		  <li><%= @patient.first_name %>  <%= @patient.last_name %></li>
+  			<li><%= @patient.age %> ans</li>
+  		  <hr>
+  		  <li><%= @patient.address %></li>
+  		  <br>
+		  </ul>
+	   </div>
+
 	  <div class="col-sm">
-	  	<h6 class="info-patient"> Informations médicales </h6>
+	  	<h1 class="info-patient"> Informations médicales </h1>
 	  	  <ul class="list-info-patient">
-	  	   <li><%= @patient.chronic_disease %> maladie chronique à relever</li>
-	  	   <hr>
-		   <li> Médecin traitant : Dr Dushmol </li>
-
+  	  	  <li><%= @patient.chronic_disease %> maladie chronique à relever</li>
+  	  	  <hr>
+  		    <li> Médecin traitant : @doctor.full_name </li>
 	  	  </ul>
-
 	  </div>
 	</div>
-    
+
   <div class="table-users">
    <div class="header-table-patient">Historique délivrance patient</div>
-   
+
    <table cellspacing="0">
       <tr>
          <th>Date</th>
@@ -37,7 +36,6 @@
          <th>Pharmacien(ne)</th>
          <th width="230">Commentaires</th>
       </tr>
-
       <tr>
          <td>29/02/2020</td>
          <td>Temesta</td>
@@ -46,10 +44,10 @@
          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </td>
       </tr>
    </table>
-</div>
+  </div>
 
 	 <%= link_to "Retourner sur le tableau de bord", patients_path, class: "btn btn-danger" %>
 	  <%= link_to "Faire une recherche de médicaments", root_path, class: "btn btn-danger", id:"btn-root" %>
-	</div>
+</div>
 
 
