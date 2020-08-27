@@ -1,11 +1,12 @@
 .footer {
-  background: #F4F4F4;
+  background: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
-  padding: 0px 50px;
+  padding: 70px;
   color: rgba(0,0,0,0.3);
+  margin-top: 40px;
 }
 .footer-links {
   display: flex;
@@ -13,7 +14,7 @@
 }
 .footer-links a {
   color: black;
-  opacity: 0.15;
+  opacity: 0.3;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
@@ -23,4 +24,18 @@
 }
 .footer .fa-heart {
   color: #D23333;
+}
+
+.footer h3 {
+  color: #9C9898;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 35px;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.footer p {
+  text-align: right;
+
 }
