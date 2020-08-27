@@ -3,7 +3,6 @@ class MessagesController < ApplicationController
     @chatroom = Chatroom.find(params[:chatroom_id])
     @message = Message.new(message_params)
     @message.chatroom = @chatroom
-    p @message.errors.messages
     @message.sender = current_user
     @message.user = current_user
     authorize @message
