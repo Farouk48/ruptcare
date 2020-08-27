@@ -32,6 +32,7 @@ puts "#{Pharma.all}"
 
 
 user_1 = User.create!(full_name: "RAHMANI Farouk", rpps_number: "10101992104", email:"farouk@gmail.com", password: "123456", pharma: pharma_1)
+user_2 = User.create!(full_name: "Sunny", rpps_number: "10101992104", email:"haha@gmail.com", password: "123456", pharma: pharma_2)
 
 puts "#{User.all}"
 

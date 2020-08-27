@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_26_153043) do
+ActiveRecord::Schema.define(version: 2020_08_27_124955) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "chatrooms", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "doctors", force: :cascade do |t|
     t.string "full_name"
@@ -36,6 +42,18 @@ ActiveRecord::Schema.define(version: 2020_08_26_153043) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "administration"
     t.string "commercialisation"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.integer "sender_id"
+    t.string "sender_type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "content"
+    t.bigint "chatroom_id", null: false
+    t.bigint "user_id", null: false
+    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "patient_drugs", force: :cascade do |t|
@@ -99,6 +117,8 @@ ActiveRecord::Schema.define(version: 2020_08_26_153043) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
   add_foreign_key "patient_drugs", "drugs"
   add_foreign_key "patient_drugs", "patients"
   add_foreign_key "patients", "doctors"
