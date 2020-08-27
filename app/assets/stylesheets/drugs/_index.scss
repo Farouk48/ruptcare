@@ -15,11 +15,12 @@
   box-shadow: 10px;
   display: flex;
   align-items: flex-start;
+  border-radius: 10px;
 }
 .card-drug img {
-  width: 100%;
-  object-fit: cover;
-  height: fit-content;
+    width: 265px;
+    height: 250px;
+
 }
 
 .card-drug-infos h1{
@@ -74,8 +75,20 @@ padding-top: 20px;
     color: black;
     position: absolute;
     right: 0px;
-    top: 30px;
-    left: 800px;
     margin-top: 7px;
+    top: 20px;
+    left: 855px;
 
+}
+#check-pharma{
+  background-color: #07B8F1;
+  color: white;
+  border-radius: 50px;
+  border-color: lightgrey;
+}
+#call-doctor{
+  background-color: #07B8F1;
+  color: white;
+  border-radius: 50px;
+  border-color: lightgrey;
 }
