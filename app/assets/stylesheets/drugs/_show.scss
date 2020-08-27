@@ -15,7 +15,6 @@
   box-shadow: 10px;
   align-items: flex-start;
 }
-
 .card-drug img {
   width: 100%;
   object-fit: cover;
@@ -34,23 +33,24 @@
   font-family: 'Heebo', sans-serif;
   font-size: 20px;
 }
-
 .card-drug-stock{
   background-color: white;
   font-family: 'Heebo', sans-serif;
 }
 .card-drug-stock h2 {
-margin-bottom: 15px;
+margin-bottom: -20px;
+padding-top: 20px;
 }
 .card-drug-left{
   display: flex;
   flex-direction: column;
   width: 40%;
+  padding: 20px;
 }
  .drug-name {
   color:  #07B8F1;
   font-family: 'Oxygen', sans-serif;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bold;
 }
 
@@ -65,3 +65,21 @@ margin-bottom: 15px;
 #thera{
   margin-top: 20px;
 }
+
+#close{
+ color: black;
+ position: absolute;
+ right: 0px;
+ top: 35px;
+ left: 850px;
+ margin-top: 7px;
+}
+
+
+
+
+
+
+
+
+
