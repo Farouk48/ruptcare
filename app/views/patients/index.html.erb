@@ -35,7 +35,7 @@
    		<% @patients.each do |patient| %>	
 
 	  <div class="overviewcard">
-	    <div class="overviewcard__icon"><%= patient.first_name %>  <%= patient.last_name %></div>
+	    <div class="overviewcard__info"><%= patient.first_name %>  <%= patient.last_name %></div>
 	    <div class="overviewcard__info"> <%= patient.age %> ans</div>
 	    <div class="overviewcard__info"> <%= patient.address %></div>
 	    <%= link_to "", patient_path(patient), class: "absolute-link" %>
