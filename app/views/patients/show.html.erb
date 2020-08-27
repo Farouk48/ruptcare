@@ -1,3 +1,8 @@
+	<div class="fa fa-chevron-circle-left">
+		<%#= link_to "", patients_path, class: "absolute-link" %>
+	</div>
+	<p class="return-text"></p>
+
 <div class="container">
 	<div class="row">
     <div class="col-sm">
@@ -24,6 +29,9 @@
 	  	  </ul>
 	  </div>
 	</div>
+	<%= link_to root_path(patient_id: @patient.id), class: "btn btn-danger", id:"btn-research" do %>
+		Faire une recherche de médicaments <i class="fa fa-search"></i>
+	<% end %>
 
   <div class="table-users">
    <div class="header-table-patient">Historique délivrance patient</div>
@@ -46,8 +54,7 @@
    </table>
   </div>
 
-	 <%= link_to "Retourner sur le tableau de bord", patients_path, class: "btn btn-danger" %>
-	  <%= link_to "Faire une recherche de médicaments", root_path, class: "btn btn-danger", id:"btn-root" %>
+	 
 </div>
 
 

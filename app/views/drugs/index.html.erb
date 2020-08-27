@@ -8,7 +8,7 @@
   <div class="card-main-drug">
     <img src="https://images.unsplash.com/photo-1558956397-d89fe6bb84e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=50" />
     <div class="card-drug-infos">
-      <h2><%= link_to @main_drug.name, drug_path(@main_drug) %></h2>
+      <h2><%= @main_drug.name %></h2>
       <p><%= @main_drug.drugs_class %></p>
       <p><%= @main_drug.family %></p>
     </div>
@@ -27,7 +27,7 @@
           <% else %>
             <i class="fas fa-circle" id="availability-faillure"></i>
           <% end %>
-          <h2><%= link_to drug.name, drug_path(drug) %></h2>
+          <h2><%= drug.name %></h2>
           <p><%= drug.drugs_class %></p>
           <p><%= drug.family %></p>
         </div>
@@ -52,7 +52,7 @@
               </div>
             </div>
             <div class="card-drug-infos">
-              <div class="drug-name"><%= drug.name  %></div>
+              <div class="drug-name"><%= drug.name %></div>
               <h1><i class="fas fa-pills" id="action"></i> Mécanisme d'action:</h1>
                 <%= drug.action %>
               <h1><i class="fas fa-pills" id="posology"></i> Schéma posologique:</h1>

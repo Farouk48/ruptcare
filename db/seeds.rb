@@ -11,7 +11,7 @@ require 'csv'
 
 
 
-
+Message.destroy_all
 User.destroy_all
 PatientDrug.destroy_all
 Patient.destroy_all
