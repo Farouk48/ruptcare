@@ -4,8 +4,8 @@
     <p>L'alternative proposée par <strong id="rupt">Rupt'</strong>Care</p>
   </div>
 
-<% if @drug.present? %>
-  <div class="card-drug">
+<% if @main_drug.present? %>
+  <div class="card-main-drug">
     <img src="https://images.unsplash.com/photo-1558956397-d89fe6bb84e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=50" />
     <div class="card-drug-infos">
       <h2><%= link_to @main_drug.name, drug_path(@main_drug) %></h2>
@@ -15,7 +15,7 @@
   </div>
 <% end  %>
 
-  <p><strong id="alternatives">Les autres alternatives thérapeutiques</strong> pouvant être recommandées au prescripteur:</p>
+  <p><strong class="alternatives"><%= @drugs.count-1 %> autres alternatives thérapeutiques</strong> pouvant être recommandées au prescripteur:</p>
 
   <div class="cards-drugs-grid"  >
     <% @drugs.first(10).each do |drug| %>
