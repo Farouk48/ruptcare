@@ -4,9 +4,11 @@ class DrugsController < ApplicationController
     @drugs = Drug.all
     @main_drug = @drugs.first
     @drugs = policy_scope(Drug).order(created_at: :desc)
-  	if params[:name].present?
+  	
+    if params[:name].present?
+
   		@drugs = Drug.search_by_name_and_action(params[:name])
-  
+      @drugs = Drug.where(drugs_class: @drugs.first.drugs_class).where.not("name ILIKE ?", "%#{params[:name]}%") 
   end
 end
 
