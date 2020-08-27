@@ -22,6 +22,11 @@
       <% unless drug == @main_drug %>
         <div class="card-other-drug">
           <img src="https://images.unsplash.com/photo-1558956397-7f6aea7aaab4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=50" />
+          <% if drug.availability.to_i < 5 %>
+            <i class="fas fa-circle" id="availability-success"></i>
+          <% else %>
+            <i class="fas fa-circle" id="availability-faillure"></i>
+          <% end %>
           <h2><%= link_to drug.name, drug_path(drug) %></h2>
           <p><%= drug.drugs_class %></p>
           <p><%= drug.family %></p>
