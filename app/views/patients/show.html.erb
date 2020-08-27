@@ -1,23 +1,26 @@
 <div class="container">
 	<div class="row">
       <div class="col-sm">
-		  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" height=250 width=200 >
+		  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" height=350 width=300 >
       </div>
+
       <div class="col-sm">
-		<h6> Informations détaillées sur le patient </h6>
+		<h6 class="info-patient"> Informations sur le patient </h6>
 		  <ul class="list-info-patient">
-		  	<li><%= @patient.first_name %></li>
-			<li><%= @patient.address %></li>
-			<li><%= @patient.age %></li>
+		  	<li><%= @patient.first_name %>  <%= @patient.last_name %></li>
+			<li><%= @patient.age %> ans</li>	
 		  <hr>
-		  <li><%= @patient.chronic_disease %></li>
+		  <li><%= @patient.address %></li>
 		  <br>
 		</ul>
 	  </div>
 	  <div class="col-sm">
-	  	<h6> Autres informations utiles sur le patient </h6>
-	  	  <ul>
-	  	   <%= @patient.chronic_disease %>
+	  	<h6 class="info-patient"> Informations médicales </h6>
+	  	  <ul class="list-info-patient">
+	  	   <li><%= @patient.chronic_disease %> maladie chronique à relever</li>
+	  	   <hr>
+		   <li> Médecin traitant : Dr Dushmol </li>
+
 	  	  </ul>
 
 	  </div>
@@ -30,9 +33,9 @@
       <tr>
          <th>Date</th>
          <th>Délivrance</th>
-         <th> Pharmacist </th>
-         <th>Pharmacist</th>
-         <th width="230">Comments</th>
+         <th> Pharmacie </th>
+         <th>Pharmacien(ne)</th>
+         <th width="230">Commentaires</th>
       </tr>
 
       <tr>
@@ -46,6 +49,7 @@
 </div>
 
 	 <%= link_to "Retourner sur le tableau de bord", patients_path, class: "btn btn-danger" %>
+	  <%= link_to "Faire une recherche de médicaments", root_path, class: "btn btn-danger", id:"btn-root" %>
 	</div>
 
 

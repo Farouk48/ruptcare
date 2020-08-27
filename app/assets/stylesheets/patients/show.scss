@@ -1,5 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 
 
+
+
+.list-info-patient {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+
+  list-style: none;
+}
 .header-table-patient {
    background-color: darken(#398B93, 5%);
    color: white;
@@ -47,4 +57,25 @@ table {
   background-color: white; 
 background-color: lighten(#398B93, 55%);
    }
+}
+
+
+
+.info-patient {
+   display: flex;
+   font-weight: bold;
+   margin-bottom: 30px;
+   margin-top: 30px;
+     font-family: 'Open Sans', sans-serif;
+  font-size:20px;
+  line-height:1.5em;
+  text-align: center;
+}
+
+
+//boutons
+
+#btn-root {
+   justify-content: right;
+   float: right;
 }
