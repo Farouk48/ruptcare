@@ -37,12 +37,14 @@
 .user-dashboard-welcome {
 	font-size: 50px;
 	color: black;
+  margin-left: 10px;
 }
 
 .user-dashboard-message {
   font-size: 20px;
   color: black;
-  opactity: 1;
+  opacity: 1;
+  padding-right: 10px;
 }
 
 .main-overview {
@@ -68,6 +70,9 @@
 
 }
 
+.overviewcard:hover{
+  color: blue;
+}
  .main-cards {
   column-count: 1;
   column-gap: 20px;
