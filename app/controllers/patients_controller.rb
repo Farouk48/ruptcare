@@ -5,13 +5,16 @@ class PatientsController < ApplicationController
 
     @patients = Patient.all
     @patients = policy_scope(Patient).order(created_at: :desc)
-
+    # if params[:first_name].present?
+    #   @patients = Patient.search_by_name_and_action(params[:first_name])
+  
+    # end
+  end
 
 
     # @patients = current_user.patients
 
 
-  end
 
   def show
     #@patient = Patient.new
