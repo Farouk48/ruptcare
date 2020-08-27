@@ -18,7 +18,7 @@
   <p><strong class="alternatives"><%= @drugs.count-1 %> autres alternatives thérapeutiques</strong> pouvant être recommandées au prescripteur:</p>
 
   <div class="cards-drugs-grid"  >
-    <% @drugs.first(10).each do |drug| %>
+    <% @drugs.each do |drug| %>
       <% unless drug == @main_drug %>
         <div class="card-other-drug" data-toggle="modal" data-target="#modal-drug-<%= drug.id %>" >
           <img src="https://images.unsplash.com/photo-1558956397-7f6aea7aaab4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=50" />
@@ -43,11 +43,10 @@
             <div class="card-drug-left">
               <img src="https://pinepharmacyug.com/wp-content/uploads/2019/09/Mirtazapine-15mg-Tablets-28.jpg">
               <div class="card-drug-stock">
-                <% if @stock.quantity.to_i > 0  %>
-                <h1><i class="fas fa-layer-group"> Stock:<%= @stock.quantity%></i></h1>
-                <% elsif @stock.quantity.to_i == 0 %>
-                <h1><i class="fas fa-layer-group">Stock: Regardez le stock chez un autre pharmacien.</i></h1>
+                <% if drug.stocks.where(pharma: current_user.pharma).first&.quantity.to_i > 0  %> <h1>
+                  <i class="fas fa-layer-group"> Stock:<%= drug.stocks.where(pharma: current_user.pharma).first.quantity %></i></h1>
                 <% else %>
+                <h1><i class="fas fa-layer-group">Stock: Regardez le stock chez un autre pharmacien.</i></h1>
                 <% end %>
                 <h2><i class="fas fa-history"> Disponible dans:</i></h2>
               </div>

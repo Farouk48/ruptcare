@@ -18,8 +18,6 @@ end
   end
 
   def show
-    @stock = Stock.find(params[:stock_id])
-    @stock.drug = @stock
     @drug = Drug.find(params[:id])
     authorize @drug
   end
