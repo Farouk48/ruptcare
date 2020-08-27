@@ -60,6 +60,7 @@
 }
 
 .card-other-drug {
+  position: relative;
   height: 200px;
   overflow: hidden;
   background: white;
@@ -87,9 +88,23 @@
   margin: 0;
 }
 
+#availability-success{
+  position: absolute;
+  top: 15px;
+  right: -15px;
+  width: 50px;
+  height: 50px;
+  color: #0a8a00;
+}
 
-
-
+#availability-faillure{
+  position: absolute;
+  top: 15px;
+  right: -15px;
+  width: 50px;
+  height: 50px;
+  color: red;
+}
 
 
 
