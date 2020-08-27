@@ -41,7 +41,7 @@ puts "#{Drug.all}"
 
 
 
-filepath = File.join(Rails.root, 'db/drugs.csv')
+filepath = File.join(Rails.root, 'db/drugs_demo.csv')
  csv_options = {
  	col_sep: ',',
  	quote_char: '"'

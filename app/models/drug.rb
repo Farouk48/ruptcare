@@ -5,7 +5,7 @@ class Drug < ApplicationRecord
   include PgSearch::Model
 
   pg_search_scope :search_by_name_and_action,
-	  against: [:name, :action],
+	  against: [:name],
 	  using: {
 	  	tsearch: {prefix: true}
 	  }
