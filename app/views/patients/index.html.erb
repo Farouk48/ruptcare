@@ -13,8 +13,8 @@
   <div class="main">
   	<div class="welcome-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "the-road-815297__340_ghyxvy", crop: :fill %>')">>
   	<div class="main-header"   >
-	  <div class="user-dashboard-welcome">Bonjour Farouk</div>
-	  <div class="user-dashboard-message">Vous n'avez pas de nouveaux messages aujourd'hui</div>
+	  <div class="user-dashboard-welcome">Bonjour <%= current_user.full_name %> </div>
+	  <div class="user-dashboard-message">Vous n'avez pas de nouveaux messages (0)</div>
 	  </div>
   </div>
   <div class="header">
@@ -25,7 +25,7 @@
 	  <div class="header__avatar">
 		  <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
 					  <i class="fas fa-search" aria-hidden="true"></i>
-					  <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search a patient"
+					  <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Rechercher un patient"
 					    aria-label="Search"></form>
   	   </div>
   </div>
