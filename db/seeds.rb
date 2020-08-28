@@ -59,15 +59,21 @@ filepath = File.join(Rails.root, 'db/drugs_demo.csv')
 end
 
 mirtazapine = Drug.find_by_name("MIRTAZAPINE 15 mg, comprimé orodispersible")
+escitalopram_10 = Drug.find_by_name("ESCITALOPRAM 10 mg, comprimé pelliculé sécable")
+
+stock_mirtazapine_1 = Stock.create!(quantity: 0, pharma: pharma_1 , drug: mirtazapine)
+stock_mirtazapine_2 = Stock.create!(quantity: 3, pharma: pharma_2 , drug: mirtazapine)
+stock_mirtazapine_3 = Stock.create!(quantity: 5, pharma: pharma_3 , drug: mirtazapine)
+stock_mirtazapine_4 = Stock.create!(quantity: 14, pharma: pharma_4 , drug: mirtazapine)
+stock_mirtazapine_5 = Stock.create!(quantity: 20, pharma: pharma_5 , drug: mirtazapine)
+stock_mirtazapine_6 = Stock.create!(quantity: 12, pharma: pharma_6 , drug: mirtazapine)
+stock_mirtazapine_7 = Stock.create!(quantity: 6, pharma: pharma_7 , drug: mirtazapine)
+stock_mirtazapine_8 = Stock.create!(quantity: 10, pharma: pharma_8 , drug: mirtazapine)
+stock_mirtazapine_8 = Stock.create!(quantity: 10, pharma: pharma_8 , drug: mirtazapine)
+
+stock_escitalopram_10 = Stock.create!(quantity: 4, pharma: pharma_1 , drug: escitalopram_10 )
 
 
-stock_2 = Stock.create!(quantity: 3, pharma: pharma_2 , drug: mirtazapine)
-stock_3 = Stock.create!(quantity: 5, pharma: pharma_3 , drug: mirtazapine)
-stock_4 = Stock.create!(quantity: 14, pharma: pharma_4 , drug: mirtazapine)
-stock_5 = Stock.create!(quantity: 20, pharma: pharma_5 , drug: mirtazapine)
-stock_6 = Stock.create!(quantity: 12, pharma: pharma_6 , drug: mirtazapine)
-stock_7 = Stock.create!(quantity: 6, pharma: pharma_7 , drug: mirtazapine)
-stock_8 = Stock.create!(quantity: 10, pharma: pharma_8 , drug: mirtazapine)
 
 
 
