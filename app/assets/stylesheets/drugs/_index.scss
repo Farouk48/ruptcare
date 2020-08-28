@@ -23,17 +23,20 @@
 
 }
 
-.card-drug-infos h1{
+.card-drug-infos .drug-info{
   font-family:'Heebo', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
+  padding-top: 15px;
 }
 
 .card-drug .card-drug-stock {
   padding: 16px;
+  padding-left: 0px;
+  padding-top: 35px;
 }
  h1, h2{
   font-family: 'Heebo', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
 }
 .card-drug-stock{
   background-color: white;
@@ -42,6 +45,7 @@
 .card-drug-stock h2 {
 margin-bottom: -20px;
 padding-top: 20px;
+padding-bottom: 7px;
 }
 .card-drug-left{
   display: flex;
@@ -56,6 +60,7 @@ padding-top: 20px;
   font-size: 35px;
 
   font-weight: bold;
+  line-height: 1.1;
 }
 
 #action{
@@ -85,10 +90,13 @@ padding-top: 20px;
   color: white;
   border-radius: 50px;
   border-color: lightgrey;
+  margin-left: 400px;
+  margin-top: -40px;
 }
 #call-doctor{
   background-color: #07B8F1;
   color: white;
   border-radius: 50px;
   border-color: lightgrey;
+  margin-left: 10px;
 }
