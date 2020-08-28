@@ -17,11 +17,6 @@
   align-items: flex-start;
   border-radius: 10px;
 }
-.card-drug img {
-    width: 265px;
-    height: 250px;
-
-}
 
 .card-drug-infos .drug-info{
   font-family:'Heebo', sans-serif;
@@ -33,7 +28,7 @@
   padding: 16px;
   padding-left: 0px;
   padding-top: 35px;
-  margin-left: -184px;
+  margin-left: 0px;
 }
  h1, h2{
   font-family: 'Heebo', sans-serif;
@@ -51,7 +46,7 @@ padding-bottom: 7px;
 .card-drug-left{
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 50%;
   padding: 20px;
 }
  .drug-name {
@@ -86,13 +81,14 @@ padding-bottom: 7px;
     left: 855px;
 
 }
-#check-pharma{
+.btn-primary{
   background-color: #07B8F1;
   color: white;
   border-radius: 50px;
   border-color: lightgrey;
-  margin-left: 400px;
-  margin-top: -40px;
+  margin-left: 98px;
+  margin-top: 1px;
+  padding-top: 5px;
 }
 #call-doctor{
   background-color: #07B8F1;
@@ -101,3 +97,8 @@ padding-bottom: 7px;
   border-color: lightgrey;
   margin-left: 10px;
 }
+
+#image-in-modal {
+  border-style: none;
+}
+
