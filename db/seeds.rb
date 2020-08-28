@@ -25,8 +25,8 @@ pharma_1 = Pharma.create!(name:"Pharmacie du 20ème", address:"144 Boulevard de 
 pharma_2 = Pharma.create!(name:"Pharmacie Oberkampf", address:"58 Rue Neuve Popincourt", city:"75011 Paris")
 pharma_3 = Pharma.create!(name:"Pharmacie Des 3 Fleurs", address:"65 Rue Jean-Pierre Timbaud", city:"75011 Paris")
 pharma_4 = Pharma.create!(name:"Pharmacie du Monde", address:"38 Avenue Parmentier", city:"75011 Paris")
-pharma_5 = Pharma.create!(name:"Pharmacie de Vaucouleurs", address:"32 Rue de Vaucouleurs", city:"75011 Paris")
-pharma_6 = Pharma.create!(name:"Grande Pharmacie Selarl.", address:"113 Boulevard Voltaire", city:"75011 Paris")
+pharma_5 = Pharma.create!(name:"Pharmacie de Vaucouleurs", address:"32 Rue de Vaucouleurs 75011 Paris", city:"")
+pharma_6 = Pharma.create!(name:"Grande Pharmacie Selarl.", address:"113 Boulevard Voltaire 75011 Paris", city:"")
 pharma_7 = Pharma.create!(name:"Pharmacie des Cliniques", address:"97 Avenue Parmentier", city:"75011 Paris")
 pharma_8 = Pharma.create!(name:"Pharmacie Goncourt", address:"146 Avenue Parmentier", city:"75011 Paris")
 pharma_9 = Pharma.create!(name:"Pharmacie La Confiance", address:"13 Rue de la Présentation", city:"75011 Paris")
@@ -58,15 +58,16 @@ filepath = File.join(Rails.root, 'db/drugs_demo.csv')
   end
 end
 
+mirtazapine = Drug.find_by_name("MIRTAZAPINE 15 mg, comprimé orodispersible")
 
 
-
-stock_1 = Stock.create!(quantity: 0, pharma: pharma_1 , drug: Drug.all.sample)
-stock_2 = Stock.create!(quantity: 14, pharma: pharma_1 , drug: Drug.all.sample)
-stock_3 = Stock.create!(quantity: 20, pharma: pharma_1 , drug: Drug.all.sample)
-stock_4 = Stock.create!(quantity: 2, pharma: pharma_1 , drug: Drug.all.sample)
-stock_5 = Stock.create!(quantity: 6, pharma: pharma_1 , drug: Drug.all.sample)
-stock_6 = Stock.create!(quantity: 10, pharma: pharma_1 , drug: Drug.all.sample)
+stock_2 = Stock.create!(quantity: 3, pharma: pharma_2 , drug: mirtazapine)
+stock_3 = Stock.create!(quantity: 5, pharma: pharma_3 , drug: mirtazapine)
+stock_4 = Stock.create!(quantity: 14, pharma: pharma_4 , drug: mirtazapine)
+stock_5 = Stock.create!(quantity: 20, pharma: pharma_5 , drug: mirtazapine)
+stock_6 = Stock.create!(quantity: 12, pharma: pharma_6 , drug: mirtazapine)
+stock_7 = Stock.create!(quantity: 6, pharma: pharma_7 , drug: mirtazapine)
+stock_8 = Stock.create!(quantity: 10, pharma: pharma_8 , drug: mirtazapine)
 
 
 
