@@ -1,9 +1,11 @@
 class PharmasController < ApplicationController
   def index
+
     @pharmas = policy_scope(Pharma).order(created_at: :desc)
     @pharmas = Pharma.where.not(latitude: nil, longitude: nil)
 
     @pharmas = Pharma.geocoded
+    # @drug = Drug.find(params[:drugs_id])
 
     @markers = @pharmas.map do |pharma|
       {
@@ -11,7 +13,6 @@ class PharmasController < ApplicationController
         lng: pharma.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { pharma: pharma })
       }
-
     end
   end
 
@@ -21,6 +22,7 @@ class PharmasController < ApplicationController
 
   def show
     @pharma = Pharma.find(params[:id])
+
     authorize @pharma
   end
 

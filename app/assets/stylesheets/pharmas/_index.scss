@@ -6,6 +6,7 @@
  font-size: 48px;
  line-height: 61px;
  font-weight: light;
+ margin-top: 10px;
 }
 
 #title-pharma h2 {
@@ -14,21 +15,28 @@
   font-size: 24px;
   line-height: 35px;
   left: 65px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 #map-pharma {
   display:flex;
-  justify-content: space-between;
+  justify-content:space-between;
 }
 
 #pharma-display {
   text-align: left;
-  padding-left: 70px;
-  border: 1px solid #B59494;
+  border-top: 1px solid #B59494;
+  border-bottom: 1px solid #B59494;
   background: rgba(108, 194, 232, 0.09);
   font-family:$body-font;
 }
 
+#pharma-display h2 {
+  margin-top: 10px;
+  }
+
 #map {
-  border: 1px solid #B59494;
+  border-top: 1px solid #B59494;
+  border-bottom: 1px solid #B59494;
 }
