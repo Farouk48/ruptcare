@@ -1,7 +1,7 @@
 <div id="title-pharma" class="container">
   <h1 >Réseau Rupt'Care</h1>
   <h2>Au <%= Date.today %> à <%= Time.now.to_s(:time) %>, les pharmacies suivantes du réseau disposent de la <strong><%= @drug.name %></strong> en stock :</h2>
-
+  <%= link_to "Retourner sur la liste de recherche", drugs_path(drug_id: @drug.id, name: params[:name]) %>
 </div>
 
 
@@ -25,4 +25,6 @@
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
+
+
 </div>
