@@ -6,20 +6,6 @@
 </div>
 
 
-<div id="homesearch">
-  <div class="container">
-    <h3>Je cherche une alternative médicamenteuse pour :</h3>
-    <div id="searchbar">
-      <%= form_tag drugs_path, method: :get do %>
-         <%= hidden_field_tag 'patient_id', params[:patient_id] %>
-        <%= text_field_tag :name,
-          params[:name], class: "input-search-bar", id:"search", placeholder: "Entrer le nom ici" %>
-      <%= submit_tag "Entrer", class: "btn btn-primary"%>
-     <% end %>
-    </div>
-  </div>
-
-</div>
 
 <%= render 'shared/footer'  %>
 
