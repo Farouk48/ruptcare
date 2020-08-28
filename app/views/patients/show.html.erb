@@ -1,7 +1,6 @@
 	
 
-		<%= link_to "", patients_path, class:"fas fa-arrow-circle-left fa-3x" %> 
-	</i>
+	<%= link_to "", patients_path, class:"fas fa-arrow-circle-left fa-3x" %> 
 	<p class="return-text"> Retour au tableau de bord </p>
 
 
@@ -10,17 +9,43 @@
   	<div class="header__search">.</div>
   </header>
 
-     <div class="container">
 
-
+<div class="container">
   <div class="main">
   	<div class="row">
-  	<div class="col-4">
+  	  <div class="col-4">
 		<div class="card-show-img">
 		<%= cl_image_tag("830x532_actrice-scarlett-johansson_yz5b8l", :width => 300, :crop => "pad") %>
 		</div>
+	</div>
 
-			<div class="legend">Rechercher une alternative médicamenteuse : </div>
+
+
+	<div class="col-8">	
+		 <div class="main-cards">
+		    <div class="card-show">
+		      <h1> Informations sur le patient </h1>
+			  <ul class="list-info-patient">
+		  		  <li><b> Nom :    </b><%= @patient.first_name %>  <%= @patient.last_name %></li>
+		  			<li><b>Age :    </b> <%= @patient.age %> ans</li>
+		  		  <hr>
+		  		  <li><b> Adresse : </b><%= @patient.address %></li>
+		  		  <br>
+			  </ul>
+			</div>
+
+	    <div class="card-show">
+	  	  <h1> Informations médicales </h1>
+	  	  <ul class="list-info-patient">
+	  	  	  <li><%= @patient.chronic_disease %> chronique : maladie à relever</li>
+	  	  	  <hr>
+	  		  <li><b> Médecin traitant : </b> Dr. Walid Tairi </li>
+	  	  </ul>
+	  	</div>
+	  </div>
+	</div>
+</div>
+	       	<div class="legend">Rechercher une alternative médicamenteuse : </div>
 <!-- 	 <div id="searchbar"> -->
 		<div class="input-field">
 		      <%= form_tag drugs_path, method: :get do %>
@@ -28,35 +53,9 @@
 
 		        <%= text_field_tag :name,
 		          params[:name], class: "input-search-bar", id:"search", placeholder: "Entrer le nom ici" %>
-		      <%= submit_tag "Entrer", class: "btn-search-show-patient" %>
+		      <%= submit_tag "Rechercher", class: "btn-search-show-patient", i: "fas fa-capsules" %>
      			<% end %>
  		</div>
-	</div>
-	<div class="col-8">	
-		 <div class="main-cards">
-		    <div class="card-show">
-		      <h1> Informations sur le patient </h1>
-			  <ul class="list-info-patient">
-		  		  <li><%= @patient.first_name %>  <%= @patient.last_name %></li>
-		  			<li><%= @patient.age %> ans</li>
-		  		  <hr>
-		  		  <li><%= @patient.address %></li>
-		  		  <br>
-			  </ul>
-			</div>
-	
-
-
-	    <div class="card-show">
-	  	  <h1> Informations médicales </h1>
-	  	  <ul class="list-info-patient">
-	  	  	  <li><%= @patient.chronic_disease %> maladie chronique à relever</li>
-	  	  	  <hr>
-	  		  <li> Médecin traitant : Dr. Walid Tairi </li>
-	  	</div>
-	  </div>
-	 </div>	  
-
 
 	<div class="card-show-table">
 	  <div class="table-users">
@@ -71,24 +70,36 @@
 	      </tr>
           <tr>
 	         <td>29/02/2020</td>
-	         <td>Miancerine 10mg</td>
+	         <td>Mianserine 10mg</td>
 	         <td>Le Wagon</td>
 	         <td> Farouk Rahmani </td>
 	         <td> Patient agressif</td>
           </tr>
           <tr>
-	         <td>03/03/2020</td>
-	         <td>Miancerine 10mg</td>
+	         <td>03/04/2020</td>
+	         <td>Mianserine 10mg</td>
 	         <td>Pharmacie du 20eme</td>
 	         <td> Julien Dupuis </td>
 	         <td> Malpoli, agressif </td>
 	      </tr>
-	   </table>
+	          <tr>
+	         <td>10/05/2020</td>
+	         <td>Mianserine 10mg</td>
+	         <td>Pharmacie du 20eme</td>
+	         <td> Julien Dupuis </td>
+	         <td> Malpoli, agressif </td>
+	      </tr>
+	          <tr>
+	         <td>07/06/2020</td>
+	         <td>Mianserine 10mg</td>
+	         <td>Pharmacie du 20eme</td>
+	         <td> Julien Dupuis </td>
+	         <td> Malpoli, agressif </td>
+	      </tr>
+	     </table>
+	    </div>
 	  </div>
-	</div>
-	</div>
-  </div>
+    </div>
 </div>
-  </div>
 </div>
-
+  

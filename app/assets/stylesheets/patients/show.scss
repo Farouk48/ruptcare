@@ -9,7 +9,8 @@
 .list-info-patient {
   font-family: 'Heebo', sans-serif;
   font-size: 15px;
-  list-style: none;
+ list-style: square;
+  text-align: left;
 }
 
 
@@ -56,7 +57,6 @@ table {
    tr {     
   background-color: white; 
 background-color: lighten(#398B93, 55%);
-height: 100px;
    }
 }
 
@@ -87,26 +87,28 @@ margin-top: 40px;
 .return-text {
    margin-left: 10px;
    margin-top: 2px;
-   font-size: 25px;
+   font-size: 20px;
+   color: #035AC1;
 
 }
 
 
 
-#search {
-border-top: 1px solid grey;
-border-left: 1px solid grey;
-border-right: 1px solid grey;
-border-bottom: 1px solid grey;
-}
+// #search {
+// border-top: 1px solid grey;
+// border-left: 1px solid grey;
+// border-right: 1px solid grey;
+// border-bottom: 1px solid grey;
+// }
 
 
 
 .legend {
-   font-size: 15px;
-   margin-left: 50px;
-   font-weight: bold;
+   font-size: 20px;
+   margin-left: 10px;
+   font-weight: bold 500;
    font-family: "Oxygen";
+   margin-top: 50px;
 }
 
 
@@ -135,14 +137,15 @@ height: 68px;
 .input-field {
 height: 68px;
 margin-bottom: 5px;
-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+// box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
 width: 800px;
-margin-left: 25px;
-background-color: grey;
-opacity: 0.75;
+margin-left: 150px;
+
+
 padding-top: 10px;
 padding-bottom: 10px;
-border: 2px solid grey;
+
+
 
    }
 
@@ -159,9 +162,9 @@ border: 2px solid grey;
   font-size: 20px;
    color: black;
   font-size: 20px;
-  margin-left: 25px;
+  margin-left: 50px;
   border: 2px solid grey;
-
+  margin-bottom: 0px;
    }
 
 .placeholder {
@@ -183,6 +186,7 @@ border: 2px solid grey;
   font-weight: bold;
   margin-left: 300px;
   margin-bottom: 100px;
+ 
 } 
 .btn-search-show-patient:hover {
    background: #4ea63f;
@@ -192,6 +196,7 @@ border: 2px solid grey;
     column-count: 2;
     column-gap: 10px;
     margin: 20px;
+
   }
   
 .card-show {
@@ -203,13 +208,19 @@ border: 2px solid grey;
     column-break-inside: avoid;
     padding: 24px;
     box-sizing: border-box;
+  
+  }
+
+  .card-show h1 {
+
   }
 
 .card-show-img {
-
-
-    width:25%;
+   margin-top: 10px;
+   margin-left: 10px;
+    width:100%;
     margin-right:2%;
+
 }
 
 
@@ -226,12 +237,12 @@ border: 2px solid grey;
 
 .header {
   grid-area: header;
-  background-color: #648ca6;
+  background-color: #E0ECE4;
 }
 
 .sidenav {
   grid-area: sidenav;
-  background-color: #394263;
+
 }
 
 .main {
@@ -246,7 +257,7 @@ border: 2px solid grey;
  justify-content: space-between;
  margin: 20px;
  padding: 20px;
- height: 150px; /* Force our height since we don't have actual content yet */
+ height: 150px; 
  background-color: #e3e4e6;
  color: slategray;
 }
@@ -259,7 +270,4 @@ border: 2px solid grey;
    text-transform: uppercase;
 }
 
-.placeholder {
-   color: black;
-}
 
