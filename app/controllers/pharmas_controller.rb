@@ -5,7 +5,7 @@ class PharmasController < ApplicationController
     @pharmas = Pharma.where.not(latitude: nil, longitude: nil)
 
     @pharmas = Pharma.geocoded
-    @drug = Drug.find(params[:drug_id])
+    @drug = Drug.find(params[:drug_id]) if params[:drug_id]
 
     @markers = @pharmas.map do |pharma|
       {
