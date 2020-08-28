@@ -18,14 +18,13 @@
       <p><%= @main_drug.drugs_class %></p>
       <p><%= @main_drug.family %></p>
 
-     
-      <% if @main_drug.stocks.where(pharma: current_user.pharma).first.quantity == 0 %>
-        <h1><i class="fas fa-layer-group"> Stock: Vérifiez chez un autre pharmacien.</i><%= link_to "Regarder réseau Rupt'care" , pharmas_path(@drug), class: "btn btn-primary"%><h2><i class="fas fa-history"> Disponible dans: <%= pluralize(@main_drug.availability, "jours") %></i></h2></h1>
+
+      <% if @main_drug.stocks.where(pharma: current_user.pharma).first && @main_drug.stocks.where(pharma: current_user.pharma).first.quantity == 0 %>
+        <h1><i class="fas fa-layer-group"> Stock: Vérifiez chez un autre pharmacien.</i><%= link_to "Regarder réseau Rupt'care" , pharmas_path(drug_id: @main_drug.id, name: params[:name]), class: "btn btn-primary"%><h2><i class="fas fa-history"> Disponible dans: <%= pluralize(@main_drug.availability, "jours") %></i></h2></h1>
         <h1>
-      <% else %>
+      <% elsif @main_drug.stocks.where(pharma: current_user.pharma).first %>
         <i class="fas fa-layer-group"> Stock: <%= @main_drug.stocks.where(pharma: current_user.pharma).first.quantity %><button type="button" class="btn btn-primary" id="call-doctor"><i class="fas fa-comment-medical"> Chat doctor</i></button></i>
       </h1>
-
       <% end %>
     </div>
   </div>
