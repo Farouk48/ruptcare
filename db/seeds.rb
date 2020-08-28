@@ -25,6 +25,11 @@ pharma_1 = Pharma.create!(name:"Pharmacie du 20ème", address:"144 Boulevard de 
 pharma_2 = Pharma.create!(name:"Pharmacie Oberkampf", address:"58 Rue Neuve Popincourt", city:"75011 Paris")
 pharma_3 = Pharma.create!(name:"Pharmacie Des 3 Fleurs", address:"65 Rue Jean-Pierre Timbaud", city:"75011 Paris")
 pharma_4 = Pharma.create!(name:"Pharmacie du Monde", address:"38 Avenue Parmentier", city:"75011 Paris")
+pharma_5 = Pharma.create!(name:"Pharmacie de Vaucouleurs", address:"32 Rue de Vaucouleurs", city:"75011 Paris")
+pharma_6 = Pharma.create!(name:"Grande Pharmacie Selarl.", address:"113 Boulevard Voltaire", city:"75011 Paris")
+pharma_7 = Pharma.create!(name:"Pharmacie des Cliniques", address:"97 Avenue Parmentier", city:"75011 Paris")
+pharma_8 = Pharma.create!(name:"Pharmacie Goncourt", address:"146 Avenue Parmentier", city:"75011 Paris")
+pharma_9 = Pharma.create!(name:"Pharmacie La Confiance", address:"13 Rue de la Présentation", city:"75011 Paris")
 
 
 
