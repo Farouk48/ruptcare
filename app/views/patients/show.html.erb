@@ -1,60 +1,95 @@
-	<div class="fa fa-chevron-circle-left">
-		<%#= link_to "", patients_path, class: "absolute-link" %>
+	
+
+		<%= link_to "", patients_path, class:"fas fa-arrow-circle-left fa-3x" %> 
+	</i>
+	<p class="return-text"> Retour au tableau de bord </p>
+
+
+
+  <header class="header">
+  	<div class="header__search">.</div>
+  </header>
+
+     <div class="container">
+
+
+  <div class="main">
+  	<div class="row">
+  	<div class="col-4">
+		<div class="card-show-img">
+		<%= cl_image_tag("0_q6frrl", :width => 300, :crop => "pad") %>
+		</div>
+
+			<div class="legend">Rechercher une alternative médicamenteuse : </div>
+<!-- 	 <div id="searchbar"> -->
+		<div class="input-field">
+		      <%= form_tag drugs_path, method: :get do %>
+		         <%= hidden_field_tag 'patient_id', params[:patient_id] %>
+
+		        <%= text_field_tag :name,
+		          params[:name], class: "input-search-bar", id:"search", placeholder: "Entrer le nom ici" %>
+		      <%= submit_tag "Entrer", class: "btn-search-show-patient" %>
+     			<% end %>
+ 		</div>
 	</div>
-	<p class="return-text"></p>
+	<div class="col-8">	
+		 <div class="main-cards">
+		    <div class="card-show">
+		      <h1> Informations sur le patient </h1>
+			  <ul class="list-info-patient">
+		  		  <li><%= @patient.first_name %>  <%= @patient.last_name %></li>
+		  			<li><%= @patient.age %> ans</li>
+		  		  <hr>
+		  		  <li><%= @patient.address %></li>
+		  		  <br>
+			  </ul>
+			</div>
+	
 
-<div class="container">
-	<div class="row">
-    <div class="col-sm">
-		  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" height=350 width=300 >
-    </div>
 
-    <div class="col-sm">
-		  <h1 class="info-patient"> Informations sur le patient </h1>
-		  <ul class="list-info-patient">
-  		  <li><%= @patient.first_name %>  <%= @patient.last_name %></li>
-  			<li><%= @patient.age %> ans</li>
-  		  <hr>
-  		  <li><%= @patient.address %></li>
-  		  <br>
-		  </ul>
-	   </div>
-
-	  <div class="col-sm">
-	  	<h1 class="info-patient"> Informations médicales </h1>
+	    <div class="card-show">
+	  	  <h1> Informations médicales </h1>
 	  	  <ul class="list-info-patient">
-  	  	  <li><%= @patient.chronic_disease %> maladie chronique à relever</li>
-  	  	  <hr>
-  		    <li> Médecin traitant : @doctor.full_name </li>
+	  	  	  <li><%= @patient.chronic_disease %> maladie chronique à relever</li>
+	  	  	  <hr>
+	  		  <li> Médecin traitant : @doctor.full_name </li>
 	  	  </ul>
+	  	</div>
+	  </div>
+	 </div>	  
+
+
+	<div class="card-show-table">
+	  <div class="table-users">
+	   <div class="header-table-patient">Historique délivrance patient</div>
+	   <table cellspacing="0">
+	      <tr>
+	         <th>Date</th>
+	         <th>Délivrance</th>
+	         <th> Pharmacie </th>
+	         <th>Pharmacien(ne)</th>
+	         <th width="230">Commentaires</th>
+	      </tr>
+          <tr>
+	         <td>29/02/2020</td>
+	         <td>Miancerine 10mg</td>
+	         <td>Le Wagon</td>
+	         <td> Farouk Rahmani </td>
+	         <td> Patient agressif</td>
+          </tr>
+          <tr>
+	         <td>03/03/2020</td>
+	         <td>Miancerine 10mg</td>
+	         <td>Pharmacie du 20eme</td>
+	         <td> Julien Dupuis </td>
+	         <td> Malpoli, agressif </td>
+	      </tr>
+	   </table>
 	  </div>
 	</div>
-	<%= link_to root_path(patient_id: @patient.id), class: "btn btn-danger", id:"btn-research" do %>
-		Faire une recherche de médicaments <i class="fa fa-search"></i>
-	<% end %>
-
-  <div class="table-users">
-   <div class="header-table-patient">Historique délivrance patient</div>
-
-   <table cellspacing="0">
-      <tr>
-         <th>Date</th>
-         <th>Délivrance</th>
-         <th> Pharmacie </th>
-         <th>Pharmacien(ne)</th>
-         <th width="230">Commentaires</th>
-      </tr>
-      <tr>
-         <td>29/02/2020</td>
-         <td>Temesta</td>
-         <td>Le Wagon</td>
-         <td> Julien Dupuis </td>
-         <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </td>
-      </tr>
-   </table>
+	</div>
   </div>
-
-	 
 </div>
-
+  </div>
+</div>
 
