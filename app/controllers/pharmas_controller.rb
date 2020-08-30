@@ -1,6 +1,5 @@
 class PharmasController < ApplicationController
   def index
-
     @pharmas = policy_scope(Pharma).order(created_at: :desc)
     @pharmas = Pharma.where.not(latitude: nil, longitude: nil)
 
@@ -11,9 +10,17 @@ class PharmasController < ApplicationController
       {
         lat: pharma.latitude,
         lng: pharma.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { pharma: pharma })
+        infoWindow: render_to_string(partial: "info_window", locals: { pharma: pharma }),
+        image_url: helpers.asset_url('clinic-medical-solid.svg')
+
       }
     end
+    #  @marker = @pharmas.map do
+    #   {
+    #     lat: @pharmas.first.latitude,
+    #     lng: @pharmas.first.longitude,
+    #   }
+    # end
   end
 
   def new
