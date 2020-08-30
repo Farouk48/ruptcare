@@ -6,7 +6,8 @@ class PharmasController < ApplicationController
     @pharmas = Pharma.geocoded
     @drug = Drug.find(params[:drug_id]) if params[:drug_id]
 
-    @markers = @pharmas.map do |pharma|
+    @user_pharma = Pharma.first
+    @markers = @pharmas.reject { |exclude| exclude == @user_pharma }.map do |pharma|
       {
         lat: pharma.latitude,
         lng: pharma.longitude,
