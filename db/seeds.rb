@@ -82,6 +82,7 @@ sertraline_25 = Drug.find_by_name("SERTRALINE 25 mg")
 sertraline_50 = Drug.find_by_name("SERTRALINE 50 mg")
 venlafaxine_37 = Drug.find_by_name("VENLAFAXINE LP 37,5 mg")
 venlafaxine_75 = Drug.find_by_name("VENLAFAXINE LP 75 mg")
+escitalopram_10 = Drug.find_by_name("ESCITALOPRAM 10 mg")
 doliprane_1000 = Drug.find_by_name("DOLIPRANE 1000 mg, comprimé")
 
 stock_mirtazapine_1 = Stock.create!(quantity: 0, pharma: pharma_1 , drug: mirtazapine)
@@ -133,27 +134,26 @@ doctor_3 = Doctor.create!(full_name: "RAHMANI Djamel", rpps_number:"10004000856"
 doctor_4 = Doctor.create!(full_name: "PAULET Gilles", rpps_number:"10004000856" , speciality: "Généraliste")
 doctor_5 = Doctor.create!(full_name: "DEVEZE Jean-Charles", rpps_number:"10004000856" , speciality: "Généraliste")
 doctor_6 = Doctor.create!(full_name: "SALTEL Florence", rpps_number:"10004000856" , speciality: "Généraliste")
-doctor_6 = Doctor.create!(full_name: "ALDEBERT Pierre", rpps_number:"10004000856" , speciality: "ORL")
-doctor_7 = Doctor.create!(full_name: "DUMAS Mathilde", rpps_number:"10004000856" , speciality: "Généraliste")
+doctor_7 = Doctor.create!(full_name: "ALDEBERT Pierre", rpps_number:"10004000856" , speciality: "ORL")
+doctor_8 = Doctor.create!(full_name: "DUMAS Mathilde", rpps_number:"10004000856" , speciality: "Généraliste")
 
 puts "#{Doctor.all}"
 
 
-
-patient_1 = Patient.create!(first_name: "Véronique", last_name: "DUBOIS", address: " 16 rue de Gaudelet", age: 37, city: " 75011 Paris", chronic_disease: "Dépression", doctor: doctor_1, pharma: pharma_1)
-patient_2 = Patient.create!(first_name: "Victor", last_name: "BERGEAUD", address: "11 rue Vaucouleurs", age: 28, city: "75011 Paris", chronic_disease: "Aucune", doctor: doctor_2, pharma: pharma_1)
-patient_3 = Patient.create!(first_name: "Michel", last_name: "DUPONT", address: "11 rue de Vaugirard", age: 55, city: "75006 Paris", chronic_disease: "Hypertension artérielle, Diabète", doctor: doctor_4, pharma: pharma_1)
-patient_4 = Patient.create!(first_name: "Laurent", last_name: "DURAND", address: "11 rue de Vaugirard", age: 55, city: "75011 Paris", chronic_disease: "Hypertension artérielle", doctor: doctor_4, pharma: pharma_1)
-patient_4 = Patient.create!(first_name: "Michelle", last_name: "LEFÈVRE", address: "11 rue de Vaugirard", age: 55, city: "75020 Paris", chronic_disease: "Polyarthrithe Rhumatoide", doctor: doctor_4, pharma: pharma_1)
-patient_4 = Patient.create!(first_name: "Delphine", last_name: "ROUX", address: "11 rue de Vaugirard", age: 55, city: "75011 Paris", chronic_disease: "Sclerose en plaque", doctor: doctor_4, pharma: pharma_1)
-patient_4 = Patient.create!(first_name: "Lucie", last_name: "MOREAU", address: "11 rue de Vaugirard", age: 55, city: "75011 Paris", chronic_disease: "Diabète", doctor: doctor_4, pharma: pharma_1)
-patient_4 = Patient.create!(first_name: "Malia", last_name: "SANGARE", address: "11 rue de Vaugirard", age: 55, city: "75011 Paris", chronic_disease: "Schizophrénie", doctor: doctor_4, pharma: pharma_1)
-patient_4 = Patient.create!(first_name: "Fadhila", last_name: "BOUNOUH", address: "11 rue de Vaugirard", age: 55, city: "75020 Paris", chronic_disease: "maladie d'Alzheimer", doctor: doctor_4, pharma: pharma_1)
-patient_4 = Patient.create!(first_name: "Jeremie", last_name: "LEROY", address: "11 rue de Vaugirard", age: 55, city: "75006 Paris", chronic_disease: "Hypertension artérielle, Diabète", doctor: doctor_4, pharma: pharma_1)
-patient_4 = Patient.create!(first_name: "Michel", last_name: "DUPUIS", address: "11 rue de Vaugirard", age: 55, city: "75011 Paris", chronic_disease: "Hypertension artérielle, Diabète", doctor: doctor_4, pharma: pharma_1)
-patient_4 = Patient.create!(first_name: "Michel", last_name: "DUPONT", address: "11 rue de Vaugirard", age: 55, city: "75011 Paris", chronic_disease: "Hypertension artérielle, Diabète", doctor: doctor_4, pharma: pharma_1)
-patient_4 = Patient.create!(first_name: "Michel", last_name: "DUPONT", address: "11 rue de Vaugirard", age: 55, city: "75011 Paris", chronic_disease: "Hypertension artérielle, Diabète", doctor: doctor_4, pharma: pharma_1)
-
+patient_1 = Patient.create!(first_name: "Véronique", last_name: "DUBOIS", address: "11 rue Vaucouleurs", age: 35, city: "75011 Paris", chronic_disease: "Dépression", doctor: doctor_2, pharma: pharma_1)
+patient_2 = Patient.create!(first_name: "Victor", last_name: "BERGEAUD", address: "74 rue Vaucouleurs", age: 28, city: "75011 Paris", chronic_disease: "Aucune", doctor: doctor_2, pharma: pharma_1)
+patient_3 = Patient.create!(first_name: "Michel", last_name: "DUPONT", address: "11 rue de Vaugirard", age: 55, city: "75006 Paris", chronic_disease: "Hypertension artérielle, Diabète", doctor: doctor_5, pharma: pharma_1)
+patient_4 = Patient.create!(first_name: "Laurent", last_name: "DURAND", address: "3 rue Couronnes", age: 43, city: "75011 Paris", chronic_disease: "Hypertension artérielle", doctor: doctor_4, pharma: pharma_1)
+patient_5 = Patient.create!(first_name: "Michelle", last_name: "LEFÈVRE", address: "34 Place du Marché", age: 53 , city: "75020 Paris", chronic_disease: "Polyarthrithe Rhumatoide", doctor: doctor_6, pharma: pharma_1)
+patient_6 = Patient.create!(first_name: "Delphine", last_name: "ROUX", address: "16 place au Blé", age: 32, city: "75011 Paris", chronic_disease: "Sclerose en plaque", doctor: doctor_2, pharma: pharma_1)
+patient_7 = Patient.create!(first_name: "Lucie", last_name: "MOREAU", address: "120 route de la Vignasse", age: 17, city: "75011 Paris", chronic_disease: "Diabète de type 1", doctor: doctor_4, pharma: pharma_1)
+patient_8 = Patient.create!(first_name: "Malia", last_name: "SANGARE", address: "11 rue de Vaugirard", age: 34, city: "75011 Paris", chronic_disease: "Schizophrénie", doctor: doctor_5, pharma: pharma_1)
+patient_9 = Patient.create!(first_name: "Fadhila", last_name: "BOUNOUH", address: "13 Avenue Franklin Roosvelt", age: 73, city: "75020 Paris", chronic_disease: "maladie d'Alzheimer", doctor: doctor_5, pharma: pharma_1)
+patient_10 = Patient.create!(first_name: "Jeremie", last_name: "LEROY", address: "128 Avenue Édouard Leclerc", age: 59, city: "75006 Paris", chronic_disease: "Cancer de la prostate", doctor: doctor_4, pharma: pharma_1)
+patient_11 = Patient.create!(first_name: "Bertrand", last_name: "RICHARD", address: "11 Avenue Charles de Gaulle ", age: 66, city: "75011 Paris", chronic_disease: "Cancer du poumon", doctor: doctor_4, pharma: pharma_1)
+patient_12 = Patient.create!(first_name: "Phillipe", last_name: "LAUNE", address: "34 rue de Vaugirard", age: 64, city: "75011 Paris", chronic_disease: "Hypertension artérielle, Diabète", doctor: doctor_3, pharma: pharma_1)
+patient_13 = Patient.create!(first_name: "Raphael", last_name: "BOREL", address: "34 rue du Perchoir", age: 56, city: "75011 Paris", chronic_disease: "Hypertension artérielle, Diabète", doctor: doctor_3, pharma: pharma_1)
+patient_14 = Patient.create!(first_name: "Robert", last_name: "GARCIA", address: "2 rue de Gaudelet", age: 54, city: " 75011 Paris", chronic_disease: "Aucune", doctor: doctor_3, pharma: pharma_1)
 
 
 
