@@ -25,6 +25,7 @@
   margin-top: 40px;
   margin-bottom: 40px;
   border-radius: 10px;
+
 }
 
 .card-main-drug img {
@@ -36,13 +37,13 @@
 
 .card-main-drug h2 {
   color: #51CAF4;
-  font-size: 20px;
-  font-weight: bold;
-  padding-left: 5px;
+  font-size: 22px;
+  font-weight: bolder;
+  padding-left: 0px;
   font-family: Heebo;
 }
 
-.card-drug-infos p {
+#aprec {
   font-size: 13px;
   line-height: 1.4;
   opacity: .7;
@@ -52,6 +53,8 @@
 
 .card-main-drug .card-drug-infos {
   padding: 10px;
+  padding-left: 20px;
+
 }
 
 .cards-drugs-grid {
@@ -112,6 +115,12 @@
   height: 50px;
   color: red;
 }
+#stock-dispo{
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
 
-
-
+.card-drug-infos p{
+  font-size: 15px;
+}
