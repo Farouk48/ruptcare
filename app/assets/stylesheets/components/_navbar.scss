@@ -1,8 +1,10 @@
 .navbar-lewagon {
   justify-content: space-between;
   height:75px;
+
   background: #FFFFFF;
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15)
+
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -25,7 +27,7 @@
 
 li a {
   text-decoration: none;
-  color:#00303F;
+  color:#01418D;
   font-size: 1.1rem;
   font-family: 'Oxygen', arial;
   text-transform: uppercase;
@@ -35,6 +37,6 @@ li a {
 }
 
 li a:hover {
-  color: #7A9D96;
+  color: #01418D;
 }
 
