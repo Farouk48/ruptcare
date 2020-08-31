@@ -30,12 +30,14 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 // import { initSelect2 } from '../components/init_select2';
 
 import { initMapbox } from '../plugins/init_mapbox';
+import { initChatroomCable } from '../channels/chatroom_channel';
 
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initMapbox();
+  initChatroomCable();
 });
     document.addEventListener('turbolinks:before-cache', () => {
       // Manually tear down bootstrap modals before caching. If turbolinks

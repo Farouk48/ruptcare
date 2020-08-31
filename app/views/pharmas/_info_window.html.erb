@@ -1,5 +1,4 @@
 <h2><%= pharma.name %></h2>
-<p><%= pharma.address %></p>
 <% if  pharma.stocks.find_by(drug:@drug) %>
-<p><%= pharma.stocks.find_by(drug:@drug).quantity %></p>
+<p>En stock: <strong><%= pharma.stocks.find_by(drug:@drug).quantity %> </strong></p>
 <% end %>
