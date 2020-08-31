@@ -1,11 +1,22 @@
-<div  id='banner-home' style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('<%= image_path('background-med.jpg') %>');">
-  <div class="container">
-    <h1>Rupt<span>'Care</span></h1>
-    <h2>Votre solution pour la rupture des médicaments</h2>
-  </div>
-</div>
+<body>
 
+<div  id='banner-home' style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('<%= image_path('background-med.jpg') %>');">
+<!--   <div class="container"> -->
+<!--     <h1>Rupt<span>'Care</span></h1>
+    <h2>Votre solution pour la rupture des médicaments</h2> -->
+
+<div class="container">
+     <h1>Rupt<span>'Care</span></h1>
+        <h2>Votre solution pour la rupture des médicaments</h2>
+  <label class="btn btn-open" for="nav"><%= link_to "Accéder à ma liste de  patients", patients_path, class: "nav-link" %></label>
+
+  
+  
+    </div>
+   </div>
+  </div>
 
 
 <%= render 'shared/footer'  %>
 
+</body>
