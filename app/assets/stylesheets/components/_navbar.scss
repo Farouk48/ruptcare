@@ -1,8 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background:  #42A5F5;
+  background:#FFFBFB;
   height:75px;
-    border-bottom: 2px solid white;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -18,7 +17,7 @@
 .avatar-large {
 	  object-fit: cover;
   background-size: cover;
-  border: 2px solid white;
+  border: 2px solid #FFFBFB;
 }
 
 
@@ -27,11 +26,11 @@ li a {
   text-decoration: none;
   color:#00303F;
   font-size: 1.1rem;
-  font-family: 'Monserat', arial;
+  font-family: 'Oxygen', arial;
   text-transform: uppercase;
   margin-top: 10px;
   margin-right: 10px;
-  
+
 }
 
 li a:hover {
