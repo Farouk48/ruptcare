@@ -3,8 +3,13 @@ background-size: cover;
 background-position: left 15% bottom 50%;
 width: 100%;
 min-height: 100vh;
-left: 0px;
-top: 105px;
+}
+
+#home-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
 }
 
 #banner-home h1 {
@@ -12,7 +17,6 @@ top: 105px;
 width: 877px;
 height: 200px;
 left: 580px;
-top: 144px;
 
 font-family: $my-font;
 font-style: normal;
@@ -32,19 +36,18 @@ color: #01418D;
 
 #banner-home h2 {
 
-left: 0%;
-right: 0%;
-top: 0%;
-bottom: 0%;
+
+position: relative;
+right: 100px;
+bottom: 50px;
 
 font-style: normal;
 font-weight: normal;
-font-size: 60px;
-line-height: 76px;
-text-align: center;
-letter-spacing: 0.2em;
+font-size: 55px;
+line-height: 70px;
+text-align: right;
+letter-spacing: 0.1em;
 text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-color: #FFFFFF;
-opacity: 0.7;
-margin-top: 200px;
+color: #FFFBFB;
+opacity: 0.9;
 }
