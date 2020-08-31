@@ -163,7 +163,7 @@ patient_drugs_1 = PatientDrug.create!(drug: doliprane_1000, patient: patient_1 ,
 
 puts "#{PatientDrug.all}"
 
-chatroom_1 = Chatroom.create!(name: "Général")
+chatroom_1 = Chatroom.create!(name: "Messagerie Sécurisée")
 
 puts "#{Chatroom.all}"
 
