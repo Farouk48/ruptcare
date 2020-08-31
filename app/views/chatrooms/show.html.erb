@@ -1,35 +1,46 @@
-<div class="main-chatroom-app">
-	<div class="sidebar-chatroom">
-		<div class="sidebar-navigation">
+<html>
+<body>
+<main class="main-chatroom-app">
+	<aside class="sidebar-chatroom">
+		<nav class="sidebar-chatroom__nav">
 			<ul>
-				<li class="sidebar-navigation li"><i class="fas fa-inbox"></i> Inbox <span class="notif"> 2 </span></li>
-				<li class="sidebar-navigation li"><i class="fas fa-pen"></i> Brouillons <span class="notif">  </span></li>
-				<li class="sidebar-navigation li"><i class="far fa-paper-plane"></i></i> Envoyés <span class="notif"> 2 </span></li>
-					<li class="sidebar-navigation li"><i class="fas fa-exclamation-triangle"></i></i> Urgent <span class="notif">  </span></li>
-				<li class="sidebar-navigation li"><i class="fas fa-trash"></i></i> Corbeille <span class="notif">  </span></li>
+				<li class="sidebar-chatroom__nav__li"><i class="fas fa-inbox"></i> Inbox <span class="notif"> 2 </span></li>
+				<li class="sidebar-chatroom__nav__li"><i class="fas fa-pen"></i> Brouillons <span class="notif">  </span></li>
+				<li class="sidebar-chatroom__nav__li"><i class="far fa-paper-plane"></i></i> Envoyés <span class="notif"> 2 </span></li>
+					<li class="sidebar-chatroom__nav__li"><i class="fas fa-exclamation-triangle"></i></i> Urgent <span class="notif"></span></li>
+				<li class="sidebar-chatroom__nav__li"><i class="fas fa-trash"></i></i> Corbeille <span class="notif">  </span></li>
+			</ul>
+		</nav>
+
+		<div class="sidebar-chatroom sidebar-chatroom__nav--spacer">
+			<ul>
+				<li class="sidebar-chatroom__nav__li"><i class="fas fa-check"></i>Validées</li>
+				<li class="sidebar-chatroom__nav__li"><i class="far fa-clock"></i>En attente</li>
+				<li class="sidebar-chatroom__nav__li"><i class="fas fa-times"></i>Rejet</li>
 			</ul>
 		</div>
 
-		<div class="sidebar-chatroom sidebar-navigation sidebar-conv-clean">
-			<ul>
-				<li class="sidebar-navigation li"><i class="fas fa-check"></i>Validées</li>
-				<li class="sidebar-navigation li"><i class="far fa-clock"></i>En attente</li>
-				<li class="sidebar-navigation li"><i class="fas fa-times"></i>Rejet</li>
-			</ul>
-		</div>
-
-		<div class="sidebar-conv-doc">
-			<div class=""
+		<div class="sidebar-chatroom sidebar-navigation sidebar-conv-doc">
+			<div class="sidebar-header">
 				<h2> Docteurs<span></span></h2>
 				<button>Tout voir </button>
+	        </div>
 	    </div>
+	</aside>
 
+	<div class="section-chat">
+		<div class="section-chat-header">
+			<div><label aria-label="Rechercher une conversion"><i data-feather='search'></i></label>
+		      <input type='text' placeholder='Search'>
+        	</div>
+        </div>
+	</div>
 
 
 <h1>#<%= @chatroom.name %></h1>
 <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
   <% @chatroom.messages.each do |message| %>
-    <%= render 'messages/message', message: message, user_is_author: message.sender == current_user %>
+    <%= render 'messages/message', message: message %>
   <% end %>
 </div>
 
@@ -37,3 +48,7 @@
   <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
   <%= f.button :submit %>
 <% end %>
+
+</main>
+</body>
+</html>
