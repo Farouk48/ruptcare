@@ -1,18 +1,19 @@
-<!-- <html class="html-show-chatroom">
+<html class="html-show-chatroom">
 <body class="body-show">
+	<h1>#<%= @chatroom.name %></h1>
 <main class="main-chatroom-app">
 	<aside class="sidebar-chatroom">
 		<nav class="sidebar-chatroom__nav">
 			<ul>
 				<li class="sidebar-chatroom__nav__li"><i class="fas fa-inbox"></i> Inbox <span class="notif"> 2 </span></li>
 				<li class="sidebar-chatroom__nav__li"><i class="fas fa-pen"></i> Brouillons <span class="notif">  </span></li>
-				<li class="sidebar-chatroom__nav__li"><i class="far fa-paper-plane"></i></i> Envoyés <p class="notif"> 2 </p></li>
+				<li class="sidebar-chatroom__nav__li"><i class="far fa-paper-plane"></i></i> Envoyés <span class="notif"></span></li>
 					<li class="sidebar-chatroom__nav__li"><i class="fas fa-exclamation-triangle"></i></i> Urgent <span class="notif"></span></li>
 				<li class="sidebar-chatroom__nav__li"><i class="fas fa-trash"></i></i> Corbeille <span class="notif">  </span></li>
 			</ul>
 		</nav>
 
-		<div class="sidebar-chatroom sidebar-chatroom__nav--spacer">
+		<div class="sidebar-chatroom sidebar-chatroom__nav--message">
 			<ul>
 				<li class="sidebar-chatroom__nav__li"><i class="fas fa-check"></i>Validées</li>
 				<li class="sidebar-chatroom__nav__li"><i class="far fa-clock"></i>En attente</li>
@@ -22,24 +23,41 @@
 
 		<div class="sidebar-chatroom sidebar-navigation sidebar-conv-doc">
 			<div class="sidebar-header">
-				<h2 class="h2-show-chatroom"> Docteurs<span></span></h2>
+				<h2 class="h2-show-chatroom"> Docteurs <span></span></h2>
 				<button class="button-show-chatroom">Tout voir </button>
 	        </div>
 	    </div>
 	</aside>
 
 	<div class="section-chat">
-		<div class="section-chat-header">
-			<div><label aria-label="Rechercher une conversion"><i data-feather='search'></i></label>
+		<div class="section-chat__header">
+			<div><label aria-label="Rechercher une conversation"><i class="fas fa-search"></i></label>
 		      <input type='text' placeholder='Search'>
         	</div>
+        	<ul>
+            <li class="sidebar-chatroom__nav__li"><i class="fas fa-check"></i>Dr. Tairi </li>
+        	<li class="sidebar-chatroom__nav__li"><i class="fas fa-check"></i>Dr. Maboul (2) </li>
+        	<li class="sidebar-chatroom__nav__li"><i class="fas fa-check"></i>Dr. Djamel </li>
         </div>
 	</div>
 
-</main>
-</body>
+	  <section class='c-openchat'>
+    <div class='c-openchat__header'>
+      <ul>
+  		 <li class='c-openchat__li'><%= current_user.full_name %></li>
+        <li class='c-openchat__li'><img src='https://res.cloudinary.com/de254wisw/image/upload/v1598617720/Capture_d_%C3%A9cran_2020-08-28_%C3%A0_14.18.52_ynx97b.png' alt=''></li>
+      </ul>
+    </div>
 
-<h1>#<%= @chatroom.name %></h1>
+	 <div class='c-openchat__box'>
+      <div class='c-openchat__box__header'>
+        <img class='c-openchat__box__pp' src='' alt=''>
+        <p class='c-openchat__box__name'>Dr Walid Tairi</p>
+        <span class='c-openchat__box__status'></span>
+      </div>
+      <div class='c-openchat__box__info'></div>
+    </div>
+
 <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
   <% @chatroom.messages.each do |message| %>
     <%= render 'messages/message', message: message, user_is_author: message.sender == current_user %>
@@ -48,5 +66,7 @@
 
 <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
   <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
-  <%= f.button :submit %>
+  <%= f.button :submit, value: "Envoyer", class: "button-send-message" %>
 <% end %>
+</main>
+</body>
