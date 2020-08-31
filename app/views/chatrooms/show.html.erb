@@ -38,17 +38,11 @@
 
 </main>
 </body>
-<<<<<<< HEAD
-</html> -->
-
-=======
-</html>
->>>>>>> 7532a1006cbb043a6a6704c2bc0f892433f54fe3
 
 <h1>#<%= @chatroom.name %></h1>
 <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
   <% @chatroom.messages.each do |message| %>
-    <%= render 'messages/message', message: message %>
+    <%= render 'messages/message', message: message, user_is_author: message.sender == current_user %>
   <% end %>
 </div>
 
