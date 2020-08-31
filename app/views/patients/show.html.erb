@@ -1,11 +1,6 @@
-	
-
-	<%= link_to "", patients_path, class:"fas fa-arrow-circle-left fa-3x" %> 
-	<p class="return-text"> Retour au tableau de bord </p>
 
 
-
-  <header class="header">
+  <header class="header-show">
   	<div class="header__search">.</div>
   </header>
 
@@ -14,15 +9,11 @@
   <div class="main">
   	<div class="row">
   	  <div class="col-4">
-		<div class="card-show-img">
-		<%= cl_image_tag("830x532_actrice-scarlett-johansson_yz5b8l", :width => 300, :crop => "pad") %>
-		</div>
 	</div>
 
 
-
-	<div class="col-8">	
-		 <div class="main-cards">
+	<div class="col-4">
+		 <div class="main-cards text-center">
 		    <div class="card-show">
 		      <h1> Informations sur le patient </h1>
 			  <ul class="list-info-patient">
@@ -37,7 +28,7 @@
 	    <div class="card-show">
 	  	  <h1> Informations médicales </h1>
 	  	  <ul class="list-info-patient">
-	  	  	  <li><%= @patient.chronic_disease %> chronique : maladie à relever</li>
+	  	  	  <li><b>Maladie(s) chronique(s):</b> <%= @patient.chronic_disease %> chronique : maladie à relever</li>
 	  	  	  <hr>
 	  		  <li><b> Médecin traitant : </b> Dr. Walid Tairi </li>
 	  	  </ul>
@@ -45,7 +36,7 @@
 	  </div>
 	</div>
 </div>
-	       	<div class="legend">Rechercher une alternative médicamenteuse : </div>
+	       	<div class="legend">Rechercher une alternative médicamenteuse :</div>
 <!-- 	 <div id="searchbar"> -->
 		<div class="input-field">
 		      <%= form_tag drugs_path, method: :get do %>
@@ -66,40 +57,39 @@
 	         <th>Délivrance</th>
 	         <th> Pharmacie </th>
 	         <th>Pharmacien(ne)</th>
-	         <th width="230">Commentaires</th>
 	      </tr>
           <tr>
 	         <td>29/02/2020</td>
 	         <td>Mianserine 10mg</td>
 	         <td>Le Wagon</td>
 	         <td> Farouk Rahmani </td>
-	         <td> Patient agressif</td>
           </tr>
           <tr>
 	         <td>03/04/2020</td>
 	         <td>Mianserine 10mg</td>
 	         <td>Pharmacie du 20eme</td>
 	         <td> Julien Dupuis </td>
-	         <td> Malpoli, agressif </td>
 	      </tr>
 	          <tr>
 	         <td>10/05/2020</td>
 	         <td>Mianserine 10mg</td>
 	         <td>Pharmacie du 20eme</td>
 	         <td> Julien Dupuis </td>
-	         <td> Malpoli, agressif </td>
 	      </tr>
 	          <tr>
 	         <td>07/06/2020</td>
 	         <td>Mianserine 10mg</td>
 	         <td>Pharmacie du 20eme</td>
 	         <td> Julien Dupuis </td>
-	         <td> Malpoli, agressif </td>
-	      </tr>
+ 	      </tr>
 	     </table>
 	    </div>
 	  </div>
     </div>
 </div>
+  <%= link_to "", patients_path, class:"fas fa-arrow-circle-left fa-3x", id:"back-arrow" %>
+  <p class="return-text"> Retour au tableau de bord </p>
 </div>
-  
+
+
+
