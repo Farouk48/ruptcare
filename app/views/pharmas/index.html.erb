@@ -6,7 +6,7 @@
 
 
 <div id="map-pharma">
-  <div id="pharmas" >
+  <div id="pharmas">
     <% @pharmas.reject { |exclude| exclude == @user_pharma }.each do|pharma| %>
     <div id="pharma-display" class="container">
       <% if pharma.present? %>
