@@ -1,9 +1,15 @@
 .top-drug-title h1 {
-  color: #51CAF4;
+  color: #006DBB;
   padding: 20px;
   font-size: 30px;
-  font-family:  sans-serif;
+  font-family:  Work Sans;
   font-weight: bold;
+  padding-left: 0px;
+
+}
+.top-drug-title p {
+  font-size: 16px;
+  font-family: Work sans-s
 }
 
 #rupt {
@@ -11,8 +17,14 @@
 }
 
 .alternatives{
-  color: #51CAF4;
-  font-size: 17px;
+  color: #006DBB;
+  font-size: 25px;
+  font-family: Work Sans;
+}
+.alternatives-following{
+  color: #006DBB;
+  font-size: 25px;
+  font-family: Work Sans;
 }
 
 .card-main-drug {
@@ -38,22 +50,25 @@
   font-size: 30px;
   font-weight: bolder;
   padding-left: 0px;
-  font-family: Heebo;
-  margin-top: -35px ;
+  font-family: Work Sans;
+  margin-top: -25px ;
 
 }
 
 #aprec {
-  font-size: 13px;
-  line-height: 1.4;
+  font-size: 16px;
+  line-height: 19px;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  font-family: Work Sans;
+  color: #333333;
 }
 
 .card-main-drug .card-drug-infos {
   padding: 10px;
   padding-left: 20px;
+  margin-top: -40px;
 
 }
 
@@ -71,11 +86,12 @@
 
 .card-other-drug {
   position: relative;
-  height: 200px;
+  height: 236px;
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
   margin-bottom: 50px;
+  left: -25px;
+  height: 236px;
 }
 
 .card-other-drug > img {
@@ -86,15 +102,21 @@
 
 .card-other-drug h2 {
   padding-top: 5px;
-  font-size: 16px;
+  font-size: 20px;
+  font-family: Work Sans;
   font-weight: bold;
   margin: 0;
+  padding-top: 15px;
+  padding-left: 15px;
 }
 
 .card-other-drug p {
-  font-size: 12px;
+  font-size: 16px;
   opacity: .7;
   margin: 0;
+  padding-left: 15px;
+  font-size: Work Sans;
+
 }
 
 #availability-success{
@@ -129,7 +151,7 @@
 .card-disable{
   opacity: 0.5;
     position: relative;
-  height: 200px;
+  height: 236px;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
@@ -146,10 +168,14 @@
   color: #006DBB;
   font-size: 20px;
   font-family: Work Sans;
-  margin-top: -19;
+  margin-top: -15px;
 }
 #stock-check{
   font-size: 16px;
    color: #006DBB;
   font-family: Work Sans;
+  padding-top: 15px;
+}
+#d-class{
+  color: #006DBB;
 }
