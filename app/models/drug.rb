@@ -1,6 +1,7 @@
 class Drug < ApplicationRecord
   has_many :stocks
   has_many :patient_drugs
+  has_one_attached :photo
 
   include PgSearch::Model
 

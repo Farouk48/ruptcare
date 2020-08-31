@@ -1,17 +1,8 @@
-<% if message.user == current_user %>
-  <div class="message-container" id="message-<%= message.id %>">
-    <i class="author">
-      <span><%= message.user.full_name %></span>
-      <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
-    </i>
-    <p><%= message.content %></p>
-  </div>
-<% else %>
-<div class="message-container message-right" id="message-<%= message.id %>">
+<div class="message-container message-right <%= "message-left" if user_is_author %> " id="message-<%= message.id %>" data-user="<%= message.user.id %>">
   <i class="author">
     <span><%= message.user.full_name %></span>
     <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
   </i>
   <p><%= message.content %></p>
 </div>
-<% end %>
+
