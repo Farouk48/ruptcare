@@ -1,17 +1,15 @@
 <div class="container">
   <div class="top-drug-title">
-    <h1>Résultats proposés par Rupt'Care</h1>
+    <h1>Mon alternative à la <%= @main_drug.name %></h1>
     <p>
-      L'alternative proposée par
-      <strong id="rupt">Rupt'</strong>
-      Care
-    </p>
+      Rupt’Care vous propose la meilleur correspondance avec le médicament recherché
+     </p>
   </div>
   <% if @main_drug.present? %>
   <div class="card-main-drug">
 
 
-    <img src="https://images.unsplash.com/photo-1558956397-d89fe6bb84e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=50" />
+    <img src="https://images.unsplash.com/photo-1581159186721-b68b78da4ec9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60">
     <div class="card-drug-infos">
       <h2><%= @main_drug.name %></h2>
       <p class="drug-class">
@@ -36,8 +34,8 @@
       </h1>
       <h1>
         <% elsif @main_drug.stocks.where(pharma: current_user.pharma).first %>
-        <i class="fas fa-layer-group"> Stock:
-          <%= @main_drug.stocks.where(pharma: current_user.pharma).first.quantity %>
+        <i class="fas fa-layer-group">
+          Stock: <%= @main_drug.stocks.where(pharma: current_user.pharma).first.quantity %>
           <button type="button" class="btn btn-primary" id="call-doctor"><i class="fas fa-comment-medical"> Chat doctor</i></button>
         </i>
 
@@ -46,7 +44,7 @@
     </div>
   </div>
   <% end %>
-  <p>
+  <p class="alternatives-following">
     <strong class="alternatives">
       <%= @drugs.count-1 %>
        autres alternatives thérapeutiques
@@ -61,10 +59,10 @@
     <div class="card-other-drug <%= "card-disable" if drug.stocks.where(pharma: current_user.pharma).first.quantity == 0  %>"  data-toggle="modal" data-target="#modal-drug-<%= drug.id %>" >
       <img src="https://images.unsplash.com/photo-1558956397-7f6aea7aaab4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=50" />
       <h2><%= drug.name %></h2>
-      <p>
+      <p id="d-class">
         <%= drug.drugs_class %>
       </p>
-      <p>
+      <p id="d-family">
         <%= drug.family %>
       </p>
     </div>
