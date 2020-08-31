@@ -1,7 +1,7 @@
 .top-drug-title h1 {
   color: #51CAF4;
   padding: 20px;
-  font-size: 24px;
+  font-size: 30px;
   font-family:  sans-serif;
   font-weight: bold;
 }
@@ -17,7 +17,7 @@
 
 .card-main-drug {
   overflow: hidden;
-  height: 450px;
+  height: 555px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   display: flex;
@@ -34,11 +34,13 @@
 }
 
 .card-main-drug h2 {
-  color: #51CAF4;
-  font-size: 22px;
+  color: #006DBB;
+  font-size: 30px;
   font-weight: bolder;
   padding-left: 0px;
   font-family: Heebo;
+  margin-top: -35px ;
+
 }
 
 #aprec {
@@ -74,7 +76,6 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   margin-bottom: 50px;
-  border-radius: 10px;
 }
 
 .card-other-drug > img {
@@ -115,9 +116,11 @@
   opacity: 0.4;
 }
 #stock-dispo{
-  font-size: 20px;
-  font-weight: bold;
-  color: black;
+  font-size: 16px;
+  color: #006DBB;
+  font-family: Work Sans;
+  position: relative;
+  top: 35px;
 }
 
 .card-drug-infos p{
@@ -132,4 +135,21 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   margin-bottom: 50px;
   border-radius: 10px;
+}
+.drug-family{
+  color: #006DBB;
+  font-size: 20px;
+  font-family: Work Sans;
+  margin-top: -15px;
+}
+.drug-class{
+  color: #006DBB;
+  font-size: 20px;
+  font-family: Work Sans;
+  margin-top: -19;
+}
+#stock-check{
+  font-size: 16px;
+   color: #006DBB;
+  font-family: Work Sans;
 }
