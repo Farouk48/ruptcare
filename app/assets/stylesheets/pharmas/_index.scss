@@ -1,9 +1,9 @@
 @import "components/map";
 
 #title-pharma h1 {
- color:#07B8F1;
+ color:#006DBB;
  font-family: $headers-font;
- font-size: 48px;
+ font-size: 30px;
  line-height: 61px;
  font-weight: light;
  margin-top: 10px;
@@ -12,11 +12,11 @@
 #title-pharma h2 {
   font-family:$body-font;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 35px;
   left: 65px;
   margin-top: 25px;
-  margin-bottom: 25px;
+  margin-bottom: -10px;
 }
 
 #map-pharma {
@@ -26,10 +26,11 @@
 
 #pharma-display {
   text-align: left;
-  border-top: 1px solid #B59494;
-  border-bottom: 1px solid #B59494;
-  background: rgba(108, 194, 232, 0.09);
+  border-top: 1px solid #01418D;
+  border-bottom: 1px solid #01418D;
+  background: #FFFFFF;
   font-family:$body-font;
+  color: #006DBB;
 }
 
 #pharma-display h2 {
@@ -37,11 +38,32 @@
   }
 
 #map {
-  border-top: 1px solid #B59494;
-  border-bottom: 1px solid #B59494;
+  border-top: 1px solid #01418D;
+  border-bottom: 1px solid #01418D;
 }
 
 #pharmas {
   overflow: scroll;
   height: 600px;
+}
+
+#back-index {
+  color: #006DBB;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  opacity: 0.8;
+}
+
+#back-index:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+
+.return-index {
+  color: #006DBB;
+  margin-bottom: 10px;
+}
+
+.strong-name {
+  color: #006DBB;
 }
