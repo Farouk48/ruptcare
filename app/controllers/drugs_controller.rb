@@ -67,6 +67,6 @@ end
   private
 
   def drug_params
-    params.require(:drug).require(:name, :drugs_class, :family, :action, :galenic, :posology, :recommandations, :availability, :commercialisation, :administration)
+    params.require(:drug).require(:name, :drugs_class, :family, :action, :galenic, :posology, :recommandations, :availability, :commercialisation, :administration, :photo)
   end
 end
