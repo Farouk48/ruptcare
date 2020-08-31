@@ -1,7 +1,5 @@
-
-<html class="html-show-chatroom">
+<!-- <html class="html-show-chatroom">
 <body class="body-show">
-
 <main class="main-chatroom-app">
 	<aside class="sidebar-chatroom">
 		<nav class="sidebar-chatroom__nav">
@@ -38,17 +36,15 @@
         </div>
 	</div>
 
-
 </main>
 </body>
-</html>
-
+</html> -->
 
 
 <h1>#<%= @chatroom.name %></h1>
 <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
   <% @chatroom.messages.each do |message| %>
-    <%= render 'messages/message', message: message, user_is_author: message.sender == current_user %>
+    <%= render 'messages/message', message: message %>
   <% end %>
 </div>
 
@@ -56,5 +52,3 @@
   <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
   <%= f.button :submit %>
 <% end %>
-
-
