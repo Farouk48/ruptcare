@@ -48,6 +48,7 @@ pharma_24 = Pharma.create!(name:"Pharmacie de la Mairie", address:"26 Avenue Jea
 pharma_25 = Pharma.create!(name:"Pharmacie des Chantiers", address:"43 Rue des États Généraux", city:"78000 Versailles")
 pharma_26 = Pharma.create!(name:"Pharmacie de la Piscine", address:"24 Rue Pottier", city:"78150 Le Chesnay")
 
+
 puts "#{Pharma.all}"
 
 
@@ -73,15 +74,8 @@ filepath = File.join(Rails.root, 'db/drugs_demo.csv')
   end
 end
 
-mirtazapine = Drug.find_by_name("MIRTAZAPINE 15 mg")
-escitalopram_10 = Drug.find_by_name("ESCITALOPRAM 10 mg")
-fluoxetine_20 = Drug.find_by_name("FLUOXETINE 20 mg")
-paroxetine_20 = Drug.find_by_name("PAROXETINE 20 mg")
-sertraline_25 = Drug.find_by_name("SERTRALINE 25 mg")
-sertraline_50 = Drug.find_by_name("SERTRALINE 50 mg")
-venlafaxine_37 = Drug.find_by_name("VENLAFAXINE LP 37,5 mg")
-venlafaxine_75 = Drug.find_by_name("VENLAFAXINE LP 75 mg")
-doliprane_1000 = Drug.find_by_name("DOLIPRANE 1000 mg, comprimé")
+mirtazapine = Drug.find_by_name!("MIRTAZAPINE 15 mg, comprimé orodispersible")
+escitalopram_10 = Drug.find_by_name!("ESCITALOPRAM 10 mg, comprimé pelliculé sécable")
 
 stock_mirtazapine_1 = Stock.create!(quantity: 0, pharma: pharma_1 , drug: mirtazapine)
 stock_mirtazapine_2 = Stock.create!(quantity: 0, pharma: pharma_2 , drug: mirtazapine)
@@ -121,6 +115,9 @@ stock_venlafaxine_75 = Stock.create!(quantity: 10, pharma: pharma_1 , drug: venl
 
 
 
+
+
+
 puts "#{Stock.all}"
 
 doctor_1 = Doctor.create!(full_name: "BOLTA Victor", rpps_number:"10004000856" , speciality: "Psychiatre")
@@ -133,6 +130,7 @@ doctor_6 = Doctor.create!(full_name: "ALDEBERT Pierre", rpps_number:"10004000856
 doctor_7 = Doctor.create!(full_name: "DUMAS Mathilde", rpps_number:"10004000856" , speciality: "Généraliste")
 
 puts "#{Doctor.all}"
+
 
 
 patient_1 = Patient.create!(first_name: "Véronique", last_name: "DUBOIS", address: " 16 rue de Gaudelet", age: 37, city: " 75011 Paris", chronic_disease: "Dépression", doctor: doctor_1, pharma: pharma_1)
@@ -154,7 +152,6 @@ patient_4 = Patient.create!(first_name: "Michel", last_name: "DUPONT", address: 
 
 puts "#{Patient.all}"
 
-
 patient_drugs_1 = PatientDrug.create!(drug: doliprane_1000, patient: patient_1 , disease:"Depression")
 
 puts "#{PatientDrug.all}"
@@ -162,7 +159,6 @@ puts "#{PatientDrug.all}"
 chatroom_1 = Chatroom.create!(name: "Général")
 
 puts "#{Chatroom.all}"
-
 
 
 
