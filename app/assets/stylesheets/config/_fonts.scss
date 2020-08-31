@@ -3,8 +3,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Oxygen&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+
 // Define fonts for body and headers
-$body-font: "Heebo",  "sans-serif";
+$body-font: "Work Sans", "sans-serif";
+//$body-font: "Heebo",  "sans-serif";
 $headers-font: "Oxygen", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
