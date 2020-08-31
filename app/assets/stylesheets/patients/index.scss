@@ -2,7 +2,6 @@
 .grid-container {
   display: grid;
   grid-template-columns: 240px 1fr;
-  grid-template-rows: 50px 1fr 50px;
   grid-template-areas:
     "sidenav header"
     "sidenav main";
@@ -11,7 +10,7 @@
 
 .header {
   grid-area: header;
-  background-color:#f1f3f8 ;
+  background-color: white ;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -204,7 +203,7 @@ left: 0;
 .welcome-banner {
   object-fit: fill;
   background-repeat: no-repeat;
-  width: 100%;
+  background-size: cover;
 
 }
 

@@ -6,28 +6,33 @@ min-height: 100vh;
 }
 
 #home-container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
+width: 658px;
+height: 118px;
+left: 678px;
+top: 390px;
+
 }
 
 #banner-home h1 {
 
-width: 877px;
-height: 200px;
-left: 580px;
-
-font-family: $my-font;
-font-style: normal;
+width: 464px;
+height: 106px;
+font-family: 'Work Sans', sans-serif;
 font-weight: bold;
-font-size: 144px;
-line-height: 215px;
-text-align: right;
-text-shadow: 3px 3px black;
-margin-left: 450px;
 
-color: #01418D;
+position: absolute;
+left: 678px;
+top: 300px;
+font-style: normal;
+font-weight: 600;
+font-size: 90px;
+line-height: 106px;
+/* identical to box height */
+
+
+color: #FFFFFF
+
+
 }
 
 #banner-home h1 span {
@@ -35,19 +40,17 @@ color: #01418D;
 }
 
 #banner-home h2 {
+position: absolute;
+width: 658px;
+height: 118px;
+left: 678px;
+top: 390px;
 
-
-position: relative;
-right: 100px;
-bottom: 50px;
-
+font-family: Work Sans;
 font-style: normal;
 font-weight: normal;
-font-size: 55px;
-line-height: 70px;
-text-align: right;
-letter-spacing: 0.1em;
-text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-color: #FFFBFB;
-opacity: 0.9;
+font-size: 50px;
+line-height: 59px;
+
+color: #FFFFFF;
 }
