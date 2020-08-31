@@ -40,7 +40,7 @@
 <h1>#<%= @chatroom.name %></h1>
 <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
   <% @chatroom.messages.each do |message| %>
-    <%= render 'messages/message', message: message %>
+    <%= render 'messages/message', message: message, user_is_author: message.sender == current_user %>
   <% end %>
 </div>
 
