@@ -59,15 +59,14 @@ color: #060303;
 }
 
 .btn-open {
-  background-color: #01418D;
+  background-color: #50D890;
   color: #FFFBFB;
   font-size: 20px;
-  border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5), 0 0 0 rgba(0, 0, 0, 0.3) inset;
-
-
-
-
+  width: 360px;
+  height: 50px;
+  font-family: 'Work Sans', sans-serif;
+  padding: 0px
 }
 
 .btn-open:active, .btn-open:focus {
