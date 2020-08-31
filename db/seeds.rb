@@ -74,8 +74,15 @@ filepath = File.join(Rails.root, 'db/drugs_demo.csv')
   end
 end
 
-mirtazapine = Drug.find_by_name!("MIRTAZAPINE 15 mg, comprimé orodispersible")
-escitalopram_10 = Drug.find_by_name!("ESCITALOPRAM 10 mg, comprimé pelliculé sécable")
+mirtazapine = Drug.find_by_name("MIRTAZAPINE 15 mg")
+escitalopram_10 = Drug.find_by_name("ESCITALOPRAM 10 mg")
+fluoxetine_20 = Drug.find_by_name("FLUOXETINE 20 mg")
+paroxetine_20 = Drug.find_by_name("PAROXETINE 20 mg")
+sertraline_25 = Drug.find_by_name("SERTRALINE 25 mg")
+sertraline_50 = Drug.find_by_name("SERTRALINE 50 mg")
+venlafaxine_37 = Drug.find_by_name("VENLAFAXINE LP 37,5 mg")
+venlafaxine_75 = Drug.find_by_name("VENLAFAXINE LP 75 mg")
+doliprane_1000 = Drug.find_by_name("DOLIPRANE 1000 mg, comprimé")
 
 stock_mirtazapine_1 = Stock.create!(quantity: 0, pharma: pharma_1 , drug: mirtazapine)
 stock_mirtazapine_2 = Stock.create!(quantity: 0, pharma: pharma_2 , drug: mirtazapine)
