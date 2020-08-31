@@ -1,118 +1,217 @@
-// @import "components/chatmessage";
+@import "components/chatmessage";
 
-// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
-// * {
-//   margin: 0;
-//   padding: 0;
-//   font-size: 13px;
-//   box-sizing: border-box;
-// }
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  box-sizing: border-box;
+}
 
-// .html-show-chatroom,
-// .body-show{
-//   height: 100%;
-//   font-family: "Roboto", sans-serif;
-// }
-// .body-show {
-//   background: rgb(250, 250, 250);
-// }
-
-
-// .main-chatroom-app{
-//   display: flex;
-//   max-width: 1400px;
-//   margin: 2rem auto;
-//   box-shadow: -1px 1px 10px 2px rgba(204, 197, 197, 0.5);
-//   border-radius: 8px;
-// }
-// .sidebar-chatroom {
-//   flex-basis: 20%;
-//   height: 100%;
-//   background-color: rgb(245, 249, 253);
-//   padding: 1.5rem;
+.html-show-chatroom,
+.body-show{
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+.body-show {
+  background: rgb(250, 250, 250);
+}
 
 
-//   &__header-show {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     padding: 1rem;
+.main-chatroom-app{
+  display: flex;
+  max-width: 1400px;
+  margin: 2rem auto;
+  box-shadow: -1px 1px 10px 2px rgba(204, 197, 197, 0.5);
+  border-radius: 8px;
+}
+.sidebar-chatroom {
+  flex-basis: 20%;
+  height: 100%;
+  background-color: rgb(245, 249, 253);
+  padding: 1.5rem;
 
-//     .h2-show-chatroom {
-//       font-size: 16px;
-//       font-weight: 400;
-//       color: rgb(245, 249, 253);
+
+  // &__header-show {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-between;
+  //   padding: 1rem;
+
+    .h2-show-chatroom {
+      font-size: 16px;
+      font-weight: 400;
+      color: black;
     
 
-//     .button-show-chatroom {
-//       border-radius: 4px;
-//       background-color: transparent;
-//       border: 1px solid rgb(201, 204, 208);
-//       color: rgb(128, 132, 136);
-//       display: inline-block;
-//       padding: 8px 15px;
-//       cursor: pointer;
-//       margin-right: 10px;
-//     }
-//   }
-// }
-//   &__nav {
-//     border-radius: 8px;
-//     background-color: rgb(245, 249, 253);
+    .button-show-chatroom {
+      border-radius: 4px;
+      background-color: transparent;
+      border: 1px solid rgb(201, 204, 208);
+      color: rgb(128, 132, 136);
+      display: inline-block;
+      padding: 8px 15px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  }
 
-//     &--spacer {
-//       margin-top: 1.5rem;
-//       margin-right: 10px;
-//     }
+  &__nav {
+    border-radius: 8px;
+    background-color: rgb(245, 249, 253);
 
-//     &__li {
-//       list-style: none;
-//       position: relative;
-//         text-decoration: none;
-//       padding: 1rem;
-//       border-bottom: 1px solid darken(rgb(245, 249, 253), 3%);
-//       display: block;
-//       color: black;
-//       display: flex;
-//       align-items: center;
-//        margin-right: 10px;
-//     }
-//  }
-// }
+    &--message {
+      margin-top: 1.5rem;
+      margin-right: 10px;
+    }
 
-// .fa-inbox {
-// 	margin-right: 10px;
-
-// }
-// .fa-pen {
-// 	margin-right: 10px;
-
-// }
-// .fa-paper-plane {
-// 	margin-right: 10px;
-
-// }
-// .fa-exclamation-triangle {
-// 	margin-right: 10px;
-
-// }
-// .fa-trash {
-// 	margin-right: 10px;
-
-// }
+    &__li {
+      list-style: none;
+      position: relative;
+       text-decoration: none;
+      padding: 1rem;
+      border-bottom: 1px solid darken(rgb(245, 249, 253), 3%);
+      display: block;
+      color: black;
+      display: flex;
+      align-items: center;
+       margin-right: 10px;
+    }
+ }
+}
 
 
-// .fa-check {
-// 	margin-right: 10px;
 
-// }
-// .fa-clock {
-// 	margin-right: 10px;
+.section-chat {
+  flex-basis: 20%;
+  padding: 1rem;
+  border-right: 1px solid #f1f4f6;
+  background: rgb(255, 255, 255);
 
-// }
-// .fa-times {
-// 	margin-right: 10px;
+  &__header {
+    padding: 1rem 0;
+    border-bottom: 1px solid #f1f4f6;
+    width: 100%;
+    div {
+      position: relative;
+    }
+    input {
+      width: 100%;
+      padding: 10px 10px 10px 40px;
+      font-size: 13px;
+      border-radius: 100px;
+      border: 1px solid #f1f4f6;
+      color: #ebf0f6;
+    }
+    label {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 15px;
+      display: flex;
 
-// }
+    }
+  }
 
+  &__list {
+    list-style: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f4f6;
+
+    // &:hover {
+    // }
+  }
+
+}
+
+.c-openchat {
+  flex-basis: 60%;
+  &__header {
+    padding: 2rem 2rem;
+    border-bottom: 1px solid #f1f4f6;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+  }
+  &__li {
+    display: inline-block;
+    margin: 0 1rem;
+    position: relative;
+
+    img {
+      width: 35px;
+      height: 35px;
+      border-radius: 100rem;
+    }
+  }
+  // &__link {
+  //   text-decoration: none;
+  //   color: rgb(150, 150, 150);
+
+    // &--active {
+    //   color: #ebf0f6;
+    // }
+  
+}
+
+
+.c-openchat__box {
+  
+  &__header {
+    padding:1rem 0;
+    border-bottom:1px solid #f1f4f6;
+    margin:0 1rem;
+    display:flex;
+    align-items:center;
+  }
+  &__status{
+    width:10px;
+    height:10px;
+    border-radius:100rem;
+    background:#37d420;
+    display:inline-block;
+    margin-left:10px;
+  }
+  &__pp {
+    width:35px;
+    height:35px;
+    border-radius:100rem;
+    border:1px solid rgb(250,250,250);
+    display:inline-block;
+  }
+  &__name {
+    margin-left:10px;
+    color:#747678;
+  }
+}
+
+.c-openchat__box__info {
+  
+  ul {
+    flex-direction:column;
+    padding:0 2rem;
+    margin:2rem 0;
+  }
+}
+
+
+.button-send-message {
+	border: 2px solid black;
+	float: right;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+.fas, .far {
+	margin-right: 10px;
+}
+
+#messages {
+	margin: 10px;
+}
