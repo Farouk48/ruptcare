@@ -1,90 +1,109 @@
 <div class="container">
   <div class="top-drug-title">
     <h1>Résultats proposés par Rupt'Care</h1>
-    <p>L'alternative proposée par <strong id="rupt">Rupt'</strong>Care</p>
+    <p>
+      L'alternative proposée par
+      <strong id="rupt">Rupt'</strong>
+      Care
+    </p>
   </div>
-
-<% if @main_drug.present? %>
+  <% if @main_drug.present? %>
   <div class="card-main-drug">
      <%= cl_image_tag @main_drug.photo.key, height: 300, width: 400, crop: :fill %>
   <!--   <img src="https://images.unsplash.com/photo-1558956397-d89fe6bb84e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=50" /> -->
     <div class="card-drug-infos">
       <h2><%= @main_drug.name %></h2>
+      <p>
+        <%= @main_drug.drugs_class %>
+      </p>
+      <p>
+        <%= @main_drug.family %>
+      </p>
       <h2 class="drug-info"> Mécanisme d'action:</h2>
-      <%= @main_drug.action %>
+      <p id="aprec"><%= @main_drug.action %></p>
       <h2 class="drug-info"> Schéma posologique:</h2>
-      <%= @main_drug.posology%>
+      <p id="aprec"><%= @main_drug.posology%></p>
       <h2 class="drug-info">Recommandations thérapeutiques:</h2>
-      <%= @main_drug.recommandations%>
-      <p><%= @main_drug.drugs_class %></p>
-      <p><%= @main_drug.family %></p>
-
-
+      <p id="aprec"><%= @main_drug.recommandations%></p>
       <% if @main_drug.stocks.where(pharma: current_user.pharma).first && @main_drug.stocks.where(pharma: current_user.pharma).first.quantity == 0 %>
-        <h1><i class="fas fa-layer-group"> Stock: Vérifiez chez un autre pharmacien.</i><%= link_to "Regarder réseau Rupt'care" , pharmas_path(drug_id: @main_drug.id, name: params[:name]), class: "btn btn-primary"%><h2><i class="fas fa-history"> Disponible dans: <%= pluralize(@main_drug.availability, "jours") %></i></h2></h1>
-        <h1>
-      <% elsif @main_drug.stocks.where(pharma: current_user.pharma).first %>
-        <i class="fas fa-layer-group"> Stock: <%= @main_drug.stocks.where(pharma: current_user.pharma).first.quantity %><button type="button" class="btn btn-primary" id="call-doctor"><i class="fas fa-comment-medical"> Chat doctor </i></button></i>
+
+      <h1>
+        <i class="fas fa-layer-group"> Stock: Vérifiez chez un autre pharmacien.</i>
+        <%= link_to "Regarder réseau Rupt'care" , pharmas_path(drug_id: @main_drug.id, name: params[:name]), class: "btn btn-primary"%>
+        <h2><i class="fas fa-history" id="stock-dispo"> Disponible dans: <%= pluralize(@main_drug.availability, "jours") %></i></h2>
+      </h1>
+      <h1>
+        <% elsif @main_drug.stocks.where(pharma: current_user.pharma).first %>
+        <i class="fas fa-layer-group"> Stock:
+          <%= @main_drug.stocks.where(pharma: current_user.pharma).first.quantity %>
+          <button type="button" class="btn btn-primary" id="call-doctor"><i class="fas fa-comment-medical"> Chat doctor</i></button>
+        </i>
+
       </h1>
       <% end %>
     </div>
   </div>
-<% end %>
-
-
-  <p><strong class="alternatives"><%= @drugs.count-1 %> autres alternatives thérapeutiques</strong> pouvant être recommandées au prescripteur:</p>
-
+  <% end %>
+  <p>
+    <strong class="alternatives">
+      <%= @drugs.count-1 %>
+       autres alternatives thérapeutiques
+    </strong>
+     pouvant être recommandées au prescripteur:
+  </p>
   <div class="cards-drugs-grid"  >
     <% @drugs.each do |drug| %>
-      <% unless drug == @main_drug %>
-        <div class="card-other-drug" data-toggle="modal" data-target="#modal-drug-<%= drug.id %>" >
-<!--   <img src="https://images.unsplash.com/photo-1558956397-7f6aea7aaab4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=50" /> -->
-<%= cl_image_tag drug.photo.key, height: 300, width: 400, crop: :fill %>
-          <% if drug.availability.to_i < 5 %>
-            <i class="fas fa-circle" id="availability-success"></i>
-          <% else %>
-            <i class="fas fa-circle" id="availability-faillure"></i>
-          <% end %>
-          <h2><%= drug.name %></h2>
-          <p><%= drug.drugs_class %></p>
-          <p><%= drug.family %></p>
+
+
+    <% unless drug == @main_drug %>
+    <div class="card-other-drug" data-toggle="modal" data-target="#modal-drug-<%= drug.id %>" >
+      <img src="https://images.unsplash.com/photo-1558956397-7f6aea7aaab4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=50" />
+      <% if drug.availability.to_i < 5 %>
+      <i class="fas fa-circle" id="availability-success"></i>
+      <% else %>
+      <i class="fas fa-circle" id="availability-faillure"></i>
+      <% end %>
+      <h2><%= drug.name %></h2>
+      <p>
+        <%= drug.drugs_class %>
+      </p>
+      <p>
+        <%= drug.family %>
+      </p>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="modal-drug-<%= drug.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog"></div>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" id="close">&times;</span></button>
+      <div class="card-drug">
+        <div class="card-drug-left">
+          <img id ="image-in-modal" src="https://images.unsplash.com/photo-1558956397-7f6aea7aaab4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=50" />
         </div>
+        <div class="card-drug-infos">
+          <h1 class="drug-name"><%= drug.name %></h1>
+          <h2 class="drug-info"> Mécanisme d'action:</h2>
+          <%= drug.action %>
+          <h2 class="drug-info"> Schéma posologique:</h2>
+          <%= drug.posology%>
+          <h2 class="drug-info">Recommandations thérapeutiques:</h2>
+          <%= drug.recommandations%>
+          <div class="card-drug-stock">
+            <% if drug.stocks.where(pharma: current_user.pharma).first&.quantity.to_i >
+             0  %>
+            <h1><i class="fas fa-layer-group"> Stock: <%= drug.stocks.where(pharma: current_user.pharma).first.quantity %><%= link_to "Contacter un médecin" , "#", class: "btn btn-primary"%></i></h1>
+            <% else %>
+            <h1>
+              <i class="fas fa-layer-group"> Stock: Vérifiez chez un autre pharmacien.</i>
+              <%= link_to "Regarder réseau Rupt'care" , pharmas_path(drug_id: drug.id, name: params[:name]), class: "btn btn-primary"%>
+              <h2><i class="fas fa-history"> Disponible dans:</i></h2>
+            </h1>
+            <% end %>
 
-        <!-- Modal -->
-        <div class="modal fade" id="modal-drug-<%= drug.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog"></div>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true" id="close">&times;</span>
-          </button>
-          <div class="card-drug">
-            <div class="card-drug-left"><!-- <img id ="image-in-modal" src="https://images.unsplash.com/photo-1558956397-7f6aea7aaab4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=50" /> -->
-               <%= cl_image_tag drug.photo.key, height: 300, width: 400, crop: :fill %>
-            </div>
-            <div class="card-drug-infos">
-              <h1 class="drug-name"><%= drug.name %></h1>
-              <h2 class="drug-info"> Mécanisme d'action:</h2>
-                <%= drug.action %>
-              <h2 class="drug-info"> Schéma posologique:</h2>
-                <%= drug.posology%>
-              <h2 class="drug-info">Recommandations thérapeutiques:</h2>
-                <%= drug.recommandations%>
-                <div class="card-drug-stock">
-                <% if drug.stocks.where(pharma: current_user.pharma).first&.quantity.to_i > 0  %>
-                  <h1>
-                    <i class="fas fa-layer-group"> Stock: <%= drug.stocks.where(pharma: current_user.pharma).first.quantity %><%= link_to "Contacter un médecin" , "#", class: "btn btn-primary"%></i>
-                  </h1>
-                <% else %>
-
-
-
-                <h1><i class="fas fa-layer-group"> Stock: Vérifiez chez un autre pharmacien.</i><%= link_to "Regarder réseau Rupt'care" , pharmas_path(drug_id: drug.id, name: params[:name]), class: "btn btn-primary"%><h2><i class="fas fa-history"> Disponible dans:</i></h2></h1>
-                <% end %>
-
-              </div>
-            </div>
           </div>
         </div>
-      <% end %>
+      </div>
+    </div>
+    <% end %>
     <% end %>
   </div>
 </div>
