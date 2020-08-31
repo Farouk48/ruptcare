@@ -1,7 +1,18 @@
+<div class="main-chatroom-app">
+	<div class="sidebar-chatroom">
+		<div class="sidebar-navigation">
+			<ul>
+				<li class="sidebar-navigation li"><i class="fas fa-inbox"></i> Inbox <span class="notif"> 2 </span></li>
+				<li class="sidebar-navigation li"><i class="fas fa-pen"></i> Brouillons <span class="notif"> 2 </span></li>
+				<li class="sidebar-navigation li"><i class="fas fa-inbox"></i> Envoyés <span class="notif"> 2 </span></li>
+					<li class="sidebar-navigation li"><i class="fas fa-inbox"></i> Urgent <span class="notif"> 2 </span></li>
+				<li class="sidebar-navigation li"><i class="fas fa-inbox"></i> Corbeille <span class="notif"> 2 </span></li>
+
+
 <h1>#<%= @chatroom.name %></h1>
 <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
   <% @chatroom.messages.each do |message| %>
-    <%= render 'messages/message', message: message %>
+    <%= render 'messages/message', message: message, user_is_author: message.sender == current_user %>
   <% end %>
 </div>
 
