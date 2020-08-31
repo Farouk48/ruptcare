@@ -1,6 +1,5 @@
 <div id="title-pharma" class="container">
   <h1 >Réseau Rupt'Care</h1>
-  <i class="fas fa-clinic-medical"></i>
   <h2>Au <%= Date.today %> à <%= Time.now.to_s(:time) %>, les pharmacies suivantes du réseau disposent de la <strong><%= @drug.name %></strong> en stock :</h2>
   <%= link_to "Retourner sur la liste de recherche", drugs_path(drug_id: @drug.id, name: params[:name]) %>
 </div>
@@ -8,7 +7,7 @@
 
 <div id="map-pharma">
   <div id="pharmas" >
-    <% @pharmas.each do|pharma| %>
+    <% @pharmas.reject { |exclude| exclude == @user_pharma }.each do|pharma| %>
     <div id="pharma-display" class="container">
       <% if pharma.present? %>
       <h2><%= pharma.name %></h2>
