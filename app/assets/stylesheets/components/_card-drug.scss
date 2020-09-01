@@ -5,11 +5,14 @@
   font-family:  Work Sans;
   font-weight: bold;
   padding-left: 0px;
+  margin-left: -80px;
 
 }
 .top-drug-title p {
   font-size: 16px;
-  font-family: Work sans-s
+  font-family: Work Sans;
+  margin-left: -78px;
+
 }
 
 #rupt {
@@ -25,6 +28,7 @@
   color: #006DBB;
   font-size: 25px;
   font-family: Work Sans;
+  margin-left: -80px;
 }
 
 .card-main-drug {
@@ -35,13 +39,15 @@
   align-items: center;
   margin-top: 40px;
   margin-bottom: 40px;
+  width: 1400px;
+  margin-left: -80px;
 
 }
 
 .card-main-drug img {
   height: 100%;
   width: 40%;
-  object-fit: cover;
+
 }
 
 .card-main-drug h2 {
@@ -73,13 +79,14 @@
 
 .cards-drugs-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   height: 100%;
   grid-gap: 30px;
   position: relative;
   grid-gap: 3rem;
   padding: 2rem;
   max-width: 1024px;
+  margin-left: -80px;
 
 }
 
@@ -90,7 +97,7 @@
   background: white;
   margin-bottom: 50px;
   left: -25px;
-  height: 236px;
+  width: 315px;
 }
 
 .card-other-drug > img {
@@ -139,7 +146,6 @@
 #stock-dispo{
   font-size: 16px;
   color: #006DBB;
-  font-family: Work Sans;
   position: relative;
   top: 35px;
 }
@@ -149,13 +155,13 @@
 }
 .card-disable{
   opacity: 0.5;
-    position: relative;
+  position: relative;
   height: 236px;
+  width: 315px;
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
   margin-bottom: 50px;
-  border-radius: 10px;
+
 }
 .drug-family{
   color: #006DBB;
@@ -171,8 +177,7 @@
 }
 #stock-check{
   font-size: 16px;
-   color: #006DBB;
-  font-family: Work Sans;
+  color: #006DBB;
   padding-top: 15px;
 }
 #d-class{
