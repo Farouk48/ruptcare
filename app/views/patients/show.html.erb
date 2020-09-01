@@ -1,54 +1,57 @@
   <header class="header-show">
-  	<div class="header__search">.</div>
   </header>
 
 
-<div class="container">
+
   <div class="main">
-  	<div class="row">
-  	  <div class="col-4">
+    <div class="container">
+    	<div class="row" id="banner-patient">
+
+    	  <div class="col-4">
 	</div>
 
 
-	<div class="col-4">
-		 <div class="main-cards text-center">
+	<div class="col-4">`
+
+		 <div class="main-cards">
 		    <div class="card-show">
-		      <h1> Informations sur le patient </h1>
+		      <h1 id="patient-info"> Informations sur le patient </h1>
 			  <ul class="list-info-patient">
 		  		  <li><b> Nom :    </b><%= @patient.first_name %>  <%= @patient.last_name %></li>
 		  			<li><b>Age :    </b> <%= @patient.age %> ans</li>
-		  		  <hr>
+
 		  		  <li><b> Adresse : </b><%= @patient.address %></li>
 		  		  <br>
 			  </ul>
 			</div>
 
 	    <div class="card-show">
-	  	  <h1> Informations médicales </h1>
+	  	  <h1 class="medic-show"> Informations médicales </h1>
 	  	  <ul class="list-info-patient">
-	  	  	  <li><b>Maladie(s) chronique(s):</b> <%= @patient.chronic_disease %> chronique : maladie à relever</li>
-	  	  	  <hr>
+	  	  	  <li><b>Maladie(s) chronique(s):</b> <%= @patient.chronic_disease %></li>
+
 	  		  <li><b> Médecin traitant : </b> Dr. Walid Tairi </li>
 	  	  </ul>
 	  	</div>
 	  </div>
 	</div>
+
 </div>
-	       	<div class="legend">Rechercher une alternative médicamenteuse :</div>
+	 <div class="legend">Rechercher une alternative médicamenteuse :</div>
 <!-- 	 <div id="searchbar"> -->
-		<div class="input-field">
+		<div class="input-field text-center" >
 		      <%= form_tag drugs_path, method: :get do %>
 		         <%= hidden_field_tag 'patient_id', params[:patient_id] %>
 
 		        <%= text_field_tag :name,
-		          params[:name], class: "input-search-bar", id:"search", placeholder: "Entrer le nom ici" %>
-		      <%= submit_tag "Rechercher", class: "btn-search-show-patient", i: "fas fa-capsules" %>
+		          params[:name], class: "input-search-bar", id:"search", placeholder: "Rechercher un médicament..." %>
+		      <%= submit_tag "Rechercher", class: "btn-search-show-patient", i: "fas fa-search" %>
      			<% end %>
  		</div>
 
 	<div class="card-show-table">
 	  <div class="table-users">
-	   <div class="header-table-patient">Historique délivrance patient</div>
+	   <div class="header-table-patient">Historique de délivrance du patient</div>
 	   <table cellspacing="0">
 	      <tr>
 	         <th>Date</th>
@@ -58,35 +61,36 @@
 	      </tr>
           <tr>
 	         <td>29/02/2020</td>
-	         <td>Mianserine 10mg</td>
+	         <td><b>Mianserine 10mg</b></td>
 	         <td>Le Wagon</td>
 	         <td> Farouk Rahmani </td>
           </tr>
           <tr>
 	         <td>03/04/2020</td>
-	         <td>Mianserine 10mg</td>
+	         <td><b>Mianserine 10mg</b> </td>
 	         <td>Pharmacie du 20eme</td>
 	         <td> Julien Dupuis </td>
 	      </tr>
 	          <tr>
 	         <td>10/05/2020</td>
-	         <td>Mianserine 10mg</td>
+	         <td><b>Mianserine 10mg</b></td>
 	         <td>Pharmacie du 20eme</td>
 	         <td> Julien Dupuis </td>
 	      </tr>
 	          <tr>
 	         <td>07/06/2020</td>
-	         <td>Mianserine 10mg</td>
+	         <td><b>Mianserine 10mg</b></td>
 	         <td>Pharmacie du 20eme</td>
 	         <td> Julien Dupuis </td>
  	      </tr>
 	     </table>
 	    </div>
 	  </div>
+
+  <!--   <%= link_to "", patients_path, class:"fas fa-arrow-circle-left fa-3x", id:"back-arrow" %>
+    <p class="return-text"> Retour au tableau de bord </p> -->
     </div>
-</div>
-  <%= link_to "", patients_path, class:"fas fa-arrow-circle-left fa-3x", id:"back-arrow" %>
-  <p class="return-text"> Retour au tableau de bord </p>
+  </div>
 </div>
 
 
