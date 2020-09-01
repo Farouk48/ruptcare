@@ -3,9 +3,8 @@
 
 
 
-  <div class="main">
-    <div class="container">
-    	<div class="row" id="banner-patient">
+  <div class="main" id="back-show-patient">
+        	<div class="row" id="banner-patient">
 
     	  <div class="col-4">
 	</div>
@@ -19,11 +18,12 @@
 			  <ul class="list-info-patient">
 		  		  <li><b> Nom :    </b><%= @patient.first_name %>  <%= @patient.last_name %></li>
 		  			<li><b>Age :    </b> <%= @patient.age %> ans</li>
-
 		  		  <li><b> Adresse : </b><%= @patient.address %></li>
 		  		  <br>
 			  </ul>
 			</div>
+
+    <div class="vl"></div>
 
 	    <div class="card-show">
 	  	  <h1 class="medic-show"> Informations médicales </h1>
@@ -37,17 +37,27 @@
 	</div>
 
 </div>
-	 <div class="legend">Rechercher une alternative médicamenteuse :</div>
-<!-- 	 <div id="searchbar"> -->
+<div class="container">
+
+  <div class="card-patient">
+   <div class="container">
+    <h1 class="card-patient-title">Dernière délivrance de mianserine:</h1>
+    <p class="card-patient-text"> <b>Rupture à l'échelle nationale</b></p>
+   </div>
 		<div class="input-field text-center" >
-		      <%= form_tag drugs_path, method: :get do %>
+      <div class="legend">Rechercher une alternative médicamenteuse :</div>
+		      <%= form_tag drugs_path, class: "drug-searchbar", method: :get do %>
 		         <%= hidden_field_tag 'patient_id', params[:patient_id] %>
 
 		        <%= text_field_tag :name,
 		          params[:name], class: "input-search-bar", id:"search", placeholder: "Rechercher un médicament..." %>
-		      <%= submit_tag "Rechercher", class: "btn-search-show-patient", i: "fas fa-search" %>
+		      <%= button_tag :submit, class: "btn-search-show-patient" do%>
+            <i class="fas fa-search"></i>
+            <% end %>
      			<% end %>
  		</div>
+</div>
+
 
 	<div class="card-show-table">
 	  <div class="table-users">
@@ -86,10 +96,7 @@
 	     </table>
 	    </div>
 	  </div>
-
-  <!--   <%= link_to "", patients_path, class:"fas fa-arrow-circle-left fa-3x", id:"back-arrow" %>
-    <p class="return-text"> Retour au tableau de bord </p> -->
-    </div>
+   </div>
   </div>
 </div>
 

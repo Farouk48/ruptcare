@@ -1,3 +1,6 @@
+#back-show-patient {
+  background: #F4F4F4;
+}
 
 .card-show h1 {
   text-align: center;
@@ -118,26 +121,15 @@ table {
 }
 
 
-
-// #search {
-// border-top: 1px solid grey;
-// border-left: 1px solid grey;
-// border-right: 1px solid grey;
-// border-bottom: 1px solid grey;
-// }
-
-
-
 .legend {
    font-size: 20px;
-   text-align: center;
+   text-align: right;
    font-weight: bold 500;
    font-family: "Oxygen";
    color: #035AC1;
    margin-top: 25px;
+   margin-right: 5%;
   }
-
-
 
 .form-patient-show {
   width: 100%;
@@ -151,7 +143,6 @@ table {
   // display: flex;
   width: 700px;
   // flex-pack: justify;
-
   // flex-align: center;
   // align-items: center;
   height: 68px;
@@ -162,12 +153,12 @@ table {
   height: 68px;
   margin-bottom: 5px;
   // box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-  width: 800px;
-
+  width: 600px;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 120%;
+  margin-right: 0%;
+
 }
 
 
@@ -178,16 +169,17 @@ table {
   border-radius: .5px;
   border: 0;
   display: block;
-  width: 700px;
+  width: 380px;
   padding: 10px 32px;
   font-size: 20px;
   color: black;
   font-size: 20px;
   border: 2px solid grey;
   margin-bottom: 0px;
-  margin-left: auto;
+  margin-left: 20%;
   margin-right: auto;
   position: relative;
+  margin-top: 5%;
 }
 
 .placeholder {
@@ -196,19 +188,18 @@ table {
 }
 
 .btn-search-show-patient {
-  width: 200px;
-  height: 40px;
+  width: 100px;
+  height: 50px;
   padding: 0 15px;
   background: #006DBB;
   white-space: nowrap;
-  border-radius: 3px;
+  border-radius: 0.5px;
   font-size: 20px;
   color: #FFFFFF;
   border: 0;
   cursor: pointer;
   font-weight: bold;
-  margin-bottom: 100px;
-  margin-top: 10px;
+  margin-top: 5%;
 }
 
 .btn-search-show-patient:hover {
@@ -218,10 +209,11 @@ table {
  }
 
 .main-cards {
-    column-count: 2;
-    column-gap: 300px;
+    column-count: 3;
+    column-gap: 150px;
     margin-top: 20px;
-    margin-left: -50px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 .card-show {
@@ -238,7 +230,6 @@ table {
 
 .card-show-table {
     display: flex;
-    background-color: #fff;
     margin-bottom: 20px;
     text-align: center;
     margin-top: 20px;
@@ -255,9 +246,7 @@ table {
 }
 
 .main {
-
   background-color: #fff;
-
 }
 
 
@@ -298,11 +287,48 @@ table {
 
 .medic-show {
     margin-top: 9px;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
 }
 
 #banner-patient {
   background: #006DBB;
   width: 100%;
+  margin-left: 0%;
 }
 
+.vl {
+  border-left: 1px solid #FFFFFF;
+  height: 200px;
+  margin-bottom: 5%;
+}
+
+#patient-info {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.drug-searchbar {
+  display: flex;
+  justify-content: center;
+}
+
+.card-patient {
+  height: 236px;
+  width: 315px;
+  background: white;
+  margin-left: 10%;
+  margin-top: 5%;
+  border: 2px solid #035AC1;
+}
+
+.card-patient-text {
+  margin-bottom: -60%;
+  margin-top: 20%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.card-patient-title {
+  padding-top: 5%
+}
