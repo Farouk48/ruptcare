@@ -77,28 +77,35 @@ filepath = File.join(Rails.root, 'db/drugs_demo.csv')
 end
 
 mirtazapine = Drug.find_by_name("MIRTAZAPINE 15 mg")
+
 escitalopram_10 = Drug.find_by_name("ESCITALOPRAM 10 mg")
 file = URI.open("https://images.unsplash.com/photo-1575879711582-0024b37f2bfa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
 escitalopram_10.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
 fluoxetine_20 = Drug.find_by_name("FLUOXETINE 20 mg")
 file = URI.open("https://images.unsplash.com/photo-1517157837591-17b69085bfdc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
 fluoxetine_20.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
 paroxetine_20 = Drug.find_by_name("PAROXETINE 20 mg")
 file = URI.open("https://images.unsplash.com/photo-1587854680352-936b22b91030?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
 paroxetine_20.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
 sertraline_25 = Drug.find_by_name("SERTRALINE 25 mg")
 file = URI.open("https://images.unsplash.com/photo-1550572017-26b5655c1e8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
 sertraline_25.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
 sertraline_50 = Drug.find_by_name("SERTRALINE 50 mg")
 file = URI.open("https://images.unsplash.com/photo-1565071783280-719b01b29912?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
 sertraline_50.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
 venlafaxine_37 = Drug.find_by_name("VENLAFAXINE LP 37,5 mg")
 file = URI.open("https://images.unsplash.com/photo-1562243061-204550d8a2c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=60")
 venlafaxine_37.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
 venlafaxine_75 = Drug.find_by_name("VENLAFAXINE LP 75 mg")
 file = URI.open("https://images.unsplash.com/photo-1522426197515-ad17e39de88d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
 venlafaxine_75.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
-escitalopram_10 = Drug.find_by_name("ESCITALOPRAM 10 mg")
+
 doliprane_1000 = Drug.find_by_name("DOLIPRANE 1000 mg, comprimé")
 
 stock_mirtazapine_1 = Stock.create!(quantity: 0, pharma: pharma_1 , drug: mirtazapine)
