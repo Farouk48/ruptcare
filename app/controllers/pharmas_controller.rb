@@ -16,6 +16,8 @@ class PharmasController < ApplicationController
 
       }
     end
+    @available_pharmas = @pharmas.joins(:stocks).where(stocks:{drug:@drug}).where('stocks.quantity > ?', 0)
+    #where('id >': 200)
     #  @marker = @pharmas.map do
     #   {
     #     lat: @pharmas.first.latitude,
