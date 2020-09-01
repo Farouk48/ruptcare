@@ -3,26 +3,22 @@ background-size: cover;
 background-position: left 15% bottom 50%;
 width: 100%;
 min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+padding: 0 80px;
 }
 
-#home-container {
-width: 658px;
-height: 118px;
-left: 678px;
-top: 390px;
-
+.home-container {
+flex: 0 0 50%;
+margin-bottom: 100px;
 }
 
 #banner-home h1 {
 
-width: 464px;
-height: 106px;
 font-family: 'Work Sans', sans-serif;
 font-weight: bold;
 
-position: absolute;
-left: 678px;
-top: 300px;
 font-style: normal;
 font-weight: 600;
 font-size: 90px;
@@ -38,16 +34,11 @@ color: #FFFFFF;
 }
 
 #banner-home h2 {
-position: absolute;
-width: 658px;
-height: 118px;
-left: 678px;
-top: 390px;
 
 font-family: Work Sans;
 font-style: normal;
 font-weight: normal;
-font-size: 50px;
+font-size: 40px;
 line-height: 59px;
 
 color: #FFFFFF;

@@ -26,27 +26,26 @@ color: #060303;
 }
 
 
-.nav-link {
-	color: #fff;
+.call-to-action-home {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1px;
 }
 
-.nav-link:hover {
-	color: #fff;
+.call-to-action-home:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 #RuptCare {
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 20px;
   font-weight: bold;
   margin-top: 0px;
 }
 
-#Care {
-  font-family: 'Heebo', sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 0px;
-}
 
 .btn-home {
   //position: absolute;
@@ -56,14 +55,10 @@ color: #060303;
   //top: 551px;
 
   //position: relative;
-  top: 300px;
-  left: 1000px;
+
   font-weight: bold;
-  width: 320px;
-  height: 50px;
-  display: flex;
+
   align-items: center;
-  justify-content: center;
   user-select: none;
   text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
   cursor: pointer;
@@ -80,13 +75,9 @@ color: #060303;
   width: 360px;
   height: 50px;
   font-family: 'Work Sans', sans-serif;
-  padding: 0px;
-  position: absolute;
-  width: 360px;
-  height: 50px;
-  left: 678px;
-  top: 551px;
+  padding: 6px;
   opacity: 0.8;
+  margin-top: 20px;
 
 }
 

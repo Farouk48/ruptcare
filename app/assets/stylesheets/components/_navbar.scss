@@ -1,10 +1,20 @@
 .navbar-lewagon {
   justify-content: space-between;
   height:75px;
-
   background: #FFFFFF;
-  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15)
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+}
 
+.navbar-lewagon-white {
+  background-color: white;
+}
+
+.page-pages-home .navbar-lewagon {
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+  position: fixed;
+  width: 100%;
+  box-shadow: none;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -23,13 +33,20 @@
   border: 2px solid #FFFBFB;
 }
 
+.nav-link {
+  font-size: 16px;
+  text-transform: none;
+}
 
+.page-pages-home .navbar-light .nav-link {
+  color: white;
+}
 
 li a {
   text-decoration: none;
   color:#01418D;
   font-size: 1.1rem;
-  font-family: 'Oxygen', arial;
+  font-family: 'Work Sans',sans-serif;
   text-transform: uppercase;
   margin-top: 10px;
   margin-right: 10px;
