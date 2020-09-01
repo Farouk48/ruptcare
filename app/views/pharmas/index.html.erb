@@ -1,15 +1,19 @@
-<div id="title-pharma" class="container">
+<div id="title-pharma">
   <h1>Liste des pharmacies du réseau Rupt'Care</h1>
   <h2>Au <%= Date.today %> à <%= Time.now.to_s(:time) %>, les pharmacies suivantes du réseau disposent de la <strong class="strong-name"><%= @drug.name %></strong> en stock :</h2>
   <%= link_to "", drugs_path(drug_id: @drug.id, name: params[:name]), class:"fas fa-arrow-circle-left fa-2x", id:"back-index"%>
   <span class='return-index'> Retourner sur la liste de recherche </span>
 </div>
 
+<div class ="map-search">
+ <%= link_to "Rechercher", id:"btn-map-recherchez" %>
+</div>
+
 
 <div id="map-pharma">
   <div id="pharmas">
     <% @pharmas.reject { |exclude| exclude == @user_pharma }.each do|pharma| %>
-    <div id="pharma-display" class="container">
+    <div id="pharma-display">
       <% if pharma.present? %>
       <h2><%= pharma.name %></h2>
       <p><%= pharma.address %></p>
@@ -22,7 +26,7 @@
   </div>
 
   <div id="map"
-       style="width: 100%; height: 600px;"
+       style="width: 100%; height: 100vh;"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>

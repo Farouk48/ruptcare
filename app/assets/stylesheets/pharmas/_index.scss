@@ -19,6 +19,12 @@
   margin-bottom: -10px;
 }
 
+.map-search {
+ background-color: #006DBB;
+ width: 100%;
+ height: 90px;
+}
+
 #map-pharma {
   display:flex;
   justify-content:space-between;
@@ -31,6 +37,7 @@
   background: #FFFFFF;
   font-family:$body-font;
   color: #006DBB;
+  padding-left: 22px;
 }
 
 #pharma-display h2 {
@@ -44,7 +51,8 @@
 
 #pharmas {
   overflow: scroll;
-  height: 600px;
+  height: 100vh;
+  width: 30%;
 }
 
 #back-index {
@@ -66,4 +74,10 @@
 
 .strong-name {
   color: #006DBB;
+}
+
+#btn-map-recherchez {
+  background-color: #50D890;
+  color: #FFFBFB;
+  font-size: 20px;
 }
