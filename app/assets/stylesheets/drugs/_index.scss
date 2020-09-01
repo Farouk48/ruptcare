@@ -97,8 +97,13 @@ padding-bottom: 7px;
   margin-bottom: -100px;
   font-family: Work sans;
   font-size: 20px;
+  white-space: nowrap;
 }
-
+.btn-primary:hover{
+  background: #FFFFFF;
+  border: 1px solid darken(#07418D, 5%);
+  color: #07418D;
+}
 #call-doctor{
   background-color: #006DBB;
   width: 297px;
