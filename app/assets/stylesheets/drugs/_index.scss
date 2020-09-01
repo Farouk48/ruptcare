@@ -5,17 +5,10 @@
   margin-left: 30px;
 }
 .card-drug {
-  overflow: hidden;
-  height: fit-content;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 55%;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 10px;
-  display: flex;
-  align-items: flex-start;
-  border-radius: 10px;
+background: white;
+width: 600px;
+height: 673px;
+margin: auto;
 }
 
 .card-drug-infos .drug-info{
@@ -51,14 +44,14 @@ padding-bottom: 7px;
   color: #006DBB;
 }
 .card-drug-left{
-  width: 30%;
-  padding: 20px;
+
+
 }
  .drug-name {
-  background-color: #006DBB;
+  padding-top: 10px;
   font-family: 'Work sans', sans-serif;
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: bolder;
   line-height: 1;
 }
 
@@ -81,7 +74,7 @@ padding-bottom: 7px;
     right: 0px;
     margin-top: 7px;
     top: 20px;
-    left: 855px;
+    left: 570px;
 
 }
 .btn-primary{
@@ -92,7 +85,6 @@ padding-bottom: 7px;
   margin-top: 1px;
   padding-top: 10px;
   margin-left: 0px;
-  margin-bottom: -100px;
   font-family: Work sans;
   font-size: 20px;
   white-space: nowrap;
@@ -102,16 +94,15 @@ padding-bottom: 7px;
   border: 1px solid darken(#07418D, 5%);
   color: #07418D;
 }
-#call-doctor{
-  background-color: #006DBB;
-  width: 297px;
-  height: 50px;
-  color: white;
-  margin-left: 10px;
+
+.card-main-drug  .btn-primary {
+  margin-bottom: -100px;
 }
 
 #image-in-modal {
-  border-style: none;
+  width: 600px;
+  height: 200px;
+  object-fit: cover;
 }
 #dispo{
 color: #006DBB
@@ -123,8 +114,64 @@ color: #006DBB
   font-weight: bold;
 }
 .next-icon1{
-   color:  #006DBB;
+   color: #006DBB ;
   font-size: 16px;
   font-family: Work Sans;
   font-weight: bold;
+}
+.card-drug-infos-modal{
+  padding-left: 30px;
+}
+#modal-fam{
+  margin-top: -20px;
+}
+#modal-aprec{
+  font-size: 13px;
+  font-family: Work Sans;
+}
+.card-drug-infos-modal .drug-info {
+  font-size: 14px;
+  font-family: Work Sans;
+  color: black;
+  padding-top: 3px;
+}
+.card-drug-infos-modal .card-drug-stock{
+  margin-top: -25px;
+}
+
+
+.card-drug-infos-modal .btn-primary:hover{
+ background: #FFFFFF;
+   border: 1px solid darken(#07418D, 5%);
+   color: #07418D;
+}
+
+.stock-modal{
+  margin-top: 3px;
+  color: #006DBB;
+  font-family: Work Sans;
+  font-weight: bold;
+}
+.dispo-modal{
+  padding-left: 1px;
+  position: relative;
+  top: -40px;
+  font-family: Work Sans;
+}
+
+#stock-modal{
+  color: #006DBB;
+}
+#dispo-modal{
+  font-family: Work Sans;
+}
+.btn-medecin{
+  color: #FFFFFF;
+  background: #07418D;
+
+}
+.btn-pharmacy{
+  color: #FFFFFF;
+    background: #07418D;
+    margin-top: 15px;
 }
