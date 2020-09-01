@@ -6,7 +6,7 @@
 		  <div class="user-dashboard-message">Vous n'avez pas de nouveaux messages</div>
 		</div>
     </div>
- 
+ <!-- 
   	  <div class="header__search">
   	  	 <div class="header__avatar">
 		    <form class="form-inline form-inline-patient d-flex justify-content-center md-form form-sm mt-0">
@@ -14,7 +14,7 @@
 			    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Rechercher un patient"
 					    aria-label="Search"></form>
   	     </div>
-	  </div>
+	  </div> -->
   </div>
 	
 
@@ -28,14 +28,22 @@
 		  </ul>
 		</div>
 		<div class="main-overview">
+			<div class="header__avatar">
 			 <h2 class="my-patients-title"> Mes patients </h2>
+			
+		    <form class="form-inline form-inline-patient d-flex justify-content-center md-form form-sm mt-0">
+			  <i class="fas fa-search" aria-hidden="true"></i>
+			    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Rechercher un patient"
+					    aria-label="Search"></form>
+  	     </div>
 
 	   		  <% @patients.each do |patient| %>
-
+			<%= link_to  patient_path(patient), class: 'overview-link' do %>
 		    <div class="overviewcard">
 		      <div class="overviewcard__info"><%= patient.first_name %>  <%= patient.last_name %>  - <%= patient.age %> ans</div>
-		      <div class="overviewcard_icon"><i class="far fa-eye">   <%= link_to "", patient_path(patient), class: "absolute-link" %></i></div>
+		      <div class="overviewcard_icon"><i class="far fa-eye"></i></div>
 	  	    </div>
+	  	    <% end %>
 	 		  <% end %>
 	   </div>
 	</div>
