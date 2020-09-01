@@ -5,7 +5,6 @@
 
   <div class="main" id="back-show-patient">
         	<div class="row" id="banner-patient">
-
     	  <div class="col-4">
 	</div>
 
@@ -23,8 +22,8 @@
 			  </ul>
 			</div>
 
-    <div class="vl"></div>
-
+<!--     <div class="vl"></div>
+ -->
 	    <div class="card-show">
 	  	  <h1 class="medic-show"> Informations médicales </h1>
 	  	  <ul class="list-info-patient">
@@ -40,22 +39,23 @@
 <div class="container">
 
   <div class="card-patient">
-   <div class="container">
-    <h1 class="card-patient-title">Dernière délivrance de mianserine:</h1>
-    <p class="card-patient-text"> <b>Rupture à l'échelle nationale</b></p>
-   </div>
-		<div class="input-field text-center" >
+    <img src="https://images.unsplash.com/photo-1544991875-5dc1b05f607d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="drug-img-patient">
+   <!--  <h1 class="card-patient-title">Dernière délivrance de mianserine:</h1> -->
+       <div class="input-field text-center" >
+        <p class="card-patient-text fas fa-exclamation-triangle"> Attention le médicament : <b>MIRTAZAPINE 15 mg est en rupture à l'échelle nationale</b></p>
       <div class="legend">Rechercher une alternative médicamenteuse :</div>
-		      <%= form_tag drugs_path, class: "drug-searchbar", method: :get do %>
-		         <%= hidden_field_tag 'patient_id', params[:patient_id] %>
+          <%= form_tag drugs_path, class: "drug-searchbar", method: :get do %>
+             <%= hidden_field_tag 'patient_id', params[:patient_id] %>
 
-		        <%= text_field_tag :name,
-		          params[:name], class: "input-search-bar", id:"search", placeholder: "Rechercher un médicament..." %>
-		      <%= button_tag :submit, class: "btn-search-show-patient" do%>
+            <%= text_field_tag :name,
+              params[:name], class: "input-search-bar", id:"search", placeholder: "Rechercher un médicament..." %>
+          <%= button_tag :submit, class: "btn-search-show-patient" do%>
             <i class="fas fa-search"></i>
             <% end %>
-     			<% end %>
- 		</div>
+          <% end %>
+    </div>
+   </div>
+
 </div>
 
 

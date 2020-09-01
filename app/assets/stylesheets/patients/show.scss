@@ -123,12 +123,12 @@ table {
 
 .legend {
    font-size: 20px;
-   text-align: right;
    font-weight: bold 500;
    font-family: "Oxygen";
    color: #035AC1;
    margin-top: 25px;
-   margin-right: 5%;
+   margin-left: 6%;
+   text-align: left;
   }
 
 .form-patient-show {
@@ -141,7 +141,7 @@ table {
   background: transparent;
   // padding: 50px 47px;
   // display: flex;
-  width: 700px;
+  width: 100%;
   // flex-pack: justify;
   // flex-align: center;
   // align-items: center;
@@ -153,10 +153,10 @@ table {
   height: 68px;
   margin-bottom: 5px;
   // box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-  width: 600px;
+  width: 800px;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-left: 120%;
+  margin-left: 0%;
   margin-right: 0%;
 
 }
@@ -166,19 +166,16 @@ table {
 
   height: 50px;
   background: #fff;
-  border-radius: .5px;
+  border-radius: 1px;
   border: 0;
   display: block;
-  width: 380px;
+  width: 900px;
   padding: 10px 32px;
   font-size: 20px;
   color: black;
   font-size: 20px;
   border: 2px solid grey;
-  margin-bottom: 0px;
-  margin-left: 20%;
-  margin-right: auto;
-  position: relative;
+  margin-left: 5%;
   margin-top: 5%;
 }
 
@@ -188,7 +185,7 @@ table {
 }
 
 .btn-search-show-patient {
-  width: 100px;
+  width: 150px;
   height: 50px;
   padding: 0 15px;
   background: #006DBB;
@@ -209,9 +206,8 @@ table {
  }
 
 .main-cards {
-    column-count: 3;
-    column-gap: 150px;
-    margin-top: 20px;
+    column-count: 2;
+    column-gap: 500px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -286,21 +282,19 @@ table {
 }
 
 .medic-show {
-    margin-top: 9px;
+    margin-top: 2px;
     margin-bottom: 20px;
 }
 
 #banner-patient {
   background: #006DBB;
-  width: 100%;
-  margin-left: 0%;
 }
 
-.vl {
-  border-left: 1px solid #FFFFFF;
-  height: 200px;
-  margin-bottom: 5%;
-}
+// .vl {
+//   border-left: 1px solid #FFFFFF;
+//   height: 200px;
+//   margin-bottom: 5%;
+// }
 
 #patient-info {
   margin-top: 0px;
@@ -308,27 +302,36 @@ table {
 }
 
 .drug-searchbar {
-  display: flex;
   justify-content: center;
+  display: flex;
 }
 
 .card-patient {
   height: 236px;
-  width: 315px;
   background: white;
-  margin-left: 10%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 5%;
   border: 2px solid #035AC1;
+  display: flex;
 }
 
 .card-patient-text {
-  margin-bottom: -60%;
-  margin-top: 20%;
-  text-align: center;
-  vertical-align: middle;
+  color: #EB5757;
   font-size: 20px;
+  width: 800px;
+  margin-top: 2%;
+  margin-left: 2%;
 }
 
-.card-patient-title {
-  padding-top: 5%
+// .card-patient-title {
+//   padding-top: 5%
+// }
+
+.drug-img-patient {
+  object-fit: cover;
+  width: 240px;
+  height: 100%;
 }
+
+
