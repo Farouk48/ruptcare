@@ -4,6 +4,7 @@
     flex-direction: column;
     // grid-area: sidenav;
     background-color: rgb(255, 251, 251) ;
+    width: 400px;
    
 
 
@@ -14,16 +15,17 @@
 
   .sidenav__list {
     padding: 0;
-    margin-top: 85px;
+    margin-top: 30px;
     list-style-type: none;
     // justify-content: center;
     text-align: left;
+    padding-left: 20px;
 
   }
 
   .sidenav__list-item {
     padding: 20px 20px 20px 40px;
-    color: #BDBDBD;
+    color: grey;
     font-family: "Work Sans";
     font-weight: medium;
     font-size: 16;
@@ -37,3 +39,7 @@
     cursor: pointer;
     color: #006DBB;
   }
+
+.fa-bars {
+  width: 30px;
+}
