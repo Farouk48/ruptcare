@@ -1,0 +1,22 @@
+.btn-search-show-patient {
+  width: 200px;
+  height: 40px;
+  padding: 0 15px;
+  background: #07418D;
+  white-space: nowrap;
+  border-radius: 3px;
+  font-size: 20px;
+  color: #FFFFFF;
+  border: 0;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 300px;
+  margin-bottom: 100px;
+  margin-top: 10px;
+}
+
+.btn-search-show-patient:hover {
+   background: #FFFFFF;
+   border: 1px solid darken(#07418D, 5%);
+   color: #07418D;
+ }
