@@ -176,7 +176,7 @@ padding-bottom: 10px;
   white-space: nowrap;
   border-radius: 3px;
   font-size: 20px;
-  color: #fff;
+  color: #FFFFFF;
   border: 0;
   cursor: pointer;
   font-weight: bold;
@@ -186,7 +186,9 @@ padding-bottom: 10px;
 }
 
 .btn-search-show-patient:hover {
-   background: #4ea63f;
+   background: #FFFFFF;
+   border: 1px solid darken(#07418D, 5%);
+   color: #07418D;
  }
 
 .main-cards {
@@ -257,5 +259,7 @@ padding-bottom: 10px;
 }
 
 #back-arrow:hover {
+  text-decoration: none;
+
 }
 
