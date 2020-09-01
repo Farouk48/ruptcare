@@ -7,11 +7,18 @@ import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 //   style: 'mapbox://styles/vbolta/ckea30aj04zzf1anzpph5ntrq' // <-- use your own!
 // });
 
+
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
   markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
   map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
 };
+
+//const fitMaptoDescription => {
+  //const positions = document.getElementById('pharma-display');
+  //positions.addEventListener
+
+//};
 
 const initMapbox = () => {
   const mapElement = document.getElementById('map');
