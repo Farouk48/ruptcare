@@ -2,9 +2,11 @@
   .sidenav {
     display: flex;
     flex-direction: column;
-    grid-area: sidenav;
+    // grid-area: sidenav;
+    background-color: rgb(255, 251, 251) ;
+   
 
-  background-color: rgb(255, 251, 251) ;
+
 
 
 
@@ -14,21 +16,24 @@
     padding: 0;
     margin-top: 85px;
     list-style-type: none;
-    justify-content: center;
+    // justify-content: center;
     text-align: left;
+
   }
 
   .sidenav__list-item {
     padding: 20px 20px 20px 40px;
-    color: black;
-    font-weight: bold;
-    font-family: "Heebo";
+    color: #BDBDBD;
+    font-family: "Work Sans";
+    font-weight: medium;
+    font-size: 16;
+
 
 
   }
 
   .sidenav__list-item:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    // background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
-    color: #fff;
+    color: #006DBB;
   }
