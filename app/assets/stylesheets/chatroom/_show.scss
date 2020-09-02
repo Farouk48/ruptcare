@@ -280,29 +280,42 @@ overflow: scroll;
 .message-left {
   background: #F5F5F5;
   opacity: 0.75;
-  max-width: 40%;
+  max-width: 50%;
   border-radius: 8px;
   padding: 5px;
   margin-bottom: 10px;
   color: black;
   font-family: "Work Sans";
-  font-weight: bold;
+  // font-weight: bold;
 }
 
 .message-right {
     background: #006DBB;
   opacity: 0.75;
-  max-width: 40%;
+  max-width: 50%;
   border-radius: 8px;
   padding: 8px;
   margin-bottom: 5px;
   color: white;
-  font-weight: bold;
+  // font-weight: bold;
 }
 
 #messages {
   overflow: scroll;
   height: 200px;
+ 
+
+  p {
+    font-size: 12px;
+    font-weight: regular;
+    padding-top: 10px;
+  }
+
+  span {
+    font-weight: bold;
+    font-size: 13px;
+    font-style: regular;
+  }
 }
 
 .page-chatrooms-show .navbar-light .nav-link {
