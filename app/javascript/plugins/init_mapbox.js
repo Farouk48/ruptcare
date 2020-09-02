@@ -77,6 +77,7 @@ const openInfoWindow = (markers) => {
 
 const togglePharmaHighlighting = (event) => {
   const pharma = document.querySelector(`[data-pharma-id="${event.currentTarget.dataset.markerId}"]`);
+  console.log(pharma);
   pharma.classList.toggle('highlight');
 }
 
