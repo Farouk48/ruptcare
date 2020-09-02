@@ -49,6 +49,8 @@ const initMapbox = () => {
       .setLngLat([2.3837872, 48.8666236])
       .addTo(map);
 
+      //test
+
     fitMapToMarkers(map, markers);
     map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,mapboxgl: mapboxgl }));
 
