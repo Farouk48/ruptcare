@@ -12,7 +12,7 @@ class PharmasController < ApplicationController
         lat: pharma.latitude,
         lng: pharma.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { pharma: pharma }),
-        image_url: helpers.asset_url('clinic-medical-solid.svg'),
+        image_url: helpers.asset_url(category_markers(pharma)),
         id: pharma.id
       }
     end
@@ -83,5 +83,14 @@ class PharmasController < ApplicationController
 
   def pharma_params
     params.permit(:pharma).require(:name, :address, :city)
+  end
+
+  def category_markers(pharmacy)
+    raise
+    if pharmacy.stocks.first.quantity > 0
+      return "Greenhouse.svg"
+    else
+      return "Redhouse.svg"
+    end
   end
 end
