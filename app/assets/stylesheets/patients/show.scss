@@ -31,25 +31,25 @@
 
 
 .table-users {
-   box-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+   // box-shadow: 1px 1px 0 rgba(0,0,0,0.1);
    max-width: calc(100% - 2em);
    margin: 1em auto;
    overflow: hidden;
-   width: 1100px;
+   width: 81%;
    margin-top: 50px;
    margin-bottom: 50px;
    font-family: 'Work Sans', sans-serif;
    margin-left: auto;
    margin-right: auto;
    border-bottom: 2px solid #035AC1;
-   border-right: 2px solid #035AC1;
+   // border-right: 2px solid #035AC1;
    border-left: 2px solid #035AC1;
-   border-top: 2px solid #035AC1;
+   // border-top: 2px solid #035AC1;
 
 }
 
 table {
-   width: 100%;
+      width: 100%;
      box-sizing: border-box;
 
 
@@ -75,10 +75,13 @@ table {
       font-weight: 300;
       font-size: 16px;
       border-bottom: 2px solid #035AC1;
+      border-top: 2px solid #035AC1;
+      // border-right: 2px solid #035AC1;
    }
 
    tr {
-  background-color: lighten(#398B93, 80%);
+      background-color: lighten(#398B93, 80%);
+      border-right: 2px solid #035AC1;
    }
 
    td b {
@@ -123,11 +126,10 @@ table {
 
 .legend {
    font-size: 20px;
-   font-weight: bold 500;
-   font-family: "Oxygen";
+   font-weight: 600;
    color: #035AC1;
-   margin-top: 25px;
-   margin-left: 6%;
+   margin-top: 8%;
+   margin-left: 7%;
    text-align: left;
   }
 
@@ -167,16 +169,18 @@ table {
   height: 50px;
   background: #fff;
   border-radius: 1px;
-  border: 0;
-  display: block;
-  width: 900px;
-  padding: 10px 32px;
-  font-size: 20px;
+  width: 510px;
+  padding: 10px 24px;
   color: black;
-  font-size: 20px;
+  font-size: 15px;
   border: 2px solid grey;
-  margin-left: 5%;
+  margin-left: 0%;
   margin-top: 5%;
+  opacity: 0.7;
+}
+
+.input-search-bar:hover {
+  opacity: 1;
 }
 
 .placeholder {
@@ -185,17 +189,16 @@ table {
 }
 
 .btn-search-show-patient {
-  width: 150px;
+  width: 90px;
   height: 50px;
   padding: 0 15px;
   background: #006DBB;
   white-space: nowrap;
-  border-radius: 0.5px;
+  // border-radius: 0.5px;
   font-size: 20px;
   color: #FFFFFF;
   border: 0;
   cursor: pointer;
-  font-weight: bold;
   margin-top: 5%;
 }
 
@@ -207,9 +210,10 @@ table {
 
 .main-cards {
     column-count: 2;
-    column-gap: 500px;
+    column-gap: 470px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
   }
 
 .card-show {
@@ -263,6 +267,8 @@ table {
    font-size: 20px;
    text-align: center;
    font-weight: bold;
+   width: 931px;
+
 }
 
 #back-arrow {
@@ -282,8 +288,8 @@ table {
 }
 
 .medic-show {
-    margin-top: 2px;
-    margin-bottom: 20px;
+    margin-top: -60px;
+    margin-bottom: 16px;
 }
 
 #banner-patient {
@@ -312,21 +318,28 @@ table {
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
-  border: 2px solid #035AC1;
+  // border: 2px solid #035AC1;
   display: flex;
 }
 
 .card-patient-text {
   color: #EB5757;
-  font-size: 20px;
-  width: 800px;
-  margin-top: 2%;
-  margin-left: 2%;
+  font-size: 16px;
+  width: 650px;
+  margin-top: 3%;
+  margin-left: 6%;
+  text-align: left;
+  line-height: 14px;
+  display:flex;
 }
 
 // .card-patient-title {
 //   padding-top: 5%
 // }
+
+#col-center {
+  max-width: 27.333333%;
+}
 
 .drug-img-patient {
   object-fit: cover;
@@ -334,4 +347,11 @@ table {
   height: 100%;
 }
 
+.test {
+  font-size: 15px;
+  margin-top: -5%;
+  margin-bottom: -1rem;
+  margin-left: 5%;
+  color: #EB5757;
+}
 
