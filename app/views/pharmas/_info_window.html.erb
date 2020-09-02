@@ -1,4 +1,7 @@
-<h2><%= pharma.name %></h2>
-<% if  pharma.stocks.find_by(drug:@drug) %>
-<p>En stock: <strong><%= pharma.stocks.find_by(drug:@drug).quantity %> </strong></p>
-<% end %>
+<div class="infoWindow">
+  <h2><%= pharma.name %></h2>
+  <% if  pharma.stocks.find_by(drug:@drug) %>
+    <p>En stock: <strong><%= pharma.stocks.find_by(drug:@drug).quantity %> </strong></p>
+  <% end %>
+</div>
+

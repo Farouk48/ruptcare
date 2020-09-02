@@ -8,9 +8,9 @@
 
 
 <div id="map-pharma">
-  <div id="pharmas">
+  <div class="pharmas">
     <% @pharmas.reject { |exclude| exclude == @user_pharma }.each do|pharma| %>
-    <div id="pharma-display">
+    <div class="pharma-display" data-pharma-id="<%= pharma.id %>">
       <% if pharma.present? %>
       <h2><%= pharma.name %></h2>
       <p><%= pharma.address %></p>
