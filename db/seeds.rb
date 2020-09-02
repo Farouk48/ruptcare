@@ -78,10 +78,6 @@ end
 
 mirtazapine = Drug.find_by_name("MIRTAZAPINE 15 mg")
 
-escitalopram_10 = Drug.find_by_name("ESCITALOPRAM 10 mg")
-file = URI.open("https://images.unsplash.com/photo-1575879711582-0024b37f2bfa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
-escitalopram_10.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
-
 fluoxetine_20 = Drug.find_by_name("FLUOXETINE 20 mg")
 file = URI.open("https://images.unsplash.com/photo-1517157837591-17b69085bfdc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
 fluoxetine_20.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
@@ -105,6 +101,10 @@ venlafaxine_37.photo.attach(io: file, filename: 'nes.png', content_type: 'image/
 venlafaxine_75 = Drug.find_by_name("VENLAFAXINE LP 75 mg")
 file = URI.open("https://images.unsplash.com/photo-1522426197515-ad17e39de88d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
 venlafaxine_75.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+escitalopram_10 = Drug.find_by_name("ESCITALOPRAM 10 mg")
+file = URI.open("https://images.unsplash.com/photo-1575879711582-0024b37f2bfa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
+escitalopram_10.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 doliprane_1000 = Drug.find_by_name("DOLIPRANE 1000 mg, comprimé")
 
