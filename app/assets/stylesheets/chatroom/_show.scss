@@ -16,16 +16,19 @@
 
 .title-chatroom {
   background-color: #006DBB;
-  height: 200px;
+  height: 80px;
   .title-chatroom__h1 {
     color: white;
     text-align: center;
-    padding-top: 75px;
+    padding-top: 30px;
     margin-top: 0px;
+    font-size: 20px;
+    padding: 10px;
 
       }
   p {
     text-align: center;
+    font-size: 15px;
   }
 }
 
@@ -117,7 +120,7 @@
       // border-radius: 100px;
       
       color: black;
-      border: 1px solid grey;
+      border: 1px solid rgb(201, 204, 208);
     }
     label {
       position: absolute;
@@ -248,7 +251,7 @@ overflow: scroll;
 
 .form-control {
   background-color: rgb(235, 240, 246);
-  width: 800px;
+  width: 600px;
   height: 40px;
   margin-top:60px;
 
@@ -276,9 +279,9 @@ overflow: scroll;
   opacity: 0.75;
   max-width: 40%;
   border-radius: 8px;
-  padding: 8px;
+  padding: 5px;
   margin-bottom: 10px;
-  color: white;
+  color: black;
   font-family: "Work Sans";
   font-weight: bold;
 }
@@ -289,11 +292,13 @@ overflow: scroll;
   max-width: 40%;
   border-radius: 8px;
   padding: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  color: white;
+  font-weight: bold;
 }
 
 #messages {
   overflow: scroll;
-  height: 500px;
+  height: 300px;
 }
 
