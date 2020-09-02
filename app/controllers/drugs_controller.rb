@@ -7,9 +7,14 @@ class DrugsController < ApplicationController
     if params[:name].present?
 
   		@drugs = Drug.search_by_name_and_action(params[:name])
-      @drugs = Drug.where(drugs_class: @drugs.first.drugs_class).where.not("name ILIKE ?", "%#{params[:name]}%")
-      @main_drug = @drugs.first
-      @search_drug = Drug.search_by_name_and_action(params[:name]).first
+      if @drugs.empty?
+        @empty = true
+      else
+        @empty = false
+        @drugs = Drug.where(drugs_class: @drugs.first.drugs_class).where.not("name ILIKE ?", "%#{params[:name]}%")
+        @main_drug = @drugs.first
+        @search_drug = Drug.search_by_name_and_action(params[:name]).first
+      end
   end
 end
 

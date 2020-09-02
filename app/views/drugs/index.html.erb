@@ -1,4 +1,12 @@
 <div class="container-fluid">
+  <% if @empty == true %>
+    <div class="top-drug-title">
+      <h1>Désolé, il n'y a pas de résultats pour ce médicament</h1>
+      <p>
+        Merci de bien vouloir rechercher un nouveau médicament
+       </p>
+    </div>
+  <% else %>
   <div class="top-drug-title">
     <h1>Mon alternative à la <%= @search_drug.name %></h1>
     <p>
@@ -115,7 +123,8 @@
     <% end %>
     <% end %>
   </div>
+  <% end %>
 </div>
-;
+
 
 
