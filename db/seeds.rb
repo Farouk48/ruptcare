@@ -163,7 +163,6 @@ doctor_8 = Doctor.create!(full_name: "DUMAS Mathilde", rpps_number:"10004000856"
 puts "#{Doctor.all}"
 
 
-patient_1 = Patient.create!(first_name: "Véronique", last_name: "DUBOIS", address: "11 rue Vaucouleurs", age: 35, city: "75011 Paris", chronic_disease: "Dépression", doctor: doctor_2, pharma: pharma_1)
 patient_2 = Patient.create!(first_name: "Victor", last_name: "BERGEAUD", address: "74 rue Vaucouleurs", age: 28, city: "75011 Paris", chronic_disease: "Aucune", doctor: doctor_2, pharma: pharma_1)
 patient_3 = Patient.create!(first_name: "Michel", last_name: "DUPONT", address: "11 rue de Vaugirard", age: 55, city: "75006 Paris", chronic_disease: "Hypertension artérielle, Diabète", doctor: doctor_5, pharma: pharma_1)
 patient_4 = Patient.create!(first_name: "Laurent", last_name: "DURAND", address: "3 rue Couronnes", age: 43, city: "75011 Paris", chronic_disease: "Hypertension artérielle", doctor: doctor_4, pharma: pharma_1)
@@ -176,6 +175,7 @@ patient_10 = Patient.create!(first_name: "Jeremie", last_name: "LEROY", address:
 patient_11 = Patient.create!(first_name: "Bertrand", last_name: "RICHARD", address: "11 Avenue Charles de Gaulle ", age: 66, city: "75011 Paris", chronic_disease: "Cancer du poumon", doctor: doctor_4, pharma: pharma_1)
 patient_12 = Patient.create!(first_name: "Phillipe", last_name: "LAUNE", address: "34 rue de Vaugirard", age: 64, city: "75011 Paris", chronic_disease: "Hypertension artérielle, Diabète", doctor: doctor_3, pharma: pharma_1)
 patient_13 = Patient.create!(first_name: "Raphael", last_name: "BOREL", address: "34 rue du Perchoir", age: 56, city: "75011 Paris", chronic_disease: "Hypertension artérielle, Diabète", doctor: doctor_3, pharma: pharma_1)
+patient_1 = Patient.create!(first_name: "Véronique", last_name: "DUBOIS", address: "11 rue Vaucouleurs", age: 35, city: "75011 Paris", chronic_disease: "Dépression", doctor: doctor_2, pharma: pharma_1)
 patient_14 = Patient.create!(first_name: "Robert", last_name: "GARCIA", address: "2 rue de Gaudelet", age: 54, city: " 75011 Paris", chronic_disease: "Aucune", doctor: doctor_3, pharma: pharma_1)
 
 
