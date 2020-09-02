@@ -1,5 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
+  color: black;
   height:75px;
   background: #FFFFFF;
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
@@ -7,11 +8,12 @@
 
 .navbar-lewagon-white {
   background-color: white;
+  color: #01418D;
 }
 
 .page-pages-home .navbar-lewagon {
   background-color: transparent;
-  transition: 0.5s background-color ease;
+  transition: background-color 0.5s ease;
   position: fixed;
   width: 100%;
   box-shadow: none;
@@ -25,27 +27,36 @@
   width: 150px;
   object-fit: cover;
   background-size: cover;
+
+  border-radius: 50%;
 }
 
 .avatar-large {
-	  object-fit: cover;
+	object-fit: cover;
   background-size: cover;
   border: 2px solid #FFFBFB;
 }
 
 .nav-link {
-  font-size: 22px;
+  font-size: 15px;
   text-transform: none;
-  font-weight: 300;
+  font-weight: 600;
+  color: black;
+  margin-right: 30px; 
+  border-right: 1px solid grey;
+  padding-right: 40px;
 }
 
 .page-pages-home .navbar-light .nav-link {
   color: white;
 }
+
 .page-pages-home .navbar-light .nav-link:hover {
   color: white;
   opacity: 0.8;
 }
+
+
 
 #navbarDropdown {
     width: 50px;
@@ -72,3 +83,6 @@ li a:hover {
   color: #01418D;
 }
 
+.nav-item-home {
+  color: black;
+}

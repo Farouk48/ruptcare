@@ -76,7 +76,7 @@
     margin-left: 100px;
     font-family: "Work Sans";
     border: 3px solid #006DBB;
-    width: 800px;
+    width: 750px;
     justify-content: space-between;
 }
 
@@ -125,7 +125,8 @@ a:hover {
 
 .form-inline-patient {
   // float: right;
-  margin-left: 400px;
+  margin-left: 250px;
+  width: 395px;
 
   // text-align: right;
 
@@ -156,4 +157,23 @@ text-align: center;
 
 .flexbox-patient {
   display: flex;
+}
+
+
+.page-patients-index .navbar-light .nav-link{
+  color: #006DBB;
+}
+.page-patients-index .navbar-light .nav-link:hover {
+  color: #006DBB;
+  opacity: 0.8;
+  font-size: semibold;
+}
+
+.page-patients-index .navbar-light #nav-link-TdB {
+  color: black;
+ opacity: 0.8;
+}
+
+#nav-link-TdB {
+  font-weight: regular;
 }
