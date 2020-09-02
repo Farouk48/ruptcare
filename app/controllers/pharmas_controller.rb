@@ -86,7 +86,6 @@ class PharmasController < ApplicationController
   end
 
   def category_markers(pharmacy)
-    raise
     if pharmacy.stocks.first.quantity > 0
       return "Greenhouse.svg"
     else
