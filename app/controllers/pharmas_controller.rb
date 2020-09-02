@@ -12,10 +12,11 @@ class PharmasController < ApplicationController
         lat: pharma.latitude,
         lng: pharma.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { pharma: pharma }),
-        image_url: helpers.asset_url('clinic-medical-solid.svg')
-
+        image_url: helpers.asset_url('clinic-medical-solid.svg'),
+        id: pharma.id
       }
     end
+
     @available_pharmas = @pharmas.joins(:stocks).where(stocks:{drug:@drug}).where('stocks.quantity > ?', 0)
     #where('id >': 200)
     #  @marker = @pharmas.map do

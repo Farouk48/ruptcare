@@ -35,7 +35,7 @@
   justify-content:space-between;
 }
 
-#pharma-display {
+.pharma-display {
   text-align: left;
   border-top: 1px solid #01418D;
   border-bottom: 1px solid #01418D;
@@ -45,7 +45,7 @@
   padding-left: 22px;
 }
 
-#pharma-display h2 {
+.pharma-display h2 {
   margin-top: 10px;
   }
 
@@ -54,7 +54,7 @@
   border-bottom: 1px solid #01418D;
 }
 
-#pharmas {
+.pharmas {
   overflow: scroll;
   height: 100vh;
   width: 30%;
@@ -76,8 +76,8 @@
   color: white;
   margin-bottom: 10px;
   position: absolute;
-  bottom: -31px;
-  left: -381px;
+  bottom: -33px;
+  left: -237px;
 }
 
 .strong-name {
