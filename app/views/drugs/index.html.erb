@@ -102,7 +102,7 @@
               </div>
               <div class="d-flex align-items-center">
                 <i class="fas fa-history" id="dispo"></i>
-                <div class="stock-modal" id="dispo-modal">Disponible dans: </div>
+                <div class="stock-modal" id="dispo-modal">Disponible dans: <%= pluralize(drug.availability, "jours") %></div>
               </div>
               <%= link_to "Regarder réseau Rupt'care" , pharmas_path(drug_id: drug.id, name: params[:name]), class: "btn btn-primary btn-pharmacy"%>
             <% end %>
