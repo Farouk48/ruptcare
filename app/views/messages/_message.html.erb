@@ -1,4 +1,5 @@
-<div class="message-container message-right <%= "message-left" if user_is_author %> " id="message-<%= message.id %>" data-user="<%= message.user.id %>">
+<div class="message-container <%= user_is_author ? 'message-left' : 'message-right' %> " id="message-<%= message.id %>" data-user="<%= message.user.id %>">
+
   <i class="author">
     <span><%= message.user.full_name %></span>
     <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>

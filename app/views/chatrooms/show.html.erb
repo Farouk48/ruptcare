@@ -11,8 +11,8 @@
           </div>
             <ul>
               <li class="sidebar-chatroom__nav__li"><img class='c-openchat__box__pp' src='https://res.cloudinary.com/de254wisw/image/upload/v1598617720/Capture_d_%C3%A9cran_2020-08-28_%C3%A0_14.18.52_ynx97b.png' alt=''>Dr. Tairi </li>
-            	<li class="sidebar-chatroom__nav__li"><img class='c-openchat__box__pp' src='https://res.cloudinary.com/de254wisw/image/upload/v1598617720/Capture_d_%C3%A9cran_2020-08-28_%C3%A0_14.18.52_ynx97b.png' alt=''>Dr. Maboul (2) </li>
-            	<li class="sidebar-chatroom__nav__li"><img class='c-openchat__box__pp' src='https://res.cloudinary.com/de254wisw/image/upload/v1598617720/Capture_d_%C3%A9cran_2020-08-28_%C3%A0_14.18.52_ynx97b.png' alt=''>Dr. Djamel </li>
+            	<li class="sidebar-chatroom__nav__li"><img class='c-openchat__box__pp' src='https://res.cloudinary.com/de254wisw/image/upload/v1598617720/Capture_d_%C3%A9cran_2020-08-28_%C3%A0_14.18.52_ynx97b.png' alt=''>Dr. Bolta </li>
+            	<li class="sidebar-chatroom__nav__li"><img class='c-openchat__box__pp' src='https://res.cloudinary.com/de254wisw/image/upload/v1598617720/Capture_d_%C3%A9cran_2020-08-28_%C3%A0_14.18.52_ynx97b.png' alt=''>Dr. Bergeaud </li>
             </ul>
             <button type="button" class="btn btn-primary" id="btn-new-message">Nouveau message</button>
         </div>
@@ -40,7 +40,7 @@
             <%= render 'messages/message', message: message, user_is_author: message.sender == current_user %>
           <% end %>
         </div>
-        <div class="flex-send-message">
+     <!--    <div class="flex-send-message"> -->
               <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
           <%= f.input :content, label: false, placeholder: "Ecrivez un message", class: "bar-envoi" %>
           <%= f.button :submit, value: "Envoyer", class: "button-send-message" %>
