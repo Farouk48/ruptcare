@@ -21,7 +21,7 @@ margin: auto;
 }
 
 .card-drug-infos .drug-info{
-  font-family: Work Sans, sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 16px;
   padding-top: 15px;
   color: black;
@@ -34,7 +34,7 @@ margin: auto;
   // padding-left: 0px;
   // padding-top: 35px;
   // margin-left: 0px;
-  margin-top: 4px;
+  margin-top: 2px;
 }
  h1, h2{
   font-family: 'Work Sans', sans-serif;
@@ -91,7 +91,7 @@ padding-bottom: 7px;
   margin-top: 1px;
   padding-top: 10px;
   margin-left: 0px;
-  font-family: Work sans;
+  font-family: 'Work sans';
   font-size: 20px;
   white-space: nowrap;
 }
@@ -113,17 +113,17 @@ color: #006DBB
 .next-icon{
   color:  #006DBB;
   font-size: 16px;
-  font-family: Work Sans;
+  font-family: 'Work Sans';
   font-weight: bold;
 }
 .next-icon1{
    color: #006DBB ;
   font-size: 16px;
-  font-family: Work Sans;
+  font-family: 'Work Sans';
   font-weight: bold;
 }
 .card-drug-infos-modal{
-  padding: 0px 30px;
+  padding: 0px 20px;
 
   display: flex;
 
@@ -136,11 +136,11 @@ color: #006DBB
 }
 #modal-aprec{
   font-size: 13px;
-  font-family: Work Sans;
+  font-family: 'Work Sans';
 }
 .card-drug-infos-modal .drug-info {
   font-size: 14px;
-  font-family: Work Sans;
+  font-family: 'Work Sans';
   color: black;
   padding-top: 3px;
 }
@@ -158,21 +158,21 @@ color: #006DBB
 .stock-modal{
   margin-top: 3px;
   color: #006DBB;
-  font-family: Work Sans;
+  font-family: 'Work Sans';
   font-weight: bold;
 }
 .dispo-modal{
   padding-left: 1px;
   position: relative;
   top: -40px;
-  font-family: Work Sans;
+  font-family: 'Work Sans';
 }
 
 #stock-modal{
   color: #006DBB;
 }
 #dispo-modal{
-  font-family: Work Sans;
+  font-family: 'Work Sans';
 }
 .btn-medecin{
   color: #FFFFFF;
@@ -189,13 +189,13 @@ color: #006DBB
 #modal-class{
   font-size: 13px;
   color:  #006DBB;
-  font-family: Work Sans;
+  font-family: 'Work Sans';
   padding-top: 5px;
 }
 #modal-fam{
   font-size: 13px;
   color: #006DBB;
-  font-family: Work Sans;
+  font-family: 'Work Sans';
   padding-top: 0px;
 }
 .stock-in-modal{
