@@ -15,6 +15,7 @@
       <h2><%= pharma.name %></h2>
       <p><%= pharma.address %></p>
       <p><%= pharma.city %> </p>
+      <h2> En stock : <%= pharma.stocks.where(drug_id: @drug.id).first.quantity %></h2>
       <% else %>
       <h2>test</h2>
       <% end %>
