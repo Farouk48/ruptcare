@@ -1,19 +1,17 @@
   <header class="header-show">
   </header>
 
-
-
   <div class="main" id="back-show-patient">
-        	<div class="row" id="banner-patient">
+        	<div class="row mr-0 ml-0" id="banner-patient">
     	  <div class="col-4" id="col-center">
 	</div>
 
 
-	<div class="col-4">`
+	<div class="col-4">
 
 		 <div class="main-cards">
-		    <div class="card-show">
-		      <h1 id="patient-info"> Informations sur le patient </h1>
+		    <div class="card-show mt-2">
+		      <h1 id="patient-info mt-1"> Informations sur le patient </h1>
 			  <ul class="list-info-patient">
 		  		  <li><b> Nom :    </b><%= @patient.first_name %>  <%= @patient.last_name %></li>
 		  			<li><b>Age :    </b> <%= @patient.age %> ans</li>
@@ -22,10 +20,8 @@
 			  </ul>
 			</div>
 
-<!--     <div class="vl"></div>
- -->
 	    <div class="card-show">
-	  	  <h1 class="medic-show"> Informations médicales </h1>
+	  	  <h1 class="medic-info mt-n4"> Informations médicales </h1>
 	  	  <ul class="list-info-patient">
 	  	  	  <li><b>Maladie(s) chronique(s):</b> <%= @patient.chronic_disease %></li>
 
@@ -34,33 +30,29 @@
 	  	</div>
 	  </div>
 	</div>
-
 </div>
-<div class="container">
 
+<div class="container">
   <div class="card-patient">
     <img src="https://images.unsplash.com/photo-1544991875-5dc1b05f607d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="drug-img-patient">
    <!--  <h1 class="card-patient-title">Dernière délivrance de mianserine:</h1> -->
        <div class="input-field text-center" >
 
-        <p class="card-patient-text fas fa-exclamation-triangle"> </p>
+        <p class="red-text"> <i class="fas fa-exclamation-triangle"> </i> Attention le médicament : <b>MIANSERINE 10mg est en rupture à l'échelle nationale</b></p>
 
-        <p class="test">Attention le médicament : <b>MIANSERINE 10mg est en rupture à l'échelle nationale</b></p>
+          <div class="legend">Rechercher une alternative médicamenteuse :
+          </div>
+              <%= form_tag drugs_path, class: "drug-searchbar", method: :get do %>
+                 <%= hidden_field_tag 'patient_id', params[:patient_id] %>
 
-      <div class="legend">Rechercher une alternative médicamenteuse :</div>
-          <%= form_tag drugs_path, class: "drug-searchbar", method: :get do %>
-             <%= hidden_field_tag 'patient_id', params[:patient_id] %>
-
-            <%= text_field_tag :name,
-              params[:name], class: "input-search-bar", id:"search", placeholder: "Rechercher un médicament..." %>
-          <%= button_tag :submit, class: "btn-search-show-patient" do%>
-            <i class="fas fa-search"></i>
-            <% end %>
-          <% end %>
-    </div>
+                <%= text_field_tag :name,
+                  params[:name], class: "input-search-bar", id:"search", placeholder: "Rechercher un médicament..." %>
+              <%= button_tag :submit, class: "btn-search-show-patient" do%>
+                <i class="fas fa-search"></i>
+                <% end %>
+              <% end %>
+      </div>
    </div>
-
-</div>
 
 
 	<div class="card-show-table">
@@ -85,26 +77,14 @@
 	         <td>Pharmacie du 20eme</td>
 	         <td> Julien Dupuis </td>
  	      </tr>
-	       <tr>
-  	         <td>10/05/2020</td>
-  	         <td><b>Mianserine 10mg</b></td>
-  	         <td>Pharmacie du 20eme</td>
-  	         <td> Man Jade </td>
-	       </tr>
         <tr>
-	         <td>03/04/2020</td>
-	         <td><b>Mianserine 10mg</b> </td>
-	         <td>Pharmacie du 20eme</td>
-	         <td> Julien Dupuis </td>
-	       </tr>
-        <tr>
-	         <td>29/02/2020</td>
+	         <td>29/04/2020</td>
 	         <td><b>Escitalopram 10mg</b></td>
 	         <td>Pharmacie du 20ème</td>
 	         <td> Julien Dupuis </td>
         </tr>
          <tr>
-           <td>30/01/2020</td>
+           <td>30/03/2020</td>
            <td><b>Escitalopram 10mg</b></td>
            <td>Pharmacie du 20ème</td>
            <td> Moner Réjane </td>
@@ -113,8 +93,8 @@
 	    </div>
 	  </div>
    </div>
+   </div>
   </div>
 </div>
-
 
 

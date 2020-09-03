@@ -30,7 +30,9 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 // import { initSelect2 } from '../components/init_select2';
 
 //import { initUpdateNavbarOnScroll } from '../components/navbar';
+
 import { initMapbox } from '../plugins/init_mapbox';
+import { zoomingMarkerWhileScrolling} from '../components/bigger_markers_in_map';
 import { initChatroomCable } from '../channels/chatroom_channel';
 import { accordion } from '../channels/accordion';
 import { initTabs } from '../components/tabs';
@@ -41,6 +43,7 @@ document.addEventListener('turbolinks:load', () => {
   //initUpdateNavbarOnScroll();
   initMapbox();
   initChatroomCable();
+
   initTabs();
 
 });
@@ -59,4 +62,7 @@ document.addEventListener('turbolinks:before-cache', () => {
     $('.modal-backdrop').remove();
     $('body').removeClass('modal-open');
   }
+
+  zoomingMarkerWhileScrolling();
+
 });

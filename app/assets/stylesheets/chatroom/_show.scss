@@ -20,10 +20,11 @@
   .title-chatroom__h1 {
     color: white;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 40px;
     margin-top: 0px;
+
     font-size: 20px;
-    padding: 10px;
+    padding: 25px;
 
       }
   p {
@@ -34,7 +35,7 @@
 
 .main-chatroom-app{
   display: flex;
- 
+
 
 
 }
@@ -55,7 +56,7 @@
       font-size: 16px;
       font-weight: 400;
       color: black;
-    
+
 
     .button-show-chatroom {
       border-radius: 4px;
@@ -88,48 +89,51 @@
       color: black;
       display: flex;
       align-items: center;
-       margin-right: 10px;
-       margin-top: 10px;
+      margin-right: 10px;
+      margin-top: 10px;
 
         &:hover {
           background-color: rgb(235, 240, 246);
           color: blue;
 
+        }
+      }
     }
-    }
- }
-}
+  }
 
 
 
 .section-chat {
-  flex-basis: 20%;
+  // flex-basis: 20%;
   padding: 1rem;
   border-right: 1px solid #f1f4f6;
   background: #F5F5F5;
-    padding: 1rem 0;
-    border-bottom: 1px solid #f1f4f6;
-    width: 100%;
-   
+  padding: 1rem 0;
+  border-bottom: 1px solid #f1f4f6;
+  width: 23%;
+
+
+
     .bar-search-chatrooms {
-      width: 250px;
-      margin-left: 50px;
-      margin-right: 50px;
+      width: 200px;
+      margin-left: 460px;
+      margin-right: 70px;
       padding: 10px 10px 10px 40px;
       font-size: 13px;
+      height: 30px;
+
       // border-radius: 100px;
-      
+
       color: black;
       border: 1px solid rgb(201, 204, 208);
     }
-    label {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 15px;
-      display: flex;
 
-
+      label {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 15px;
+        display: flex;
     }
 
     &__list {
@@ -144,12 +148,11 @@
 }
 
 .c-openchat {
-  flex-basis: 80%;
+  flex-basis: 85%;
   background-color: #fff;
-
-  margin-right: 10px;
+  // margin-right: 10px;
   padding: 10px;
-overflow: scroll;
+  overflow: scroll;
 
   }
   // &__link {
@@ -159,19 +162,28 @@ overflow: scroll;
     // &--active {
     //   color: #ebf0f6;
     // }
-  
 
+#search-bar-chatroom {
+  margin-bottom: 20px;
+  // margin-left: 21rem !important;
+  max-width: 266px;
+  margin-right: 28px;
+  width: 300px;
+  }
 
-
+.section-chat__header {
+  width: 300px;
+}
 .c-openchat__box {
-  
+
   &__header {
-    padding:1rem 0;
+    // padding:1rem 0;
     border-bottom:1px solid rgb(235, 240, 246);
     // margin:0 1rem;
     display:flex;
     // align-items:center;
-   
+
+
   }
   &__status{
     width:10px;
@@ -199,7 +211,7 @@ overflow: scroll;
 }
 
 .c-openchat__box__info {
-  
+
   ul {
     flex-direction:column;
     padding:0 2rem;
@@ -207,11 +219,20 @@ overflow: scroll;
   }
 }
 
+.message_content {
+  flex-grow: 1;
+}
+
+#message_content {
+  margin-top: 0px;
+  width: 100%;
+
+}
 
 .button-send-message {
 
 	float: right;
-	margin-right: 5px;
+	margin-right: 23px;
 	margin-bottom: 5px;
   background-color: #006DBB;
   color: white;
@@ -219,7 +240,7 @@ overflow: scroll;
   font-weight: bold;
   height: 40px;
   margin-left: 0,5px;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 
 .fas, .far {
@@ -228,25 +249,26 @@ overflow: scroll;
 
 #messages {
 	margin: 10px;
-}
-
-.bar-envoi {
-	position: fixed;
-	margin-right: 30px;
-	margin-left: 30px;
-  bottom: 1px;
-  width: 20px;
 
 }
 
-#btn-new-message {
-  margin-left: 60px;
-  padding: 5px;
-  width: 200px;
-  font-family: "Work Sans";
-  font-size: 16px;
-  font-weight: bold;
-}
+// .bar-envoi {
+// 	position: fixed;
+// 	margin-right: 30px;
+// 	margin-left: 30px;
+//   bottom: 1px;
+//   width: 20px;
+
+// }
+
+// #btn-new-message {
+//   margin-left: 60px;
+//   padding: 5px;
+//   width: 200px;
+//   font-family: "Work Sans";
+//   font-size: 16px;
+//   font-weight: bold;
+// }
 
 .flex-send-message {
   display: flex;
@@ -269,6 +291,7 @@ overflow: scroll;
   color: #006DBB;
   font-family: "Work Sans";
   font-weight: bold;
+  font-size: 20px;
 
 
 }
@@ -280,29 +303,42 @@ overflow: scroll;
 .message-left {
   background: #F5F5F5;
   opacity: 0.75;
-  max-width: 40%;
+  max-width: 50%;
   border-radius: 8px;
   padding: 5px;
   margin-bottom: 10px;
   color: black;
   font-family: "Work Sans";
-  font-weight: bold;
+  // font-weight: bold;
 }
 
 .message-right {
     background: #006DBB;
   opacity: 0.75;
-  max-width: 40%;
+  max-width: 50%;
   border-radius: 8px;
   padding: 8px;
   margin-bottom: 5px;
   color: white;
-  font-weight: bold;
+  // font-weight: bold;
 }
 
 #messages {
   overflow: scroll;
-  height: 200px;
+  // height: 260px;
+  min-height: calc(100vh - 300px);
+
+  p {
+    font-size: 12px;
+    font-weight: regular;
+    padding-top: 10px;
+  }
+
+  span {
+    font-weight: bold;
+    font-size: 13px;
+    font-style: regular;
+  }
 }
 
 .page-chatrooms-show .navbar-light .nav-link {
@@ -312,3 +348,90 @@ overflow: scroll;
   color: black;
 }
 
+//modal
+
+#btn-submit-pdf {
+ background: #006DBB;
+ font-family: "Work Sans";
+}
+
+#btn-submit-pdf:hover {
+background: #FFFFFF;
+border: 1px solid #063675;
+color: #07418D;
+}
+
+#success-btn {
+  color: #006DBB;
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+#success-btn:hover {
+  color: green;
+  font-weight: bold;
+}
+
+#pending-btn {
+  color: #006DBB;
+  font-size: 15px;
+}
+#pending-btn:hover {
+  color: orange;
+}
+
+#reject-btn {
+  color: #006DBB;
+  font-size: 15px;
+    margin-left: 40px;
+}
+#reject-btn:hover {
+  color: red;
+}
+
+.state-demand {
+  font-family: "Work Sans";
+  font-weight: bold;
+  color: #006DBB;
+  margin-left: 36px;
+  font-size: 17px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  text-justify: center;
+
+}
+
+.modal-title {
+  color: green;
+  font-weight: bold;
+}
+
+#btn-submit-pdf {
+  margin-right: 60px;
+  margin-left: 80px;
+}
+
+.sidebar-chatroom__nav__li {
+  // margin-left: 20px;
+}
+
+.detail-demande  {
+  list-style: square;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 40px;
+  color: #006DBB;
+
+  p {
+    font-family: "Work Sans";
+    font-size: 14px;
+    color: #006DBB;
+
+
+  }
+}
+
+.valid-refus-drug {
+  margin-top: 50px;
+  margin-left: 20px;
+}
