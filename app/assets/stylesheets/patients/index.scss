@@ -128,7 +128,6 @@ a:hover {
   // float: right;
   margin-left: 250px;
   width: 395px;
-
   // text-align: right;
 
   input {
@@ -137,8 +136,11 @@ a:hover {
      position: relative;
      left: 21px;
      top: 3px;
-
-
+     background-image: url("search-solid.svg");
+     background-repeat: no-repeat;
+     background-size: 20px 20px;
+     background-position: 95% 50%;
+     padding: 20px;
   }
 
   // .fa-search {
