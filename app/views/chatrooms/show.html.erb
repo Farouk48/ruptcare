@@ -12,7 +12,7 @@
       <!--   <ul class='grey-area-chatroom'> -->
           <li class="detail-demande"><p> Demande pour : <br> <b>Mme Véronique DUBOIS </b></p>
           <li class="detail-demande"><p> Médicament remplacé : <br><b> Mianserine 10mg </b></p>
-          <li class="detail-demande"><p> Alternative acceptée : <br> <b>Escitalopram 10mg</b><p> 
+          <li class="detail-demande"><p> Alternative acceptée : <br> <b>Escitalopram 10mg</b><p>
         <div class="valid-refus-drug">
           <li class='sidebar-chatroom__nav__li'><a class='c-sidepanel__nav__link c-sidepanel__nav__link--success' id='success-btn'  href='' title='' data-toggle="modal" data-target="#exampleModal"><i class="fas fa-check"></i>Acceptée</a></li>
           <li class='sidebar-chatroom__nav__li'><a class='c-sidepanel__nav__link c-sidepanel__nav__link--warning' id='reject-btn' href='' title=''><i class="far fa-times-circle"></i></i>Refusée</a></li>
@@ -37,11 +37,11 @@
             <!-- <form class="needs-validation" novalidate> -->
               <div class="form-group">
                 <label for="exampleInputEmail1">L'alternative médicamenteuse a été validée par le médecin</label>
-            
+
                 <small id="emailHelp" class="form-text text-muted">Vous pouvez désormais générer un PDF récapitulant la demande : </small>
               </div>
-        
-          
+
+
              <!--  <button type="submit" class="btn btn-primary" id="btn-submit-pdf" -->
 
               <%= link_to chatroom_path(@chatroom, format: :pdf), target: '_blank', class: 'btn btn-primary' do %>
@@ -71,7 +71,7 @@
             <img class='c-openchat__box__pp' src='https://res.cloudinary.com/de254wisw/image/upload/v1599038915/Walid_Tairi_1_p5yc2o.jpg' alt=''>
             <p class='c-openchat__box__name'>Dr Walid Tairi</p>
             <span class='c-openchat__box__status'></span>
-             <form class="form-inline form-inline-patient d-flex justify-content-center md-form form-md mt-0">
+             <form class="form-inline form-inline-patient d-flex md-form form-md mt-0" style='flex-grow: 1; justify-content: flex-end;'>
               <input class="form-control form-control-sm ml-3 w-75" id="search-bar-chatroom" type="text" placeholder="Rechercher un message"
                aria-label="Search"></form>
           </div>
