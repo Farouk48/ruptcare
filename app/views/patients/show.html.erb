@@ -8,6 +8,7 @@
 
 
 	<div class="col-4">
+
 		 <div class="main-cards">
 		    <div class="card-show mt-2">
 		      <h1 id="patient-info mt-1"> Informations sur le patient </h1>
@@ -19,8 +20,6 @@
 			  </ul>
 			</div>
 
-<!--     <div class="vl"></div>
- -->
 	    <div class="card-show">
 	  	  <h1 class="medic-info mt-n4"> Informations médicales </h1>
 	  	  <ul class="list-info-patient">
@@ -31,10 +30,9 @@
 	  	</div>
 	  </div>
 	</div>
-
 </div>
-<div class="container">
 
+<div class="container">
   <div class="card-patient">
     <img src="https://images.unsplash.com/photo-1544991875-5dc1b05f607d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="drug-img-patient">
    <!--  <h1 class="card-patient-title">Dernière délivrance de mianserine:</h1> -->
@@ -42,7 +40,8 @@
 
         <p class="red-text"> <i class="fas fa-exclamation-triangle"> </i> Attention le médicament : <b>MIANSERINE 10mg est en rupture à l'échelle nationale</b></p>
 
-          <div class="legend">Rechercher une alternative médicamenteuse :</div>
+          <div class="legend">Rechercher une alternative médicamenteuse :
+          </div>
               <%= form_tag drugs_path, class: "drug-searchbar", method: :get do %>
                  <%= hidden_field_tag 'patient_id', params[:patient_id] %>
 
@@ -52,11 +51,9 @@
                 <i class="fas fa-search"></i>
                 <% end %>
               <% end %>
-    </div>
+      </div>
    </div>
-
 </div>
-
 
 	<div class="card-show-table">
 	  <div class="table-users">
@@ -80,18 +77,6 @@
 	         <td>Pharmacie du 20eme</td>
 	         <td> Julien Dupuis </td>
  	      </tr>
-	  <!--      <tr>
-  	         <td>10/05/2020</td>
-  	         <td><b>Mianserine 10mg</b></td>
-  	         <td>Pharmacie du 20eme</td>
-  	         <td> Man Jade </td>
-	       </tr>
-        <tr>
-	         <td>03/04/2020</td>
-	         <td><b>Mianserine 10mg</b> </td>
-	         <td>Pharmacie du 20eme</td>
-	         <td> Julien Dupuis </td>
-	       </tr> -->
         <tr>
 	         <td>29/04/2020</td>
 	         <td><b>Escitalopram 10mg</b></td>
