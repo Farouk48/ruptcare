@@ -1,0 +1,24 @@
+.drug-information-tabs {
+  li {
+    font-size: 0.9em;
+    opacity: 0.6;
+    font-weight: bold;
+    transition: opacity 0.3s ease-in-out;
+  }
+  li:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+  li.active {
+    opacity: 1;
+    border-bottom: 1px solid rgba(0,0,0,0.8);
+  }
+}
+
+.drug-information-tab-content {
+  p { display: none;}
+  p.active {
+    display: block;
+    font-size: .85em;
+  }
+}

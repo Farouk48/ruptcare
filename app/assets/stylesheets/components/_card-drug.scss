@@ -1,6 +1,5 @@
 .top-drug-title h1 {
   color: #006DBB;
-  padding: 20px;
   font-size: 30px;
   font-family:  Work Sans;
   font-weight: bold;
@@ -9,7 +8,7 @@
 }
 .top-drug-title p {
   font-size: 16px;
-  font-family: Work Sans;
+  font-family:'Work Sans';
 
 }
 
@@ -26,33 +25,52 @@
   color: #006DBB;
   font-size: 25px;
   font-family: Work Sans;
+  position: relative;
+  top: 10px;
 }
 
 .card-main-drug {
   overflow: hidden;
-  height: 555px;
+  height: 340px;
   background: white;
   display: flex;
-  align-items: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
   width: 100%;
+  border-radius: 4px;
+  box-shadow: 0px 4px 16px rgba(0,0,0,0.07);
 }
 
 .card-main-drug img {
-  height: 100%;
   width: 40%;
+  object-fit: cover;
+  object-position: bottom;
+}
 
+.card-drug-infos-top {
+  display: flex;
+  justify-content: space-between;
+  .stock-availability {
+    font-size: 16px;
+    margin-top: 3px;
+  }
 }
 
 .card-main-drug h2 {
   color: #006DBB;
-  font-size: 30px;
   font-weight: bolder;
-  padding-left: 0px;
   font-family: Work Sans;
-  margin-top: -25px ;
+  font-size: 16px;
+    padding-bottom: 10px;
+    margin-top: 1px;
+}
 
+.drug-main-title {
+  font-size: 25px;
+  p {
+    margin-bottom: 0px;
+  }
+  h2{
+    font-size: 30px;
+  }
 }
 
 #aprec {
@@ -66,32 +84,65 @@
 }
 
 .card-main-drug .card-drug-infos {
-  padding: 10px;
-  padding-left: 20px;
-  margin-top: -40px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+}
 
+.drug-information-tabs-container {
+  flex: 1;
+  margin: 20px 0px;
 }
 
 .cards-drugs-grid {
   display: grid;
   grid-auto-flow: column;
   height: 100%;
-  grid-gap: 30px;
-  position: relative;
   grid-gap: 1rem;
   max-width: 100%;
   overflow: hidden;
   overflow-x: auto;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .card-other-drug {
   position: relative;
-  height: 236px;
+  height: 200px;
   overflow: hidden;
   background: white;
-  margin-bottom: 50px;
   width: 315px;
   cursor: pointer;
+}
+
+.availability-stock-tag {
+  padding-left: 15px;
+  font-size: 14px;
+  color: $green;
+  .availability-bubble {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: $green;
+    display: inline-block;
+    margin-bottom: 2px;
+  }
+  &.red .availability-bubble {
+    background-color: $red;
+  }
+  &.red {
+    color: $red;
+  }
+}
+
+.card-other-drug-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0px 15px;
+  p {
+    padding-left: 0px !important;
+  }
 }
 
 .card-other-drug > img {
@@ -141,45 +192,92 @@
   font-size: 16px;
   color: #006DBB;
   position: relative;
-  top: 35px;
+      bottom: 226px;
+    right: -428px;
+
 }
 
 .card-drug-infos p{
   font-size: 15px;
 }
 .card-disable{
-  opacity: 0.5;
-  position: relative;
-  height: 236px;
-  width: 315px;
-  overflow: hidden;
-  background: white;
-  margin-bottom: 50px;
-
+  opacity: 0.4;
+  img {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+  }
 }
+
+
 .drug-family{
   color: #006DBB;
-  font-size: 20px;
+  font-size: 13px;
   font-family: Work Sans;
-  margin-top: -15px;
 }
 .drug-class{
   color: #006DBB;
-  font-size: 20px;
+  font-size: 13px;
   font-family: Work Sans;
-  margin-top: -12px;
 }
 #stock-check{
   font-size: 16px;
   color: #006DBB;
-  padding-top: 15px;
+     position: relative;
+   top: 85px;
 }
 #d-class{
   color: #006DBB;
 }
-.container-grid-column{
-height: 200px;
-overflow: scroll;
-margin-top: -18px;
 
+
+.availaible{
+  color: green;
+  position: relative;
+  right: -205px;
+}
+.not-availaible{
+  color: red;
+  position: relative;
+  right: -170px;
+}
+
+.card-drug-left img{
+  width: 600px;
+  height: 200px;
+}
+
+.nav-card {
+  display: flex;
+  flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0px;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.nav-link-card {
+    display: block;
+    font-size: 15px;
+    text-transform: none;
+    font-weight: 600;
+    padding-right: 10px;
+}
+.nav-link-modal{
+   display: block;
+    font-size: 15px;
+    text-transform: none;
+    font-weight: 600;
+    padding-right: 5px;
+}
+
+.nav-modal{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0px;
+  list-style: none;
+  justify-content: space-between;
+}
+#nav-contact-tab{
+  color: red;
 }
