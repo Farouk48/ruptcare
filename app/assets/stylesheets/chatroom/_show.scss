@@ -20,8 +20,9 @@
   .title-chatroom__h1 {
     color: white;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 40px;
     margin-top: 0px;
+
     font-size: 20px;
     padding: 10px;
 
@@ -103,20 +104,23 @@
 
 
 .section-chat {
-  flex-basis: 20%;
+  // flex-basis: 20%;
   padding: 1rem;
   border-right: 1px solid #f1f4f6;
   background: #F5F5F5;
     padding: 1rem 0;
     border-bottom: 1px solid #f1f4f6;
-    width: 100%;
+    width: 23%;
+    padding-left: 20px;
+
    
     .bar-search-chatrooms {
       width: 200px;
-      margin-left: 20px;
+      margin-left: 4px;
       margin-right: 70px;
       padding: 10px 10px 10px 40px;
       font-size: 13px;
+      height: 30px;
       // border-radius: 100px;
       
       color: black;
@@ -144,10 +148,10 @@
 }
 
 .c-openchat {
-  flex-basis: 80%;
+  flex-basis: 85%;
   background-color: #fff;
 
-  margin-right: 10px;
+  // margin-right: 10px;
   padding: 10px;
 overflow: scroll;
 
@@ -166,7 +170,7 @@ overflow: scroll;
 .c-openchat__box {
   
   &__header {
-    padding:1rem 0;
+    // padding:1rem 0;
     border-bottom:1px solid rgb(235, 240, 246);
     // margin:0 1rem;
     display:flex;
@@ -209,7 +213,7 @@ overflow: scroll;
 
 #message_content {
   margin-top: 15px;
-  width: 850px;
+  width: 775px;
 
 }
 
@@ -308,7 +312,7 @@ overflow: scroll;
 
 #messages {
   overflow: scroll;
-  height: 300px;
+  height: 260px;
  
 
   p {
@@ -340,6 +344,7 @@ overflow: scroll;
 
 #success-btn {
   color: #006DBB;
+  font-size: 15px;
 }
 
 #success-btn:hover {
@@ -349,6 +354,7 @@ overflow: scroll;
 
 #pending-btn {
   color: #006DBB;
+  font-size: 15px;
 }
 #pending-btn:hover {
   color: orange;
@@ -356,6 +362,7 @@ overflow: scroll;
 
 #reject-btn {
   color: #006DBB;
+  font-size: 15px;
 }
 #reject-btn:hover {
   color: red;
@@ -366,7 +373,8 @@ overflow: scroll;
   font-weight: bold;
   color: #006DBB;
   margin-left: 20px;
-  font-size: 20px;
+  font-size: 15px;
+  margin-top: 10px;
 
 
 }
@@ -383,4 +391,6 @@ overflow: scroll;
 
 .sidebar-chatroom__nav__li {
   margin-left: 20px;
+
 }
+

@@ -9,21 +9,21 @@
     	<div class="section-chat">
     		<div class="searcher">
     			<div><label aria-label="Rechercher une conversation"></label>
-    		      <input type='text' placeholder='Search' class='bar-search-chatrooms'>
+    		      <input type='text' placeholder='Rechercher...' class='bar-search-chatrooms'>
           </div>
-            <ul>
+          <!--   <ul> -->
              <!--  <li class="sidebar-chatroom__nav__li"><img class='c-openchat__box__pp' src='https://res.cloudinary.com/de254wisw/image/upload/v1599038915/Walid_Tairi_1_p5yc2o.jpg' alt=''>Dr. Tairi </li> -->
             	<!-- <li class="sidebar-chatroom__nav__li"><img class='c-openchat__box__pp' src='https://res.cloudinary.com/de254wisw/image/upload/v1599039428/277c5102-94c2-406c-9c43-d68a4c006883_wy1gaj.jpg' alt=''>Dr. Bolta </li> -->
             <!-- 	<li class="sidebar-chatroom__nav__li"><img class='c-openchat__box__pp' src='https://res.cloudinary.com/de254wisw/image/upload/v1598606334/0_q6frrl.jpg' alt=''>Dr. Bergeaud </li> -->
-            </ul>
+            <!-- </ul> -->
           </div>
 
 
           <!--   <button type="button" class="btn btn-primary" id="btn-new-message">Nouveau message</button> -->
        <!--  </div> -->
 
-        <div class="section-chat__header">
-           <p class="state-demand"> Etat de la demande :  <p>
+      <div class="section-chat__header">
+          <p class="state-demand"> Etat de la demande :  <p>
       <!--   <ul class='grey-area-chatroom'> -->
         
           <li class='sidebar-chatroom__nav__li'><a class='c-sidepanel__nav__link c-sidepanel__nav__link--success' id='success-btn'  href='' title='' data-toggle="modal" data-target="#exampleModal"><i class="fas fa-check"></i>Validé</a></li>
@@ -34,32 +34,32 @@
     </div>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-check"></i>Demande validée</h5>
-      <!--   <button type="button" class="close" data-dismiss="modal" aria-label="Close"> -->
-        <!--   <span aria-hidden="true">&times;</span>
-        </button>
- -->      </div>
-      <div class="modal-body">
-        <form class="needs-validation" novalidate>
-          <div class="form-group">
-            <label for="exampleInputEmail1">L'alternative médicamenteuse a été validée par le médecin</label>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-check"></i>Demande validée</h5>
+          <!--   <button type="button" class="close" data-dismiss="modal" aria-label="Close"> -->
+            <!--   <span aria-hidden="true">&times;</span>
+            </button>
+     -->      </div>
+          <div class="modal-body">
+            <form class="needs-validation" novalidate>
+              <div class="form-group">
+                <label for="exampleInputEmail1">L'alternative médicamenteuse a été validée par le médecin</label>
+            
+                <small id="emailHelp" class="form-text text-muted">Vous pouvez désormais générer un PDF récapitulant la demande : </small>
+              </div>
         
-            <small id="emailHelp" class="form-text text-muted">Vous pouvez désormais générer un PDF récapitulant la demande : </small>
+          
+              <button type="submit" class="btn btn-primary" id="btn-submit-pdf"><i class="fas fa-file-pdf"></i>Générer un PDF</button>
+            </form>
           </div>
-    
-      
-          <button type="submit" class="btn btn-primary" id="btn-submit-pdf"><i class="fas fa-file-pdf"></i>Générer un PDF</button>
-        </form>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+          </div> -->
+        </div>
       </div>
-      <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-      </div> -->
     </div>
-  </div>
-</div>
 
 
     	  <section class='c-openchat'>
