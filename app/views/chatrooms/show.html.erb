@@ -2,33 +2,23 @@
 
 <html class="html-show-chatroom">
   <body class="body-show">
-    <div class="title-chatroom"><h1 class="title-chatroom__h1">#<%= @chatroom.name %> <p>Ici vous pouvez retrouver tous les messages que vous avez échangés avec d’autres pharmaciens ou en écrire un nouveau.</p></h1></div>
+    <div class="title-chatroom"><h1 class="title-chatroom__h1"><%= @chatroom.name %> <p>Ici vous pouvez retrouver tous les messages que vous avez échangés avec d’autres pharmaciens ou en écrire un nouveau.</p></h1></div>
     <main class="main-chatroom-app">
 
 
-    	<div class="section-chat">
-    		<div class="searcher">
-    			<div><label aria-label="Rechercher une conversation"></label>
-    		      <input type='text' placeholder='Rechercher...' class='bar-search-chatrooms'>
-          </div>
-          <!--   <ul> -->
-             <!--  <li class="sidebar-chatroom__nav__li"><img class='c-openchat__box__pp' src='https://res.cloudinary.com/de254wisw/image/upload/v1599038915/Walid_Tairi_1_p5yc2o.jpg' alt=''>Dr. Tairi </li> -->
-            	<!-- <li class="sidebar-chatroom__nav__li"><img class='c-openchat__box__pp' src='https://res.cloudinary.com/de254wisw/image/upload/v1599039428/277c5102-94c2-406c-9c43-d68a4c006883_wy1gaj.jpg' alt=''>Dr. Bolta </li> -->
-            <!-- 	<li class="sidebar-chatroom__nav__li"><img class='c-openchat__box__pp' src='https://res.cloudinary.com/de254wisw/image/upload/v1598606334/0_q6frrl.jpg' alt=''>Dr. Bergeaud </li> -->
-            <!-- </ul> -->
-          </div>
-
-
-          <!--   <button type="button" class="btn btn-primary" id="btn-new-message">Nouveau message</button> -->
-       <!--  </div> -->
 
       <div class="section-chat__header">
-          <p class="state-demand"> Etat de la demande :  <p>
+          <p class="state-demand"> DETAILS DE LA DEMANDE  <p>
       <!--   <ul class='grey-area-chatroom'> -->
-        
-          <li class='sidebar-chatroom__nav__li'><a class='c-sidepanel__nav__link c-sidepanel__nav__link--success' id='success-btn'  href='' title='' data-toggle="modal" data-target="#exampleModal"><i class="fas fa-check"></i>Validé</a></li>
-          <li class='sidebar-chatroom__nav__li'><a class='c-sidepanel__nav__link c-sidepanel__nav__link--pending' id='pending-btn' href='' title='' ><i class="far fa-clock"></i>En attente</a></li>
-          <li class='sidebar-chatroom__nav__li'><a class='c-sidepanel__nav__link c-sidepanel__nav__link--warning' id='reject-btn' href='' title=''><i class="far fa-times-circle"></i></i>Refusé</a></li>
+          <li class="detail-demande"><p> Demande pour : Mme Véronique Dubois</p>
+          <li class="detail-demande"><p> Médicament remplacé :  médicament Mianserine</p>
+          <li class="detail-demande"><p> Médicament de remplacement : Escitalopram<p> 
+        <div class="valid-refus-drug">
+          <li class='sidebar-chatroom__nav__li'><a class='c-sidepanel__nav__link c-sidepanel__nav__link--success' id='success-btn'  href='' title='' data-toggle="modal" data-target="#exampleModal"><i class="fas fa-check"></i>Validée</a></li>
+          <li class='sidebar-chatroom__nav__li'><a class='c-sidepanel__nav__link c-sidepanel__nav__link--warning' id='reject-btn' href='' title=''><i class="far fa-times-circle"></i></i>Refusée</a></li>
+        </div>
+     <!--      <li class='sidebar-chatroom__nav__li'><a class='c-sidepanel__nav__link c-sidepanel__nav__link--pending' id='pending-btn' href='' title='' ><i class="far fa-clock"></i>En attente</a></li>
+          <li class='sidebar-chatroom__nav__li'><a class='c-sidepanel__nav__link c-sidepanel__nav__link--warning' id='reject-btn' href='' title=''><i class="far fa-times-circle"></i></i>Refusé</a></li> -->
         <!-- </ul> -->
     	</div>
     </div>
@@ -41,9 +31,10 @@
           <!--   <button type="button" class="close" data-dismiss="modal" aria-label="Close"> -->
             <!--   <span aria-hidden="true">&times;</span>
             </button>
-     -->      </div>
+     -->  </div>
+
           <div class="modal-body">
-            <form class="needs-validation" novalidate>
+            <!-- <form class="needs-validation" novalidate> -->
               <div class="form-group">
                 <label for="exampleInputEmail1">L'alternative médicamenteuse a été validée par le médecin</label>
             
@@ -51,8 +42,13 @@
               </div>
         
           
-              <button type="submit" class="btn btn-primary" id="btn-submit-pdf"><i class="fas fa-file-pdf"></i>Générer un PDF</button>
-            </form>
+             <!--  <button type="submit" class="btn btn-primary" id="btn-submit-pdf" -->
+
+              <%= link_to chatroom_path(@chatroom, format: :pdf), target: '_blank', class: 'btn btn-primary' do %>
+                  <i class="fas fa-file-pdf"></i>Générer un PDF
+                <% end %>
+              <!-- Générer un PDF --><!-- </button> -->
+          <!--   </form> -->
           </div>
           <!-- <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
@@ -62,7 +58,7 @@
     </div>
 
 
-    	  <section class='c-openchat'>
+  <section class='c-openchat'>
     <!--     <div class='c-openchat__header'>
           <ul>
       		 <li class='c-openchat__li'><%= current_user.full_name %></li>
@@ -75,6 +71,9 @@
             <img class='c-openchat__box__pp' src='https://res.cloudinary.com/de254wisw/image/upload/v1599038915/Walid_Tairi_1_p5yc2o.jpg' alt=''>
             <p class='c-openchat__box__name'>Dr Walid Tairi</p>
             <span class='c-openchat__box__status'></span>
+             <form class="form-inline form-inline-patient d-flex justify-content-center md-form form-md mt-0">
+              <input class="form-control form-control-sm ml-3 w-75" id="search-bar-chatroom" type="text" placeholder="Rechercher un message"
+               aria-label="Search"></form>
           </div>
           <div class='c-openchat__box__info'></div>
       </div>
@@ -86,16 +85,11 @@
         </div>
      <!--    <div class="flex-send-message"> -->
               <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
-          <%= f.input :content, label: false, placeholder: "Ecrivez un message", class: "bar-envoi" %>
-          <%= f.button :submit, value: "Envoyer", class: "button-send-message" %>
+              <%= f.input :content, label: false, placeholder: "Ecrivez un message", class: "bar-envoi" %>
+              <%= f.button :submit, value: "Envoyer", class: "button-send-message" %>
 
         <% end %>
-      </div>
-    
      </section>
-   
- 
-
     </main>
   </body>
 </html>
