@@ -10,8 +10,8 @@ pharmas.forEach((pharma) => {
     const dataMarker = "[data-marker-id='" + `${id}` +"']"
     const marker = document.querySelector(dataMarker)
     console.log(marker)
-    marker.style.width = '35px'
-    marker.style.height = '35px'
+    marker.style.width = '47px'
+    marker.style.height = '47px'
   })
   pharma.addEventListener('mouseleave', (event) => {
     event.preventDefault();
