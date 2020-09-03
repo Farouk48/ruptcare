@@ -4,64 +4,129 @@
   <title>La page que vous recherchez n'existe pas ou a été déplacée (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+    @import url(https://fonts.googleapis.com/css?family=Raleway:300);
 
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
+    $color1: white;
+    $color2: #342643;
+    $color3: #1FA9D6;
 
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+    *, *:before, *:after {
+      box-sizing: border-box;
+    }
+    html {
+        height: 100%;
+    }
+    body {
+        background: url(https://media1.tenor.com/images/766adcaf4097f8c68aa069ad0fbaeb79/tenor.gif?itemid=17064896) no-repeat center center fixed;
+        background-size:100% 100%;
+        font-family: 'Raleway', sans-serif;
+        background-color: $color2;
+        height: 100%;
+    }
 
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
+    .text-wrapper {
+        height: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+    }
 
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+    .title {
+        font-size: 9em;
+        font-weight: 700;
+        color: $color1;
+        position:relative;
+    }
+
+    .subtitle {
+        font-size: 40px;
+        font-weight: 700;
+        color: $color1;
+        position:relative;
+    }
+
+    .buttons {
+        margin: 30px;
+
+        a.button {
+            background-color: $color2;
+            font-weight: 700;
+            border: 2px solid $color1;
+            text-decoration: none;
+            padding: 15px;
+            text-transform: uppercase;
+            color: $color1;
+            border-radius: 26px;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background-color: lighten($color2, 10%);
+                color: white;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+
+
+    }
+
+
+    // Glitch animation from https://codepen.io/lbebber/pen/ypgql
+    @keyframes noise-anim{
+      $steps:20;
+      @for $i from 0 through $steps{
+        #{percentage($i*(1/$steps))}{
+          clip:rect(random(200)+px,9999px,random(200)+px,0);
+        }
+      }
+    }
+    .subtitle:after, .title:after{
+      content:attr(data-content);
+      position:absolute;
+      left:2px;
+      text-shadow:-1px 0 red;
+      top:0;
+      color:$color1;
+      overflow:hidden;
+      clip:rect(0,900px,0,0);
+      animation:noise-anim 2s infinite linear alternate-reverse;
+    }
+
+    @keyframes noise-anim-2{
+      $steps:20;
+      @for $i from 0 through $steps{
+        #{percentage($i*(1/$steps))}{
+          clip:rect(random(200)+px,9999px,random(200)+px,0);
+        }
+      }
+    }
+    .subtitle:before, .title:before{
+      content:attr(data-content);
+      position:absolute;
+      left:-2px;
+      text-shadow:1px 0 blue;
+      top:0;
+      color:$color1;
+      overflow:hidden;
+      clip:rect(0,900px,0,0);
+      animation:noise-anim-2 3s infinite linear alternate-reverse;
+    }
   </style>
 </head>
 
-<body class="rails-default-error-page">
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>Oups... La page que vous cherchez n'est pas disponible.</h1>
-      <p> Il s'agit peut être d'une erreur de saisie ou la page que vous recherchez n'existe pas ou a été déplacée.</p>
-    </div>
-    <p>Contactez l'administrateur pour plus d'informations.</p>
+<body>
+  <div class="text-wrapper">
+      <div class="title" data-content="404">
+          Erreur 404
+      </div>
+
+      <div class="subtitle" data-content="Oops, the page you're looking for doesn't exist">
+          Oups... La page que vous cherchez n'est pas disponible.
+      </div>
+
+      <div class="buttons">
+          <a class="button" href="http://www.ruptcare.com">Retour a la page d'accueil </a>
+      </div>
   </div>
 </body>
 </html>
