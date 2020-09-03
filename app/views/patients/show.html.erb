@@ -2,16 +2,15 @@
   </header>
 
   <div class="main" id="back-show-patient">
-        	<div class="row" id="banner-patient">
+        	<div class="row mr-0 ml-0" id="banner-patient">
     	  <div class="col-4" id="col-center">
 	</div>
 
 
-	<div class="col-4">`
-
+	<div class="col-4">
 		 <div class="main-cards">
-		    <div class="card-show">
-		      <h1 id="patient-info"> Informations sur le patient </h1>
+		    <div class="card-show mt-2">
+		      <h1 id="patient-info mt-1"> Informations sur le patient </h1>
 			  <ul class="list-info-patient">
 		  		  <li><b> Nom :    </b><%= @patient.first_name %>  <%= @patient.last_name %></li>
 		  			<li><b>Age :    </b> <%= @patient.age %> ans</li>
@@ -23,7 +22,7 @@
 <!--     <div class="vl"></div>
  -->
 	    <div class="card-show">
-	  	  <h1 class="medic-info"> Informations médicales </h1>
+	  	  <h1 class="medic-info mt-n4"> Informations médicales </h1>
 	  	  <ul class="list-info-patient">
 	  	  	  <li><b>Maladie(s) chronique(s):</b> <%= @patient.chronic_disease %></li>
 
