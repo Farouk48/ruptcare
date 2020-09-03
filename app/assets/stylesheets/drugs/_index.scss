@@ -7,8 +7,17 @@
 .card-drug {
 background: white;
 width: 600px;
-height: 592px;
+height: fit-content;
+padding-bottom: 20px;
 margin: auto;
+  .drug-information-tabs {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+  }
+  .drug-information-tab-content {
+    padding: 0px 20px;
+  }
 }
 
 .card-drug-infos .drug-info{
@@ -21,10 +30,11 @@ margin: auto;
 }
 
 .card-drug .card-drug-stock {
-  padding: 16px;
-  padding-left: 0px;
-  padding-top: 35px;
-  margin-left: 0px;
+  // padding: 16px;
+  // padding-left: 0px;
+  // padding-top: 35px;
+  // margin-left: 0px;
+  margin-top: 4px;
 }
  h1, h2{
   font-family: 'Work Sans', sans-serif;
@@ -35,7 +45,8 @@ margin: auto;
 }
 .card-drug-stock{
   background-color: white;
-  font-family: 'Heebo', sans-serif;
+  font-family: Work Sans;
+  max-width: 44%;
 }
 .card-drug-stock h2 {
 margin-bottom: -20px;
@@ -43,14 +54,9 @@ padding-top: 20px;
 padding-bottom: 7px;
   color: #006DBB;
 }
-.card-drug-left{
-
-
-}
  .drug-name {
-  padding-top: 10px;
   font-family: 'Work sans', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bolder;
   line-height: 1;
 }
@@ -95,9 +101,6 @@ padding-bottom: 7px;
   color: #07418D;
 }
 
-.card-main-drug  .btn-primary {
-  margin-bottom: -100px;
-}
 
 #image-in-modal {
   width: 600px;
@@ -120,10 +123,16 @@ color: #006DBB
   font-weight: bold;
 }
 .card-drug-infos-modal{
-  padding-left: 30px;
+  padding: 0px 30px;
+
+  display: flex;
+
+  .drug-new-left-card {
+    flex-grow: 1;
+  }
 }
 #modal-fam{
-  margin-top: -20px;
+
 }
 #modal-aprec{
   font-size: 13px;
@@ -136,7 +145,7 @@ color: #006DBB
   padding-top: 3px;
 }
 .card-drug-infos-modal .card-drug-stock{
-  margin-top: -25px;
+  // margin-top: -25px;
 }
 
 
@@ -168,10 +177,31 @@ color: #006DBB
 .btn-medecin{
   color: #FFFFFF;
   background: #07418D;
-
+  position: relative;
+  top: 15px;
 }
 .btn-pharmacy{
   color: #FFFFFF;
     background: #07418D;
     margin-top: 15px;
 }
+
+#modal-class{
+  font-size: 13px;
+  color:  #006DBB;
+  font-family: Work Sans;
+  padding-top: 5px;
+}
+#modal-fam{
+  font-size: 13px;
+  color: #006DBB;
+  font-family: Work Sans;
+  padding-top: 0px;
+}
+.stock-in-modal{
+      top: -320px;
+    right: -435px;
+    color: #006DDB;
+    position: relative;
+}
+
