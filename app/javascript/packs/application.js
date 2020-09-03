@@ -43,7 +43,7 @@ document.addEventListener('turbolinks:load', () => {
   //initUpdateNavbarOnScroll();
   initMapbox();
   initChatroomCable();
-
+  zoomingMarkerWhileScrolling();
   initTabs();
 
 });
@@ -63,6 +63,6 @@ document.addEventListener('turbolinks:before-cache', () => {
     $('body').removeClass('modal-open');
   }
 
-  zoomingMarkerWhileScrolling();
+  //zoomingMarkerWhileScrolling();
 
 });
