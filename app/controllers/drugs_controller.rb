@@ -11,7 +11,7 @@ class DrugsController < ApplicationController
         @empty = true
       else
         @empty = false
-        @drugs = Drug.where(drugs_class: @drugs.first.drugs_class).where.not("name ILIKE ?", "%#{params[:name]}%")
+        @drugs = Drug.where(drugs_class: @drugs.first.drugs_class).where.not("name ILIKE ?", "%#{params[:name]}%")#.to_a
         @main_drug = @drugs.first
         @search_drug = Drug.search_by_name_and_action(params[:name]).first
       end
