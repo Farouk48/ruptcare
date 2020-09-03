@@ -1,0 +1,121 @@
+.card-patient {
+  height: 236px;
+  background: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  // border: 2px solid #035AC1;
+  display: flex;
+}
+
+.card-patient-text {
+  color: #EB5757;
+  font-size: 16px;
+  width: 650px;
+  margin-top: 3%;
+  margin-left: 6%;
+  text-align: left;
+  line-height: 14px;
+  display:flex;
+}
+
+.form-patient-show {
+  width: 100%;
+  max-width: 1290px;
+
+}
+
+.drug-searchbar {
+  justify-content: center;
+  display: flex;
+}
+
+// #searchbar {
+//   background: transparent;
+//   // padding: 50px 47px;
+//   // display: flex;
+//   width: 10%;
+//   // flex-pack: justify;
+//   // flex-align: center;
+//   // align-items: center;
+//   height: 68px;
+
+//   }
+
+.input-field {
+  height: 68px;
+  margin-bottom: 5px;
+  // box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  width: 800px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 0%;
+  margin-right: 0%;
+
+}
+
+
+.input-search-bar {
+
+  height: 50px;
+  background: #fff;
+  border-radius: 1px;
+  width: 510px;
+  padding: 10px 24px;
+  color: black;
+  font-size: 15px;
+  border: 2px solid grey;
+  margin-top: 3%;
+  opacity: 0.7;
+}
+
+.input-search-bar:hover {
+  opacity: 1;
+}
+
+.placeholder {
+  color: black;
+  font-size: 20px;
+}
+
+.btn-search-show-patient {
+  width: 90px;
+  height: 50px;
+  padding: 0 15px;
+  background: #006DBB;
+  white-space: nowrap;
+  // border-radius: 0.5px;
+  font-size: 20px;
+  color: #FFFFFF;
+  border: 0;
+  cursor: pointer;
+  margin-top: 3%;
+}
+
+.btn-search-show-patient:hover {
+   background: #FFFFFF;
+   border: 1px solid #006DBB;
+   color: #006DBB;
+ }
+
+.main-cards {
+    column-count: 2;
+    column-gap: 470px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+.red-text {
+  font-size: 15px;
+  margin-top: 2%;
+  color: #EB5757;
+}
+
+.legend {
+   font-size: 20px;
+   font-weight: 600;
+   color: #035AC1;
+   margin-top: 5%;
+  }
+
