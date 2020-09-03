@@ -89,17 +89,17 @@
       color: black;
       display: flex;
       align-items: center;
-       margin-right: 10px;
-       margin-top: 10px;
+      margin-right: 10px;
+      margin-top: 10px;
 
         &:hover {
           background-color: rgb(235, 240, 246);
           color: blue;
 
+        }
+      }
     }
-    }
- }
-}
+  }
 
 
 
@@ -108,32 +108,32 @@
   padding: 1rem;
   border-right: 1px solid #f1f4f6;
   background: #F5F5F5;
-    padding: 1rem 0;
-    border-bottom: 1px solid #f1f4f6;
-    width: 23%;
-    padding-left: 20px;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f1f4f6;
+  width: 23%;
+ 
 
    
     .bar-search-chatrooms {
       width: 200px;
-      margin-left: 4px;
+      margin-left: 460px;
       margin-right: 70px;
       padding: 10px 10px 10px 40px;
       font-size: 13px;
       height: 30px;
+
       // border-radius: 100px;
       
       color: black;
       border: 1px solid rgb(201, 204, 208);
     }
-    label {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 15px;
-      display: flex;
 
-
+      label {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 15px;
+        display: flex;
     }
 
     &__list {
@@ -150,10 +150,9 @@
 .c-openchat {
   flex-basis: 85%;
   background-color: #fff;
-
   // margin-right: 10px;
   padding: 10px;
-overflow: scroll;
+  overflow: scroll;
 
   }
   // &__link {
@@ -164,7 +163,10 @@ overflow: scroll;
     //   color: #ebf0f6;
     // }
   
-
+#search-bar-chatroom {
+  margin-bottom: 20px;
+  margin-left: 107px !important;
+}
 
 
 .c-openchat__box {
@@ -212,15 +214,15 @@ overflow: scroll;
 }
 
 #message_content {
-  margin-top: 15px;
-  width: 775px;
+  margin-top: 0px;
+  width: 740px;
 
 }
 
 .button-send-message {
 
 	float: right;
-	margin-right: 5px;
+	margin-right: 23px;
 	margin-bottom: 5px;
   background-color: #006DBB;
   color: white;
@@ -228,7 +230,7 @@ overflow: scroll;
   font-weight: bold;
   height: 40px;
   margin-left: 0,5px;
-  margin-top: 15px;
+  margin-top: 0px;
 }
 
 .fas, .far {
@@ -240,14 +242,14 @@ overflow: scroll;
 
 }
 
-.bar-envoi {
-	position: fixed;
-	margin-right: 30px;
-	margin-left: 30px;
-  bottom: 1px;
-  width: 20px;
+// .bar-envoi {
+// 	position: fixed;
+// 	margin-right: 30px;
+// 	margin-left: 30px;
+//   bottom: 1px;
+//   width: 20px;
 
-}
+// }
 
 // #btn-new-message {
 //   margin-left: 60px;
@@ -375,6 +377,8 @@ overflow: scroll;
   margin-left: 20px;
   font-size: 15px;
   margin-top: 10px;
+  text-justify: center;
+  
 
 
 }
@@ -391,6 +395,17 @@ overflow: scroll;
 
 .sidebar-chatroom__nav__li {
   margin-left: 20px;
-
 }
 
+.detail-demande  {
+  list-style: none;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  p {
+    font-family: "Work Sans";
+    font-size: 14px;
+    color: #006DBB;
+    font-style: italic;
+  }
+}
