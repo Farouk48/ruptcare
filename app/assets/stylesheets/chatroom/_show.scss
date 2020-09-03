@@ -112,9 +112,9 @@
     width: 100%;
    
     .bar-search-chatrooms {
-      width: 250px;
-      margin-left: 50px;
-      margin-right: 50px;
+      width: 200px;
+      margin-left: 20px;
+      margin-right: 70px;
       padding: 10px 10px 10px 40px;
       font-size: 13px;
       // border-radius: 100px;
@@ -207,6 +207,11 @@ overflow: scroll;
   }
 }
 
+#message_content {
+  margin-top: 15px;
+  width: 850px;
+
+}
 
 .button-send-message {
 
@@ -219,7 +224,7 @@ overflow: scroll;
   font-weight: bold;
   height: 40px;
   margin-left: 0,5px;
-  margin-top: 60px;
+  margin-top: 15px;
 }
 
 .fas, .far {
@@ -228,6 +233,7 @@ overflow: scroll;
 
 #messages {
 	margin: 10px;
+
 }
 
 .bar-envoi {
@@ -239,14 +245,14 @@ overflow: scroll;
 
 }
 
-#btn-new-message {
-  margin-left: 60px;
-  padding: 5px;
-  width: 200px;
-  font-family: "Work Sans";
-  font-size: 16px;
-  font-weight: bold;
-}
+// #btn-new-message {
+//   margin-left: 60px;
+//   padding: 5px;
+//   width: 200px;
+//   font-family: "Work Sans";
+//   font-size: 16px;
+//   font-weight: bold;
+// }
 
 .flex-send-message {
   display: flex;
@@ -302,7 +308,7 @@ overflow: scroll;
 
 #messages {
   overflow: scroll;
-  height: 200px;
+  height: 300px;
  
 
   p {
@@ -325,3 +331,56 @@ overflow: scroll;
   color: black;
 }
 
+//modal
+
+#btn-submit-pdf {
+ background: #006DBB;
+ font-family: "Work Sans";
+}
+
+#success-btn {
+  color: #006DBB;
+}
+
+#success-btn:hover {
+  color: green;
+  font-weight: bold;
+}
+
+#pending-btn {
+  color: #006DBB;
+}
+#pending-btn:hover {
+  color: orange;
+}
+
+#reject-btn {
+  color: #006DBB;
+}
+#reject-btn:hover {
+  color: red;
+}
+
+.state-demand {
+  font-family: "Work Sans";
+  font-weight: bold;
+  color: #006DBB;
+  margin-left: 20px;
+  font-size: 20px;
+
+
+}
+
+.modal-title {
+  color: green;
+  font-weight: bold;
+}
+
+#btn-submit-pdf {
+  margin-right: 60px;
+  margin-left: 80px;
+}
+
+.sidebar-chatroom__nav__li {
+  margin-left: 20px;
+}
