@@ -1,5 +1,5 @@
 meta_product_name: "Rupt'Care"
 meta_title: "Rupt'Care - Votre solution pour la rupture des médicaments"
 meta_description: "Une interface faite pour aider les pharmaciens à trouver la meilleure solution thérapeutique disponible en coopération avec les professionels et les industries de la santé"
-meta_image: "cover.png" # should exist in `app/assets/images/`
+meta_image: "cover.jpg" # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account"   # required for Twitter Card
