@@ -30,7 +30,9 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 // import { initSelect2 } from '../components/init_select2';
 
 //import { initUpdateNavbarOnScroll } from '../components/navbar';
+
 import { initMapbox } from '../plugins/init_mapbox';
+import { zoomingMarkerWhileScrolling} from '../components/bigger_markers_in_map';
 import { initChatroomCable } from '../channels/chatroom_channel';
 
 document.addEventListener('turbolinks:load', () => {
@@ -39,6 +41,7 @@ document.addEventListener('turbolinks:load', () => {
   //initUpdateNavbarOnScroll();
   initMapbox();
   initChatroomCable();
+  zoomingMarkerWhileScrolling();
 });
     document.addEventListener('turbolinks:before-cache', () => {
       // Manually tear down bootstrap modals before caching. If turbolinks

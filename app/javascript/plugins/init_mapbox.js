@@ -22,8 +22,8 @@ const initMapbox = () => {
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v10',
-      center: [2.3837872, 48.8666236],
-      zoom: 13
+      center: [2.356876, 48.848378],
+      zoom: 12.2
     });
 
     const markers = JSON.parse(mapElement.dataset.markers);
@@ -39,7 +39,7 @@ const initMapbox = () => {
       const newMarker = new mapboxgl.Marker(element)
 
         .setLngLat([ marker.lng, marker.lat ])
-        .setPopup(popup) // add this
+        //.setPopup(popup) // add this
         .addTo(map);
         mapMarkers.push(newMarker)
         newMarker.getElement().dataset.markerId = marker.id;
@@ -47,6 +47,7 @@ const initMapbox = () => {
         newMarker.getElement().addEventListener('mouseleave', (e) => togglePharmaHighlighting(e) );
       });
       console.log(mapMarkers);
+
      const mainMarker = new mapboxgl.Marker()
       .setLngLat([2.3837872, 48.8666236])
       .addTo(map);
@@ -56,7 +57,7 @@ const initMapbox = () => {
     fitMapToMarkers(map, markers);
     map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,mapboxgl: mapboxgl }));
 
-    openInfoWindow(mapMarkers)
+    //openInfoWindow(mapMarkers)
   }
 };
 
@@ -66,18 +67,19 @@ const fitMapToMarkers = (map, markers) => {
   //map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
 };
 
-const openInfoWindow = (markers) => {
-  const pharmas = document.querySelectorAll('.pharma-display')
-  console.log(pharmas);
-  pharmas.forEach((pharma,index) => {
-    pharma.addEventListener('mouseenter', () => {
-      markers[index].togglePopup();
-      });
-    pharma.addEventListener('mouseleave',() => {
-      markers[index].togglePopup();
-    });
-  });
-}
+//const openInfoWindow = (markers) => {
+  //const pharmas = document.querySelectorAll('.pharma-display')
+  //console.log(pharmas);
+  //pharmas.forEach((pharma,index) => {
+    //pharma.addEventListener('mouseenter', () => {
+      //markers[index].togglePopup();
+      //});
+    //pharma.addEventListener('mouseleave',() => {
+      //markers[index].togglePopup();
+    //});
+  //});
+//}
+
 
 const togglePharmaHighlighting = (event) => {
   const pharma = document.querySelector(`[data-pharma-id="${event.currentTarget.dataset.markerId}"]`);
@@ -86,4 +88,5 @@ const togglePharmaHighlighting = (event) => {
 
 
 export { initMapbox };
+
 
