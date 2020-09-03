@@ -35,7 +35,7 @@
 
 .main-chatroom-app{
   display: flex;
- 
+
 
 
 }
@@ -56,7 +56,7 @@
       font-size: 16px;
       font-weight: 400;
       color: black;
-    
+
 
     .button-show-chatroom {
       border-radius: 4px;
@@ -111,9 +111,9 @@
   padding: 1rem 0;
   border-bottom: 1px solid #f1f4f6;
   width: 23%;
- 
 
-   
+
+
     .bar-search-chatrooms {
       width: 200px;
       margin-left: 460px;
@@ -123,7 +123,7 @@
       height: 30px;
 
       // border-radius: 100px;
-      
+
       color: black;
       border: 1px solid rgb(201, 204, 208);
     }
@@ -162,10 +162,12 @@
     // &--active {
     //   color: #ebf0f6;
     // }
-  
+
 #search-bar-chatroom {
   margin-bottom: 20px;
-  margin-left: 21rem !important;
+  // margin-left: 21rem !important;
+  max-width: 266px;
+  margin-right: 28px;
   width: 300px;
   }
 
@@ -173,7 +175,7 @@
   width: 300px;
 }
 .c-openchat__box {
-  
+
   &__header {
     // padding:1rem 0;
     border-bottom:1px solid rgb(235, 240, 246);
@@ -181,7 +183,7 @@
     display:flex;
     // align-items:center;
 
-   
+
   }
   &__status{
     width:10px;
@@ -209,7 +211,7 @@
 }
 
 .c-openchat__box__info {
-  
+
   ul {
     flex-direction:column;
     padding:0 2rem;
@@ -217,9 +219,13 @@
   }
 }
 
+.message_content {
+  flex-grow: 1;
+}
+
 #message_content {
   margin-top: 0px;
-  width: 875px;
+  width: 100%;
 
 }
 
@@ -392,7 +398,7 @@ color: #07418D;
   margin-top: 10px;
   margin-bottom: 40px;
   text-justify: center;
-  
+
 }
 
 .modal-title {
@@ -420,7 +426,7 @@ color: #07418D;
     font-family: "Work Sans";
     font-size: 14px;
     color: #006DBB;
-   
+
 
   }
 }
