@@ -24,7 +24,7 @@
     margin-top: 0px;
 
     font-size: 20px;
-    padding: 10px;
+    padding: 25px;
 
       }
   p {
@@ -165,10 +165,13 @@
   
 #search-bar-chatroom {
   margin-bottom: 20px;
-  margin-left: 107px !important;
+  margin-left: 40rem !important;
+  width: 300px;
+  }
+
+.section-chat__header {
+  width: 300px;
 }
-
-
 .c-openchat__box {
   
   &__header {
@@ -177,6 +180,7 @@
     // margin:0 1rem;
     display:flex;
     // align-items:center;
+
    
   }
   &__status{
@@ -215,7 +219,7 @@
 
 #message_content {
   margin-top: 0px;
-  width: 740px;
+  width: 1020px;
 
 }
 
@@ -281,6 +285,7 @@
   color: #006DBB;
   font-family: "Work Sans";
   font-weight: bold;
+  font-size: 20px;
 
 
 }
@@ -314,8 +319,8 @@
 
 #messages {
   overflow: scroll;
-  height: 260px;
- 
+  // height: 260px;
+  min-height: calc(100vh - 300px);
 
   p {
     font-size: 12px;
@@ -344,9 +349,16 @@
  font-family: "Work Sans";
 }
 
+#btn-submit-pdf:hover {
+background: #FFFFFF;
+border: 1px solid #063675;
+color: #07418D;
+}
+
 #success-btn {
   color: #006DBB;
   font-size: 15px;
+  margin-left: 40px;
 }
 
 #success-btn:hover {
@@ -365,6 +377,7 @@
 #reject-btn {
   color: #006DBB;
   font-size: 15px;
+    margin-left: 40px;
 }
 #reject-btn:hover {
   color: red;
@@ -374,13 +387,12 @@
   font-family: "Work Sans";
   font-weight: bold;
   color: #006DBB;
-  margin-left: 20px;
-  font-size: 15px;
+  margin-left: 36px;
+  font-size: 17px;
   margin-top: 10px;
+  margin-bottom: 40px;
   text-justify: center;
   
-
-
 }
 
 .modal-title {
@@ -394,18 +406,26 @@
 }
 
 .sidebar-chatroom__nav__li {
-  margin-left: 20px;
+  // margin-left: 20px;
 }
 
 .detail-demande  {
-  list-style: none;
+  list-style: square;
   padding-left: 20px;
   padding-right: 20px;
+  margin-left: 40px;
+  color: #006DBB;
 
   p {
     font-family: "Work Sans";
     font-size: 14px;
     color: #006DBB;
-    font-style: italic;
+   
+
   }
+}
+
+.valid-refus-drug {
+  margin-top: 50px;
+  margin-left: 20px;
 }

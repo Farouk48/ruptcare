@@ -2,7 +2,7 @@
 
 <html class="html-show-chatroom">
   <body class="body-show">
-    <div class="title-chatroom"><h1 class="title-chatroom__h1"><%= @chatroom.name %> <p>Ici vous pouvez retrouver tous les messages que vous avez échangés avec d’autres pharmaciens ou en écrire un nouveau.</p></h1></div>
+    <div class="title-chatroom"><h1 class="title-chatroom__h1"><%= @chatroom.name %> </h1></div>
     <main class="main-chatroom-app">
 
 
@@ -10,11 +10,11 @@
       <div class="section-chat__header">
           <p class="state-demand"> DETAILS DE LA DEMANDE  <p>
       <!--   <ul class='grey-area-chatroom'> -->
-          <li class="detail-demande"><p> Demande pour : Mme Véronique Dubois</p>
-          <li class="detail-demande"><p> Médicament remplacé :  médicament Mianserine</p>
-          <li class="detail-demande"><p> Médicament de remplacement : Escitalopram<p> 
+          <li class="detail-demande"><p> Demande pour : <br> <b>Mme Véronique DUBOIS </b></p>
+          <li class="detail-demande"><p> Médicament remplacé : <br><b> Mianserine 10mg </b></p>
+          <li class="detail-demande"><p> Alternative acceptée : <br> <b>Escitalopram 10mg</b><p> 
         <div class="valid-refus-drug">
-          <li class='sidebar-chatroom__nav__li'><a class='c-sidepanel__nav__link c-sidepanel__nav__link--success' id='success-btn'  href='' title='' data-toggle="modal" data-target="#exampleModal"><i class="fas fa-check"></i>Validée</a></li>
+          <li class='sidebar-chatroom__nav__li'><a class='c-sidepanel__nav__link c-sidepanel__nav__link--success' id='success-btn'  href='' title='' data-toggle="modal" data-target="#exampleModal"><i class="fas fa-check"></i>Acceptée</a></li>
           <li class='sidebar-chatroom__nav__li'><a class='c-sidepanel__nav__link c-sidepanel__nav__link--warning' id='reject-btn' href='' title=''><i class="far fa-times-circle"></i></i>Refusée</a></li>
         </div>
      <!--      <li class='sidebar-chatroom__nav__li'><a class='c-sidepanel__nav__link c-sidepanel__nav__link--pending' id='pending-btn' href='' title='' ><i class="far fa-clock"></i>En attente</a></li>
