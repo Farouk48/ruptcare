@@ -172,7 +172,8 @@
   }
 
 .section-chat__header {
-  width: 300px;
+  width: 28%;
+
 }
 .c-openchat__box {
 
@@ -232,7 +233,7 @@
 .button-send-message {
 
 	float: right;
-	margin-right: 23px;
+	margin-right: 5px;
 	margin-bottom: 5px;
   background-color: #006DBB;
   color: white;
@@ -418,14 +419,15 @@ color: #07418D;
 .detail-demande  {
   list-style: square;
   padding-left: 20px;
-  padding-right: 20px;
-  margin-left: 40px;
+  padding-right: 10px;
+  margin-left: 20px;
   color: #006DBB;
 
   p {
     font-family: "Work Sans";
     font-size: 14px;
     color: #006DBB;
+    margin-left: 20px;
 
 
   }
