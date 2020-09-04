@@ -1,6 +1,6 @@
 class PharmasController < ApplicationController
   def index
-    @pharmas = policy_scope(Pharma).order(created_at: :desc)
+    @pharmas = policy_scope(Pharma).includes(:stock).order('stocks.quantity')
     @pharmas = Pharma.where.not(latitude: nil, longitude: nil)
 
     @pharmas = Pharma.geocoded
