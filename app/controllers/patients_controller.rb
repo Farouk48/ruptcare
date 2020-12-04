@@ -1,28 +1,21 @@
 class PatientsController < ApplicationController
-  before_action :set_patient, only: [:show]
+  before_action :set_patient, only: [:show, :edit, :update, :destroy]
 
   def index
-
     @patients = Patient.all
     @patients = policy_scope(Patient).order(created_at: :desc)
     # if params[:first_name].present?
     #   @patients = Patient.search_by_name_and_action(params[:first_name])
-  
     # end
   end
-
-
-    # @patients = current_user.patients
-
-
-
+    #@patients = current_user.patients
   def show
     #@patient = Patient.new
     authorize @patient
   end
 
   def create
-    @patient = Patient.new
+    @patient = Patient.new(patient_params)
     @patient.user = current_user
     authorize @patient
 
@@ -36,16 +29,13 @@ class PatientsController < ApplicationController
   end
 
   def edit
-    @patient = Patient.find(params[:id])
     authorize @patient
   end
 
   def update
     authorize @patient
-    @patient = Patient.find(params[:id])
-
     respond_to do |format|
-      if @patient.update()
+      if @patient.update(patient_params)
         format.html { redirect_to @drug, notice: 'Patient was successfully updated.' }
       else
         format.html { render :edit }
@@ -55,9 +45,7 @@ class PatientsController < ApplicationController
 
   def destroy
     authorize @patient
-    @patient = Patient.find(params[:id])
     @patient.destroy
-
     respond_to do |format|
       format.html { redirect_to patient_url, notice: 'Patient was successfully destroyed.' }
     end
@@ -66,14 +54,10 @@ class PatientsController < ApplicationController
   private
 
   def patient_params
-    params.permit(:patient).require(:first_name, :last_name, :address, :age, :city, :chronic_disease, :doctor_id, :pharma_id)
+    params.require(:patient).permit(:first_name, :last_name, :address, :age, :city, :chronic_disease, :doctor_id, :pharma_id)
   end
-
-private
 
   def set_patient
-  	@patient = Patient.find(params[:id])
+    @patient = Patient.find(params[:id])
   end
-
-
 end
